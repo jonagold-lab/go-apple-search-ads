@@ -1,0 +1,6 @@
+example/cert.pem
+example/cert.key
+example/api-keys.pem
+example/api-keys.key
+.vscode
+**/.DS_Store

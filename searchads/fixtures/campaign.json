@@ -1,0 +1,792 @@
+{
+  "data": {
+    "id": 235557343,
+    "orgId": 1388280,
+    "name": "GB_Competitor_Exact",
+    "budgetAmount": {
+      "amount": "1000",
+      "currency": "USD"
+    },
+    "dailyBudgetAmount": {
+      "amount": "50",
+      "currency": "USD"
+    },
+    "adamId": 1112839581,
+    "referenceLabel": null,
+    "negativeKeywords": [
+      {
+        "id": 235559099,
+        "campaignId": 235557343,
+        "adGroupId": null,
+        "text": "jonagold li",
+        "status": "ACTIVE",
+        "matchType": "EXACT",
+        "modificationTime": "2019-01-11T12:40:14.127",
+        "deleted": false
+      }
+    ],
+    "paymentModel": "PAYG",
+    "locInvoiceDetails": null,
+    "adGroups": [
+      {
+        "id": 235552805,
+        "campaignId": 235557343,
+        "name": "GB_Competitor_Exact",
+        "cpaGoal": {
+          "amount": "6",
+          "currency": "USD"
+        },
+        "storefronts": ["GB"],
+        "startTime": "2019-01-10T23:00:00.000",
+        "endTime": null,
+        "automatedKeywordsOptIn": false,
+        "defaultCpcBid": {
+          "amount": "5",
+          "currency": "USD"
+        },
+        "keywords": [
+          {
+            "id": 235575616,
+            "adGroupId": 235552805,
+            "text": "luno app",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.689",
+            "deleted": false
+          },
+          {
+            "id": 235575617,
+            "adGroupId": 235552805,
+            "text": "abra app",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.687",
+            "deleted": false
+          },
+          {
+            "id": 235575618,
+            "adGroupId": 235552805,
+            "text": "coin base app",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.683",
+            "deleted": false
+          },
+          {
+            "id": 235575619,
+            "adGroupId": 235552805,
+            "text": "Coin base",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.681",
+            "deleted": false
+          },
+          {
+            "id": 235575620,
+            "adGroupId": 235552805,
+            "text": "Swissquote",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.678",
+            "deleted": false
+          },
+          {
+            "id": 235583841,
+            "adGroupId": 235552805,
+            "text": "Swissquote Trading",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.673",
+            "deleted": false
+          },
+          {
+            "id": 235583842,
+            "adGroupId": 235552805,
+            "text": "Libertex",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.671",
+            "deleted": false
+          },
+          {
+            "id": 235583843,
+            "adGroupId": 235552805,
+            "text": "Libertex - online trading CFD",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.668",
+            "deleted": false
+          },
+          {
+            "id": 235583844,
+            "adGroupId": 235552805,
+            "text": "Blockfolio",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.665",
+            "deleted": false
+          },
+          {
+            "id": 235583845,
+            "adGroupId": 235552805,
+            "text": "Blockfolio - Bitcoin Tracker",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.662",
+            "deleted": false
+          },
+          {
+            "id": 235583846,
+            "adGroupId": 235552805,
+            "text": "Coinmarketcap",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.651",
+            "deleted": false
+          },
+          {
+            "id": 235583847,
+            "adGroupId": 235552805,
+            "text": "CoinMarketCap.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.649",
+            "deleted": false
+          },
+          {
+            "id": 235583848,
+            "adGroupId": 235552805,
+            "text": "bitwallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.646",
+            "deleted": false
+          },
+          {
+            "id": 235583849,
+            "adGroupId": 235552805,
+            "text": "bitWallet — Bitcoin Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.642",
+            "deleted": false
+          },
+          {
+            "id": 235583850,
+            "adGroupId": 235552805,
+            "text": "eToro Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.639",
+            "deleted": false
+          },
+          {
+            "id": 235583851,
+            "adGroupId": 235552805,
+            "text": "CEX.IO",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.627",
+            "deleted": false
+          },
+          {
+            "id": 235583852,
+            "adGroupId": 235552805,
+            "text": "CEX.IO Bitcoin Exchange",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.624",
+            "deleted": false
+          },
+          {
+            "id": 235583853,
+            "adGroupId": 235552805,
+            "text": "Uphold",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.621",
+            "deleted": false
+          },
+          {
+            "id": 235583854,
+            "adGroupId": 235552805,
+            "text": "Uphold: Buy Digital Currencies",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.618",
+            "deleted": false
+          },
+          {
+            "id": 235583855,
+            "adGroupId": 235552805,
+            "text": "Mycelium",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.614",
+            "deleted": false
+          },
+          {
+            "id": 235583856,
+            "adGroupId": 235552805,
+            "text": "Mycelium Bitcoin Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.611",
+            "deleted": false
+          },
+          {
+            "id": 235583857,
+            "adGroupId": 235552805,
+            "text": "airbitz",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.609",
+            "deleted": false
+          },
+          {
+            "id": 235583858,
+            "adGroupId": 235552805,
+            "text": "Airbitz - Bitcoin Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.606",
+            "deleted": false
+          },
+          {
+            "id": 235583859,
+            "adGroupId": 235552805,
+            "text": "Cryptopay",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.604",
+            "deleted": false
+          },
+          {
+            "id": 235583860,
+            "adGroupId": 235552805,
+            "text": "BitPay",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.601",
+            "deleted": false
+          },
+          {
+            "id": 235583861,
+            "adGroupId": 235552805,
+            "text": "BitPay – Secure Bitcoin Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.598",
+            "deleted": false
+          },
+          {
+            "id": 235583862,
+            "adGroupId": 235552805,
+            "text": "Luno",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.595",
+            "deleted": false
+          },
+          {
+            "id": 235583863,
+            "adGroupId": 235552805,
+            "text": "Luno Bitcoin & Cryptocurrency",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.592",
+            "deleted": false
+          },
+          {
+            "id": 235583864,
+            "adGroupId": 235552805,
+            "text": "BTC.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.589",
+            "deleted": false
+          },
+          {
+            "id": 235583865,
+            "adGroupId": 235552805,
+            "text": "BTC.com – Bitcoin Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.586",
+            "deleted": false
+          },
+          {
+            "id": 235583866,
+            "adGroupId": 235552805,
+            "text": "Coinbase Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.584",
+            "deleted": false
+          },
+          {
+            "id": 235583867,
+            "adGroupId": 235552805,
+            "text": "Abra",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.582",
+            "deleted": false
+          },
+          {
+            "id": 235583868,
+            "adGroupId": 235552805,
+            "text": "crypto.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.579",
+            "deleted": false
+          },
+          {
+            "id": 235583869,
+            "adGroupId": 235552805,
+            "text": "Crypto.com Wallet & Card App",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.576",
+            "deleted": false
+          },
+          {
+            "id": 235583870,
+            "adGroupId": 235552805,
+            "text": "capital.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.573",
+            "deleted": false
+          },
+          {
+            "id": 235583871,
+            "adGroupId": 235552805,
+            "text": "Capital.com Online Trading",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.570",
+            "deleted": false
+          },
+          {
+            "id": 235583872,
+            "adGroupId": 235552805,
+            "text": "etoro",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.565",
+            "deleted": false
+          },
+          {
+            "id": 235583873,
+            "adGroupId": 235552805,
+            "text": "eToro Cryptocurrency Trading",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.561",
+            "deleted": false
+          },
+          {
+            "id": 235583874,
+            "adGroupId": 235552805,
+            "text": "Binance",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.558",
+            "deleted": false
+          },
+          {
+            "id": 235583875,
+            "adGroupId": 235552805,
+            "text": "Binance - Exchange",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.554",
+            "deleted": false
+          },
+          {
+            "id": 235583876,
+            "adGroupId": 235552805,
+            "text": "Bitcoin.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.550",
+            "deleted": false
+          },
+          {
+            "id": 235583877,
+            "adGroupId": 235552805,
+            "text": "Bitcoin Wallet By Bitcoin.com",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.547",
+            "deleted": false
+          },
+          {
+            "id": 235583878,
+            "adGroupId": 235552805,
+            "text": "BRD",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.545",
+            "deleted": false
+          },
+          {
+            "id": 235583879,
+            "adGroupId": 235552805,
+            "text": "BRD - bitcoin wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.542",
+            "deleted": false
+          },
+          {
+            "id": 235583880,
+            "adGroupId": 235552805,
+            "text": "Wirex",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.537",
+            "deleted": false
+          },
+          {
+            "id": 235583881,
+            "adGroupId": 235552805,
+            "text": "WIREX: Bitcoin ETH XRP Wallet",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.534",
+            "deleted": false
+          },
+          {
+            "id": 235583882,
+            "adGroupId": 235552805,
+            "text": "Blockchain Wallet: Bitcoin",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.531",
+            "deleted": false
+          },
+          {
+            "id": 235583883,
+            "adGroupId": 235552805,
+            "text": "Coinbase",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.527",
+            "deleted": false
+          },
+          {
+            "id": 235583884,
+            "adGroupId": 235552805,
+            "text": "Coinbase – Buy & sell bitcoin",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.521",
+            "deleted": false
+          },
+          {
+            "id": 235583885,
+            "adGroupId": 235552805,
+            "text": "Cash App",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.517",
+            "deleted": false
+          },
+          {
+            "id": 238400634,
+            "adGroupId": 235552805,
+            "text": "paypal",
+            "status": "PAUSED",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "2",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:12:36.589",
+            "deleted": false
+          },
+          {
+            "id": 237530061,
+            "adGroupId": 235552805,
+            "text": "jaxx liberty",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.512",
+            "deleted": false
+          },
+          {
+            "id": 237530062,
+            "adGroupId": 235552805,
+            "text": "jaxx",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.508",
+            "deleted": false
+          },
+          {
+            "id": 237530063,
+            "adGroupId": 235552805,
+            "text": "gdax",
+            "status": "ACTIVE",
+            "matchType": "EXACT",
+            "bidAmount": {
+              "amount": "6",
+              "currency": "USD"
+            },
+            "modificationTime": "2019-02-06T14:13:36.503",
+            "deleted": false
+          }
+        ],
+        "negativeKeywords": [],
+        "targetingDimensions": {
+          "age": null,
+          "gender": null,
+          "country": null,
+          "adminArea": null,
+          "locality": null,
+          "deviceClass": {
+            "included": ["IPHONE", "IPAD"],
+            "excluded": null
+          },
+          "daypart": null,
+          "appDownloaders": {
+            "included": [],
+            "excluded": []
+          }
+        },
+        "orgId": 1388280,
+        "modificationTime": "2019-02-07T15:26:41.319",
+        "status": "ENABLED",
+        "servingStatus": "RUNNING",
+        "servingStateReasons": null,
+        "displayStatus": "RUNNING",
+        "deleted": false
+      }
+    ],
+    "budgetOrders": [],
+    "displayStatus": "RUNNING",
+    "startTime": "2019-01-10T23:00:00.000",
+    "endTime": null,
+    "status": "ENABLED",
+    "servingStatus": "RUNNING",
+    "additionalDetail": null,
+    "servingStateReasons": null,
+    "storefront": "GB",
+    "modificationTime": "2019-03-01T21:49:30.327",
+    "deleted": false,
+    "sapinLawResponse": "NOT_ANSWERED"
+  },
+  "pagination": null,
+  "error": null
+}
