@@ -30,6 +30,7 @@ type Client struct {
 	common    service
 	Campaign  *CampaignService
 	AdGroup   *AdGroupService
+	ACL       *ACLService
 }
 
 type service struct {
@@ -90,6 +91,8 @@ func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) *Cl
 	c := &Client{client: httpClient, BaseURL: baseURL, UserAgent: userAgent, OrgID: orgID}
 	c.common.client = c
 	c.Campaign = (*CampaignService)(&c.common)
+	c.AdGroup = (*AdGroupService)(&c.common)
+	c.ACL = (*ACLService)(&c.common)
 	return c
 }
 

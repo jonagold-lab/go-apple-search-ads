@@ -61,11 +61,11 @@ func TestCampaignService_Create(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
-	input := &NewCampaign{Name: "t"}
+	input := &Campaign{Name: "t"}
 
 	wantAcceptHeaders := []string{"application/json"}
 	mux.HandleFunc("/campaigns", func(w http.ResponseWriter, r *http.Request) {
-		v := new(NewCampaign)
+		v := new(Campaign)
 		json.NewDecoder(r.Body).Decode(v)
 		testMethod(t, r, "POST")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
@@ -90,11 +90,11 @@ func TestCampaignService_Edit(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
-	input := &UpdateCampaign{Name: "New Name"}
+	input := &Campaign{Name: "New Name"}
 
 	wantAcceptHeaders := []string{"application/json"}
 	mux.HandleFunc("/campaigns/235557343", func(w http.ResponseWriter, r *http.Request) {
-		v := new(UpdateCampaign)
+		v := new(Campaign)
 		json.NewDecoder(r.Body).Decode(v)
 		testMethod(t, r, "PUT")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
@@ -125,15 +125,16 @@ func TestCampaignService_Delete(t *testing.T) {
 		testMethod(t, r, "DELETE")
 		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
 		w.WriteHeader(http.StatusOK)
+		w.Write(loadFixture("campaign_delete.json"))
 	})
 
 	resp, err := client.Campaign.Delete(context.Background(), 235557343)
 	if err != nil {
-		t.Errorf("Campaign.Edit returned error: %v", err)
+		t.Errorf("Campaign.Delete returned error: %v", err)
 	}
 	want := http.StatusOK
 	got := resp.StatusCode
 	if !reflect.DeepEqual(got, want) {
-		t.Errorf("Campaign.Edit returned %+v, want %+v", got, want)
+		t.Errorf("Campaign.Delete returned %+v, want %+v", got, want)
 	}
 }

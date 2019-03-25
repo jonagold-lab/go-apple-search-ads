@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "currency": "USD",
+      "orgId": 1388280,
+      "orgName": "Jonagold - ASA",
+      "roleNames": ["Admin"],
+      "paymentModel": "PAYG"
+    },
+    {
+      "currency": "USD",
+      "orgId": 1405310,
+      "orgName": "Jonagold Wallet \u0026 Exchange",
+      "roleNames": ["Admin"],
+      "paymentModel": "PAYG"
+    }
+  ],
+  "pagination": {
+    "totalResults": 33,
+    "startIndex": 0,
+    "itemsPerPage": 20
+  },
+  "error": null
+}
