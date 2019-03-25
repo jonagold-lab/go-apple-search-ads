@@ -12,17 +12,20 @@ type PaymentModel byte
 const (
 	LOC PaymentModel = iota
 	PAYG
+	EMPTY
 )
 
 var (
 	_PaymentModelNameToValue = map[string]PaymentModel{
 		"LOC":  LOC,
 		"PAYG": PAYG,
+		"":     EMPTY,
 	}
 
 	_PaymentModelValueToName = map[PaymentModel]string{
-		LOC:  "LOC",
-		PAYG: "PAYG",
+		LOC:   "LOC",
+		PAYG:  "PAYG",
+		EMPTY: "",
 	}
 )
 
@@ -30,8 +33,9 @@ func init() {
 	var v PaymentModel
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_PaymentModelNameToValue = map[string]PaymentModel{
-			interface{}(LOC).(fmt.Stringer).String():  LOC,
-			interface{}(PAYG).(fmt.Stringer).String(): PAYG,
+			interface{}(LOC).(fmt.Stringer).String():   LOC,
+			interface{}(PAYG).(fmt.Stringer).String():  PAYG,
+			interface{}(EMPTY).(fmt.Stringer).String(): EMPTY,
 		}
 	}
 }
