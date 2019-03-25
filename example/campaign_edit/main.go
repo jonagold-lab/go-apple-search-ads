@@ -11,7 +11,11 @@ import (
 
 func main() {
 	orgID := 1405310
-	client := searchads.NewClient(nil, "../cert.pem", "../cert.key", &orgID)
+	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", &orgID)
+	if err != nil {
+		log.Fatalf("Client error: %s", err)
+		panic(err)
+	}
 
 	data := searchads.Campaign{
 		Name: "New Name",

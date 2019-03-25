@@ -10,7 +10,11 @@ import (
 )
 
 func main() {
-	client := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
+	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
+	if err != nil {
+		log.Fatalf("Client error: %s", err)
+		panic(err)
+	}
 	opt := searchads.ListOptions{Limit: 1000, Offset: 0}
 	list, rs, err := client.ACL.List(context.Background(), &opt)
 	if err != nil {

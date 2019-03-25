@@ -50,7 +50,7 @@ func setup() (client *Client, mux *http.ServeMux, serverURL string, teardown fun
 	// configured to use test server.
 	orgID := 1238
 	fakeClient := http.Client{}
-	client = NewClient(&fakeClient, "", "", &orgID)
+	client, _ = NewClient(&fakeClient, "", "", &orgID)
 	url, _ := url.Parse(server.URL + baseURLPath + "/")
 	client.BaseURL = url
 

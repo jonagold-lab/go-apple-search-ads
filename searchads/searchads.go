@@ -79,12 +79,12 @@ func setClientWithCerts(pemFile, keyFile string) (*http.Client, error) {
 }
 
 // NewClient with either http.Client or with pemFile and keyFile
-func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) *Client {
+func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) (*Client, error) {
 	if httpClient == nil {
 		var err error
 		httpClient, err = setClientWithCerts(pemFile, keyFile)
 		if err != nil {
-			panic(err)
+			return nil, err
 		}
 	}
 	baseURL, _ := url.Parse(defaultBaseURL)
@@ -93,7 +93,7 @@ func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) *Cl
 	c.Campaign = (*CampaignService)(&c.common)
 	c.AdGroup = (*AdGroupService)(&c.common)
 	c.ACL = (*ACLService)(&c.common)
-	return c
+	return c, nil
 }
 
 // NewRequest to build request
