@@ -70,3 +70,12 @@ func ParseTimeZone(name string) (TimeZone, error) {
 	}
 	return TimeZone(0), fmt.Errorf("invalid TimeZone: %s", name)
 }
+
+// String to return the String of a TimeZone
+func (r TimeZone) String() (string, error) {
+	s, ok := _TimeZoneValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid TimeZone: %d", r)
+	}
+	return s, nil
+}

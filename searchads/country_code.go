@@ -114,3 +114,12 @@ func ParseCountryCode(name string) (CountryCode, error) {
 	}
 	return CountryCode(0), fmt.Errorf("invalid CountryCode: %s", name)
 }
+
+// String to return the String of a CountryCode
+func (r CountryCode) String() (string, error) {
+	s, ok := _CountryCodeValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid CountryCode: %d", r)
+	}
+	return s, nil
+}

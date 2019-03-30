@@ -82,3 +82,12 @@ func ParseOperator(name string) (Operator, error) {
 	}
 	return Operator(0), fmt.Errorf("invalid Operator: %s", name)
 }
+
+// String to return the String of a Operator
+func (r Operator) String() (string, error) {
+	s, ok := _OperatorValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid Operator: %d", r)
+	}
+	return s, nil
+}

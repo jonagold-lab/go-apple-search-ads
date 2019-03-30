@@ -78,3 +78,12 @@ func ParseGranularity(name string) (Granularity, error) {
 	}
 	return Granularity(0), fmt.Errorf("invalid Granularity: %s", name)
 }
+
+// String to return the String of a Granularity
+func (r Granularity) String() (string, error) {
+	s, ok := _GranularityValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid Granularity: %d", r)
+	}
+	return s, nil
+}

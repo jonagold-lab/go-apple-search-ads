@@ -70,3 +70,12 @@ func ParseSortOrder(name string) (SortOrder, error) {
 	}
 	return SortOrder(0), fmt.Errorf("invalid SortOrder: %s", name)
 }
+
+// String to return the String of a SortOrder
+func (r SortOrder) String() (string, error) {
+	s, ok := _SortOrderValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid SortOrder: %d", r)
+	}
+	return s, nil
+}

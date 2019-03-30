@@ -70,3 +70,12 @@ func ParseServingStatus(name string) (ServingStatus, error) {
 	}
 	return ServingStatus(0), fmt.Errorf("invalid ServingStatus: %s", name)
 }
+
+// String to return the String of a ServingStatus
+func (r ServingStatus) String() (string, error) {
+	s, ok := _ServingStatusValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid ServingStatus: %d", r)
+	}
+	return s, nil
+}

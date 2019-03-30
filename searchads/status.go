@@ -70,3 +70,12 @@ func ParseStatus(name string) (Status, error) {
 	}
 	return Status(0), fmt.Errorf("invalid Status: %s", name)
 }
+
+// String to return the String of a Status
+func (r Status) String() (string, error) {
+	s, ok := _StatusValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid Status: %d", r)
+	}
+	return s, nil
+}

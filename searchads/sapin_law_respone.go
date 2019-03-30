@@ -74,3 +74,12 @@ func ParseSapinLawResponse(name string) (SapinLawResponse, error) {
 	}
 	return SapinLawResponse(0), fmt.Errorf("invalid SapinLawResponse: %s", name)
 }
+
+// String to return the String of a SapinLawResponse
+func (r SapinLawResponse) String() (string, error) {
+	s, ok := _SapinLawResponseValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid SapinLawResponse: %d", r)
+	}
+	return s, nil
+}

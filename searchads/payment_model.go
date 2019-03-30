@@ -74,3 +74,12 @@ func ParsePaymentModel(name string) (PaymentModel, error) {
 	}
 	return PaymentModel(0), fmt.Errorf("invalid PaymentModel: %s", name)
 }
+
+// String to return the String of a PaymentModel
+func (r PaymentModel) String() (string, error) {
+	s, ok := _PaymentModelValueToName[r]
+	if !ok {
+		return "", fmt.Errorf("invalid PaymentModel: %d", r)
+	}
+	return s, nil
+}
