@@ -61,3 +61,12 @@ func (r *ServingStatus) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseServingStatus to turn a String into the ServingStatus
+func ParseServingStatus(name string) (ServingStatus, error) {
+	v, ok := _ServingStatusNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return ServingStatus(0), fmt.Errorf("invalid ServingStatus: %s", name)
+}

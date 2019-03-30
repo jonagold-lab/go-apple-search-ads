@@ -65,3 +65,12 @@ func (r *SapinLawResponse) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseSapinLawResponse to turn a String into the SapinLawResponse
+func ParseSapinLawResponse(name string) (SapinLawResponse, error) {
+	v, ok := _SapinLawResponseNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return SapinLawResponse(0), fmt.Errorf("invalid SapinLawResponse: %s", name)
+}

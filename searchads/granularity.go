@@ -69,3 +69,12 @@ func (r *Granularity) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseGranularity to turn a String into the Granularity
+func ParseGranularity(name string) (Granularity, error) {
+	v, ok := _GranularityNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return Granularity(0), fmt.Errorf("invalid Granularity: %s", name)
+}

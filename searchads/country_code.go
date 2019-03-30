@@ -105,3 +105,12 @@ func (r *CountryCode) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseCountryCode to turn a String into the CountryCode
+func ParseCountryCode(name string) (CountryCode, error) {
+	v, ok := _CountryCodeNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return CountryCode(0), fmt.Errorf("invalid CountryCode: %s", name)
+}

@@ -61,3 +61,12 @@ func (r *TimeZone) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseTimeZone to turn a String into the TimeZone
+func ParseTimeZone(name string) (TimeZone, error) {
+	v, ok := _TimeZoneNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return TimeZone(0), fmt.Errorf("invalid TimeZone: %s", name)
+}

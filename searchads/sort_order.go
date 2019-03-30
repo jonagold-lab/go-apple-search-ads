@@ -61,3 +61,12 @@ func (r *SortOrder) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseSortOrder to turn a String into the SortOrder
+func ParseSortOrder(name string) (SortOrder, error) {
+	v, ok := _SortOrderNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return SortOrder(0), fmt.Errorf("invalid SortOrder: %s", name)
+}

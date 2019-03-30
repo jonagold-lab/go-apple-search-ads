@@ -65,3 +65,12 @@ func (r *PaymentModel) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParsePaymentModel to turn a String into the PaymentModel
+func ParsePaymentModel(name string) (PaymentModel, error) {
+	v, ok := _PaymentModelNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return PaymentModel(0), fmt.Errorf("invalid PaymentModel: %s", name)
+}

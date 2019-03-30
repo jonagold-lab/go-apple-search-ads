@@ -73,3 +73,12 @@ func (r *Operator) UnmarshalJSON(data []byte) error {
 	*r = v
 	return nil
 }
+
+// ParseOperator to turn a String into the Operator
+func ParseOperator(name string) (Operator, error) {
+	v, ok := _OperatorNameToValue[name]
+	if ok {
+		return v, nil
+	}
+	return Operator(0), fmt.Errorf("invalid Operator: %s", name)
+}
