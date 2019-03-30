@@ -37,14 +37,14 @@ type Campaign struct {
 
 // NegativeKeyword to define negative Keyword and connection to other
 type NegativeKeyword struct {
-	ID               int    `json:"id"`
-	CampaignID       int    `json:"campaignId"`
-	AdGroupID        int    `json:"adGroupId"`
-	ModificationTime string `json:"modificationTime"`
-	Text             string `json:"text"`
-	MatchType        string `json:"matchType"`
-	Status           string `json:"status"`
-	Deleted          bool   `json:"deleted"`
+	ID               int    `json:"id,omitempty"`
+	CampaignID       int    `json:"campaignId,omitempty"`
+	AdGroupID        int    `json:"adGroupId,omitempty"`
+	ModificationTime string `json:"modificationTime,omitempty"`
+	Text             string `json:"text,omitempty"`
+	MatchType        string `json:"matchType,omitempty"`
+	Status           string `json:"status,omitempty"`
+	Deleted          bool   `json:"deleted,omitempty"`
 }
 
 // Amount  to hold amount and currency for various fields

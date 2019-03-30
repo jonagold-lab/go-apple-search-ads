@@ -31,64 +31,64 @@ type AdGroup struct {
 }
 
 type Keywords struct {
-	ID               int    `json:"id"`
-	AdGroupID        int    `json:"adGroupId"`
-	Text             string `json:"text"`
-	Status           string `json:"status"`
-	MatchType        string `json:"matchType"`
-	BidAmount        Amount `json:"bidAmount"`
-	ModificationTime string `json:"modificationTime"`
-	Deleted          bool   `json:"deleted"`
+	ID               int    `json:"id,omitempty"`
+	AdGroupID        int    `json:"adGroupId,omitempty"`
+	Text             string `json:"text,omitempty"`
+	Status           string `json:"status,omitempty"`
+	MatchType        string `json:"matchType,omitempty"`
+	BidAmount        Amount `json:"bidAmount,omitempty"`
+	ModificationTime string `json:"modificationTime,omitempty"`
+	Deleted          bool   `json:"deleted,omitempty"`
 }
 type DeviceClass struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 type AppDownloaders struct {
-	Included []string `json:"included"`
-	Excluded []string `json:"excluded"`
+	Included []string `json:"included,omitempty"`
+	Excluded []string `json:"excluded,omitempty"`
 }
 type TargetingDimensions struct {
-	Age            *Age           `json:"age"`
-	Gender         *Gender        `json:"gender"`
-	Country        *Country       `json:"country"`
-	AdminArea      *AdminArea     `json:"adminArea"`
-	Locality       *Locality      `json:"locality"`
-	DeviceClass    DeviceClass    `json:"deviceClass"`
-	Daypart        *Daypart       `json:"daypart"`
-	AppDownloaders AppDownloaders `json:"appDownloaders"`
+	Age            Age            `json:"age,omitempty"`
+	Gender         Gender         `json:"gende,omitemptyr"`
+	Country        Country        `json:"country,omitempty"`
+	AdminArea      AdminArea      `json:"adminArea,omitempty"`
+	Locality       Locality       `json:"locality,omitempty"`
+	DeviceClass    DeviceClass    `json:"deviceClass,omitempty"`
+	Daypart        Daypart        `json:"daypart,omitempty"`
+	AppDownloaders AppDownloaders `json:"appDownloaders,omitempty"`
 }
 
 type Country struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 
 type Age struct {
-	Included []AgeObj `json:"included"`
+	Included []AgeObj `json:"included,omitempty"`
 }
 
 type AgeObj struct {
-	MinAge string `json:"minAge"`
-	MaxAge string `json:"maxAge"`
+	MinAge string `json:"minAge,omitempty"`
+	MaxAge string `json:"maxAge,omitempty"`
 }
 
 type Gender struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 
 type AdminArea struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 
 type Locality struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 
 type Daypart struct {
-	UserTime UserTime `json:"userTime"`
+	UserTime UserTime `json:"userTime,omitempty"`
 }
 
 type UserTime struct {
-	Included []string `json:"included"`
+	Included []string `json:"included,omitempty"`
 }
 
 // List function to get Adgroups from campaign
