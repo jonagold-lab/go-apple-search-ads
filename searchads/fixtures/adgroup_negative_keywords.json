@@ -1,0 +1,336 @@
+{
+  "data": [
+    {
+      "id": 242935419,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back doctor",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.296",
+      "deleted": false
+    },
+    {
+      "id": 242935420,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain relief exercises",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.306",
+      "deleted": false
+    },
+    {
+      "id": 242936121,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain exercise",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.308",
+      "deleted": false
+    },
+    {
+      "id": 242936122,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain yoga",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.311",
+      "deleted": false
+    },
+    {
+      "id": 242936123,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "suffering from back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.312",
+      "deleted": false
+    },
+    {
+      "id": 242936124,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "backpain relief forever",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.315",
+      "deleted": false
+    },
+    {
+      "id": 242936125,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back exercises",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.319",
+      "deleted": false
+    },
+    {
+      "id": 242936126,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "backpain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.320",
+      "deleted": false
+    },
+    {
+      "id": 242936127,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "reduce back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.322",
+      "deleted": false
+    },
+    {
+      "id": 242936128,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.324",
+      "deleted": false
+    },
+    {
+      "id": 242936129,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain relief",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.326",
+      "deleted": false
+    },
+    {
+      "id": 242936130,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia health",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.327",
+      "deleted": false
+    },
+    {
+      "id": 242936131,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.329",
+      "deleted": false
+    },
+    {
+      "id": 242936132,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.330",
+      "deleted": false
+    },
+    {
+      "id": 242936133,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia app",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-01-28T11:50:40.332",
+      "deleted": false
+    },
+    {
+      "id": 251593246,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "physio",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-22T16:05:18.682",
+      "deleted": false
+    },
+    {
+      "id": 262447079,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia app",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.818",
+      "deleted": false
+    },
+    {
+      "id": 262447080,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.827",
+      "deleted": false
+    },
+    {
+      "id": 262459941,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia health",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.830",
+      "deleted": false
+    },
+    {
+      "id": 262459942,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "kaia back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.834",
+      "deleted": false
+    },
+    {
+      "id": 262459943,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "reduce back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.837",
+      "deleted": false
+    },
+    {
+      "id": 262459944,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain relief",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.843",
+      "deleted": false
+    },
+    {
+      "id": 262459945,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "backpain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.846",
+      "deleted": false
+    },
+    {
+      "id": 262459946,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.849",
+      "deleted": false
+    },
+    {
+      "id": 262459947,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.853",
+      "deleted": false
+    },
+    {
+      "id": 262459948,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "backpain relief forever",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.855",
+      "deleted": false
+    },
+    {
+      "id": 262459949,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "suffering from back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.860",
+      "deleted": false
+    },
+    {
+      "id": 262459950,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain yoga",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.864",
+      "deleted": false
+    },
+    {
+      "id": 262459951,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.867",
+      "deleted": false
+    },
+    {
+      "id": 262459952,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back pain relief exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.870",
+      "deleted": false
+    },
+    {
+      "id": 262459953,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back doctor",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.873",
+      "deleted": false
+    },
+    {
+      "id": 262459954,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "for patients",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.881",
+      "deleted": false
+    },
+    {
+      "id": 262459955,
+      "campaignId": 242933727,
+      "adGroupId": 242930998,
+      "text": "back",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-19T11:38:16.884",
+      "deleted": false
+    }
+  ],
+  "pagination": { "totalResults": 33, "startIndex": 0, "itemsPerPage": 1000 },
+  "error": null
+}

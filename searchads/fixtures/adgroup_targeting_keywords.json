@@ -1,0 +1,176 @@
+{
+  "data": [
+    {
+      "id": 242935006,
+      "adGroupId": 242878799,
+      "text": "kaia app",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.979",
+      "deleted": false
+    },
+    {
+      "id": 242935007,
+      "adGroupId": 242878799,
+      "text": "kaia",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "1.07", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.984",
+      "deleted": false
+    },
+    {
+      "id": 242935008,
+      "adGroupId": 242878799,
+      "text": "kaia health",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "2.17", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.986",
+      "deleted": false
+    },
+    {
+      "id": 242935009,
+      "adGroupId": 242878799,
+      "text": "kaia back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "2.32", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.988",
+      "deleted": false
+    },
+    {
+      "id": 242935010,
+      "adGroupId": 242878799,
+      "text": "reduce back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.990",
+      "deleted": false
+    },
+    {
+      "id": 242935011,
+      "adGroupId": 242878799,
+      "text": "back pain relief",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "1.07", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.992",
+      "deleted": false
+    },
+    {
+      "id": 242935012,
+      "adGroupId": 242878799,
+      "text": "backpain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.994",
+      "deleted": false
+    },
+    {
+      "id": 242935013,
+      "adGroupId": 242878799,
+      "text": "back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "2.48", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.996",
+      "deleted": false
+    },
+    {
+      "id": 242935014,
+      "adGroupId": 242878799,
+      "text": "back exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "0.8", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:58.998",
+      "deleted": false
+    },
+    {
+      "id": 242935015,
+      "adGroupId": 242878799,
+      "text": "backpain relief forever",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.000",
+      "deleted": false
+    },
+    {
+      "id": 242935016,
+      "adGroupId": 242878799,
+      "text": "suffering from back pain",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.002",
+      "deleted": false
+    },
+    {
+      "id": 242935017,
+      "adGroupId": 242878799,
+      "text": "back pain yoga",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "0.98", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.004",
+      "deleted": false
+    },
+    {
+      "id": 242935018,
+      "adGroupId": 242878799,
+      "text": "back pain exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "0.98", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.006",
+      "deleted": false
+    },
+    {
+      "id": 242935019,
+      "adGroupId": 242878799,
+      "text": "back pain relief exercises",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "2.03", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.008",
+      "deleted": false
+    },
+    {
+      "id": 242935020,
+      "adGroupId": 242878799,
+      "text": "back doctor",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "1.74", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.010",
+      "deleted": false
+    },
+    {
+      "id": 249752464,
+      "adGroupId": 242878799,
+      "text": "for patients",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "6", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.012",
+      "deleted": false
+    },
+    {
+      "id": 251586551,
+      "adGroupId": 242878799,
+      "text": "back",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "bidAmount": { "amount": "1.74", "currency": "EUR" },
+      "modificationTime": "2019-03-26T09:09:59.015",
+      "deleted": false
+    }
+  ],
+  "pagination": { "totalResults": 17, "startIndex": 0, "itemsPerPage": 1000 },
+  "error": null
+}

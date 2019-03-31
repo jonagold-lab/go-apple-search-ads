@@ -124,6 +124,9 @@ func (s *AdGroupService) Get(ctx context.Context, campaignID int, id int) (*AdGr
 
 // Create will create a new AdGroup on a specific campaign
 func (s *AdGroupService) Create(ctx context.Context, campaignID int, data *AdGroup) (*AdGroup, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
 	u := fmt.Sprintf("campaigns/%d/adgroups", campaignID)
 	req, err := s.client.NewRequest("POST", u, data)
 	if err != nil {
@@ -141,6 +144,12 @@ func (s *AdGroupService) Create(ctx context.Context, campaignID int, data *AdGro
 
 // Edit will update an existing AdGroup on a Campaign
 func (s *AdGroupService) Edit(ctx context.Context, campaignID int, id int, data *AdGroup) (*AdGroup, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	if id == 0 {
+		return nil, nil, fmt.Errorf("id can not be 0")
+	}
 	u := fmt.Sprintf("campaigns/%d/adgroups/%d", campaignID, id)
 	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
@@ -158,6 +167,12 @@ func (s *AdGroupService) Edit(ctx context.Context, campaignID int, id int, data 
 
 // Delete will remove an existing AdGroup on a Campaign
 func (s *AdGroupService) Delete(ctx context.Context, campaignID int, id int) (*Response, error) {
+	if campaignID == 0 {
+		return nil, fmt.Errorf("campaignID can not be 0")
+	}
+	if id == 0 {
+		return nil, fmt.Errorf("id can not be 0")
+	}
 	u := fmt.Sprintf("campaigns/%d/adgroups/%d", campaignID, id)
 	req, err := s.client.NewRequest("DELETE", u, nil)
 	if err != nil {

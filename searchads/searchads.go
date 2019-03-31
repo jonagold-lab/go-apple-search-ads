@@ -33,6 +33,7 @@ type Client struct {
 	ACL                     *ACLService
 	CampaignNegativeKeyword *CampaignNegativeKeywordServive
 	AdGroupNegativeKeyword  *AdGroupNegativeKeywordServive
+	AdGroupTargetingKeyword *AdGroupTargetingKeywordServive
 }
 
 type service struct {

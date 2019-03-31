@@ -1,37 +1,53 @@
 {
   "data": [
     {
-      "id": 235523270,
-      "campaignId": 235469991,
-      "name": "GB_Brand_Exact",
-      "cpaGoal": {
-        "amount": "6",
-        "currency": "USD"
-      },
-      "startTime": "2019-01-10T23:00:00.000",
+      "id": 242930998,
+      "campaignId": 242933727,
+      "name": "Search Match",
+      "cpaGoal": null,
+      "startTime": "2019-01-27T23:00:00.000",
       "endTime": null,
-      "automatedKeywordsOptIn": false,
-      "defaultCpcBid": {
-        "amount": "3",
-        "currency": "USD"
-      },
+      "automatedKeywordsOptIn": true,
+      "defaultCpcBid": { "amount": "1.2", "currency": "EUR" },
       "targetingDimensions": {
         "age": null,
         "gender": null,
         "country": null,
         "adminArea": null,
         "locality": null,
-        "deviceClass": {
-          "included": ["IPHONE", "IPAD"]
-        },
+        "deviceClass": { "included": ["IPHONE", "IPAD"] },
         "daypart": null,
-        "appDownloaders": {
-          "included": [],
-          "excluded": []
-        }
+        "appDownloaders": { "included": [], "excluded": [] }
       },
-      "orgId": 1388280,
-      "modificationTime": "2019-01-15T10:10:16.826",
+      "orgId": 378940,
+      "modificationTime": "2019-03-19T17:15:38.904",
+      "status": "ENABLED",
+      "servingStatus": "RUNNING",
+      "servingStateReasons": null,
+      "displayStatus": "RUNNING",
+      "deleted": false
+    },
+    {
+      "id": 242878799,
+      "campaignId": 242933727,
+      "name": "Broad Match",
+      "cpaGoal": null,
+      "startTime": "2019-01-27T23:00:00.000",
+      "endTime": null,
+      "automatedKeywordsOptIn": false,
+      "defaultCpcBid": { "amount": "10", "currency": "EUR" },
+      "targetingDimensions": {
+        "age": null,
+        "gender": null,
+        "country": null,
+        "adminArea": null,
+        "locality": null,
+        "deviceClass": { "included": ["IPHONE", "IPAD"] },
+        "daypart": null,
+        "appDownloaders": { "included": [], "excluded": [] }
+      },
+      "orgId": 378940,
+      "modificationTime": "2019-03-26T09:10:00.681",
       "status": "ENABLED",
       "servingStatus": "RUNNING",
       "servingStateReasons": null,
@@ -39,10 +55,6 @@
       "deleted": false
     }
   ],
-  "pagination": {
-    "totalResults": 1,
-    "startIndex": 0,
-    "itemsPerPage": 1
-  },
+  "pagination": { "totalResults": 2, "startIndex": 0, "itemsPerPage": 2 },
   "error": null
 }
