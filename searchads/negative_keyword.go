@@ -1,5 +1,10 @@
 package searchads
 
+import (
+	"context"
+	"fmt"
+)
+
 // NegativeKeyword to define negative Keyword and connection to other
 type NegativeKeyword struct {
 	ID               int       `json:"id,omitempty"`
@@ -10,4 +15,88 @@ type NegativeKeyword struct {
 	MatchType        MatchType `json:"matchType,omitempty"`
 	Status           Status    `json:"status,omitempty"`
 	Deleted          bool      `json:"deleted,omitempty"`
+}
+
+// CampaignNegativeKeywordServive to handle Negative Keywords of
+type CampaignNegativeKeywordServive service
+
+// List function to get Adgroups from campaign
+func (s *CampaignNegativeKeywordServive) List(ctx context.Context, campaignID int, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	u, err := addOptions(fmt.Sprintf("campaigns/%d/negativekeywords", campaignID), opt)
+	if err != nil {
+		return nil, nil, err
+	}
+	req, err := s.client.NewRequest("GET", u, nil)
+	if err != nil {
+		return nil, nil, err
+	}
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return negativekeywords, resp, nil
+}
+
+// CreateBulk will create multiple Negative Keywords for a campaign
+func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+	u := fmt.Sprintf("campaigns/%d/negativekeywords/bulk", campaignID)
+	req, err := s.client.NewRequest("POST", u, data)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, negativekeywords)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return negativekeywords, resp, nil
+}
+
+// AdGroupNegativeKeywordServive to handle Negative Keywords of
+type AdGroupNegativeKeywordServive service
+
+// List function to get Adgroups from campaign
+func (s *AdGroupNegativeKeywordServive) List(ctx context.Context, campaignID int, adGroupID int, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	u, err := addOptions(fmt.Sprintf("campaigns/%d/adgroups/%d/negativekeywords", campaignID, adGroupID), opt)
+	if err != nil {
+		return nil, nil, err
+	}
+	req, err := s.client.NewRequest("GET", u, nil)
+	if err != nil {
+		return nil, nil, err
+	}
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return negativekeywords, resp, nil
+}
+
+// CreateBulk will create multiple Negative Keywords for a campaign
+func (s *AdGroupNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int, adGroupID int, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+	u := fmt.Sprintf("campaigns/%d/adgroups/%d/negativekeywords/bulk", campaignID, adGroupID)
+	req, err := s.client.NewRequest("POST", u, data)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, negativekeywords)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return negativekeywords, resp, nil
 }

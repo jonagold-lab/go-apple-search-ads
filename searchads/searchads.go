@@ -23,14 +23,16 @@ const (
 
 // A Client manages communication with the Google Search Ads API.
 type Client struct {
-	client    *http.Client // Reuse a single struct instead of allocating one for each service on the heap.
-	BaseURL   *url.URL
-	OrgID     *int
-	UserAgent string
-	common    service
-	Campaign  *CampaignService
-	AdGroup   *AdGroupService
-	ACL       *ACLService
+	client                  *http.Client // Reuse a single struct instead of allocating one for each service on the heap.
+	BaseURL                 *url.URL
+	OrgID                   *int
+	UserAgent               string
+	common                  service
+	Campaign                *CampaignService
+	AdGroup                 *AdGroupService
+	ACL                     *ACLService
+	CampaignNegativeKeyword *CampaignNegativeKeywordServive
+	AdGroupNegativeKeyword  *AdGroupNegativeKeywordServive
 }
 
 type service struct {

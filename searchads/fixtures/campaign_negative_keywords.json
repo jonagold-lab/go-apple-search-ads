@@ -1,0 +1,516 @@
+{
+  "data": [
+    {
+      "id": 251586002,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "health for me",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-22T15:25:46.851",
+      "deleted": false
+    },
+    {
+      "id": 252222600,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "yoga",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:58:20.077",
+      "deleted": false
+    },
+    {
+      "id": 252299441,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "healthie",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.107",
+      "deleted": false
+    },
+    {
+      "id": 252299442,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "treathf",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.111",
+      "deleted": false
+    },
+    {
+      "id": 252299443,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "yoga for beginners.",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.113",
+      "deleted": false
+    },
+    {
+      "id": 252299444,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "28 day challenge",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.114",
+      "deleted": false
+    },
+    {
+      "id": 252299445,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "hiit",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.116",
+      "deleted": false
+    },
+    {
+      "id": 252299446,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "heartbeat",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.118",
+      "deleted": false
+    },
+    {
+      "id": 252299447,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "gym workouts for men",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T11:59:45.120",
+      "deleted": false
+    },
+    {
+      "id": 252299448,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "blood pressure app",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-25T12:00:15.610",
+      "deleted": false
+    },
+    {
+      "id": 255851772,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "flo period & ovulation tracker",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-01T15:28:20.757",
+      "deleted": false
+    },
+    {
+      "id": 255851773,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "fitonomy app",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-01T15:28:20.761",
+      "deleted": false
+    },
+    {
+      "id": 255851774,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "ecg app for apple watch",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-03-01T15:28:20.763",
+      "deleted": false
+    },
+    {
+      "id": 250057930,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "kaufda",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-19T11:55:54.490",
+      "deleted": false
+    },
+    {
+      "id": 250055717,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "at home fitness",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.239",
+      "deleted": false
+    },
+    {
+      "id": 250055718,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "at home workout",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.243",
+      "deleted": false
+    },
+    {
+      "id": 250055719,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back ache",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.244",
+      "deleted": false
+    },
+    {
+      "id": 250055720,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back exercises",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.246",
+      "deleted": false
+    },
+    {
+      "id": 250065301,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.247",
+      "deleted": false
+    },
+    {
+      "id": 250065302,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back pain relief",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.248",
+      "deleted": false
+    },
+    {
+      "id": 250065303,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back streches",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.250",
+      "deleted": false
+    },
+    {
+      "id": 250065304,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "back workout",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.251",
+      "deleted": false
+    },
+    {
+      "id": 250065305,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "backache",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.253",
+      "deleted": false
+    },
+    {
+      "id": 250065306,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "backpain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.254",
+      "deleted": false
+    },
+    {
+      "id": 250065307,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "chronic pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.256",
+      "deleted": false
+    },
+    {
+      "id": 250065308,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "exercise",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.257",
+      "deleted": false
+    },
+    {
+      "id": 250065309,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "health",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.258",
+      "deleted": false
+    },
+    {
+      "id": 250065310,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "health and fitness",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.259",
+      "deleted": false
+    },
+    {
+      "id": 250065311,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "health apps",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.261",
+      "deleted": false
+    },
+    {
+      "id": 250065312,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "health tracker",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.262",
+      "deleted": false
+    },
+    {
+      "id": 250065313,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "lower pack pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.265",
+      "deleted": false
+    },
+    {
+      "id": 250065314,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "manage my pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.266",
+      "deleted": false
+    },
+    {
+      "id": 250065315,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "medical apps",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.267",
+      "deleted": false
+    },
+    {
+      "id": 250065316,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "medical treatment",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.268",
+      "deleted": false
+    },
+    {
+      "id": 250065317,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.270",
+      "deleted": false
+    },
+    {
+      "id": 250065318,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "pain relief",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.271",
+      "deleted": false
+    },
+    {
+      "id": 250065319,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "pain tracker",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.273",
+      "deleted": false
+    },
+    {
+      "id": 250065320,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "physio",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.274",
+      "deleted": false
+    },
+    {
+      "id": 250065321,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "posture",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.276",
+      "deleted": false
+    },
+    {
+      "id": 250065322,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "reduce back pain",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.277",
+      "deleted": false
+    },
+    {
+      "id": 250065323,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "relief",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.279",
+      "deleted": false
+    },
+    {
+      "id": 250065324,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "sciatica",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.280",
+      "deleted": false
+    },
+    {
+      "id": 250065325,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "spine",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.281",
+      "deleted": false
+    },
+    {
+      "id": 250065326,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "spine health",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.283",
+      "deleted": false
+    },
+    {
+      "id": 250065327,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "strengthen",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.284",
+      "deleted": false
+    },
+    {
+      "id": 250065328,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "workout at home",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-19T12:02:31.285",
+      "deleted": false
+    },
+    {
+      "id": 251394606,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "workout",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-22T09:08:24.790",
+      "deleted": false
+    },
+    {
+      "id": 251394607,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "workout apps",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-22T09:08:24.797",
+      "deleted": false
+    },
+    {
+      "id": 251394608,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "fitness",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-22T09:08:24.800",
+      "deleted": false
+    },
+    {
+      "id": 251394609,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "free workout apps for women",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-22T09:08:24.803",
+      "deleted": false
+    },
+    {
+      "id": 251394610,
+      "campaignId": 242933727,
+      "adGroupId": null,
+      "text": "workout app",
+      "status": "ACTIVE",
+      "matchType": "BROAD",
+      "modificationTime": "2019-02-22T09:08:24.812",
+      "deleted": false
+    }
+  ],
+  "pagination": { "totalResults": 51, "startIndex": 0, "itemsPerPage": 1000 },
+  "error": null
+}
