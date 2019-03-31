@@ -10,41 +10,33 @@ type CampaignService service
 
 // Campaign to hold information about a campaign
 type Campaign struct {
-	ID                  int               `json:"id,omitempty"`
-	OrgID               int               `json:"orgId,omitempty"`
-	AdamID              int               `json:"adamId,omitempty"`
-	Name                string            `json:"name,omitempty"`
-	BudgetAmount        Amount            `json:"budgetAmount,omitempty"`
-	DailyBudgetAmount   Amount            `json:"dailyBudgetAmount,omitempty"`
-	ReferenceLabel      string            `json:"referenceLabel,omitempty"`
-	NegativeKeywords    []NegativeKeyword `json:"negativeKeywords,omitempty"`
-	PaymentModel        PaymentModel      `json:"paymentModel,omitempty"`
-	LocInvoiceDetails   string            `json:"locInvoiceDetails,omitempty"`
-	BudgetOrders        []string          `json:"budgetOrders,omitempty"`
-	DisplayStatus       string            `json:"displayStatus,omitempty"`
-	StartTime           string            `json:"startTime,omitempty"`
-	EndTime             string            `json:"endTime,omitempty"`
-	Status              Status            `json:"status,omitempty"`
-	ServingStatus       ServingStatus     `json:"servingStatus,omitempty"`
-	AdditionalDetail    string            `json:"additionalDetail,omitempty"`
-	ServingStateReasons []string          `json:"servingStateReasons,omitempty"`
-	Storefront          CountryCode       `json:"storefront,omitempty"`
-	ModificationTime    string            `json:"modificationTime,omitempty"`
-	Deleted             bool              `json:"deleted,omitempty"`
-	SapinLawResponse    SapinLawResponse  `json:"sapinLawResponse,omitempty"`
-	AdGroups            []AdGroup         `json:"adGroups,omitempty"`
+	ID                                 int               `json:"id,omitempty"`
+	OrgID                              int               `json:"orgId,omitempty"`
+	Name                               string            `json:"name,omitempty"`
+	BudgetAmount                       Amount            `json:"budgetAmount,omitempty"`
+	DailyBudgetAmount                  Amount            `json:"dailyBudgetAmount,omitempty"`
+	AdamID                             int               `json:"adamId,omitempty"`
+	PaymentModel                       PaymentModel      `json:"paymentModel,omitempty"`
+	BudgetOrders                       []int             `json:"budgetOrders,omitempty"`
+	Status                             Status            `json:"status,omitempty"`
+	ServingStatus                      ServingStatus     `json:"servingStatus,omitempty"`
+	ServingStateReasons                []string          `json:"servingStateReasons,omitempty"`
+	ModificationTime                   string            `json:"modificationTime,omitempty"`
+	StartTime                          string            `json:"startTime,omitempty"`
+	EndTime                            string            `json:"endTime,omitempty"`
+	Deleted                            bool              `json:"deleted,omitempty"`
+	CountriesOrRegions                 []CountryCode     `json:"countriesOrRegions,omitempty"`
+	CountryOrRegionServingStateReasons []string          `json:"CountryOrRegionServingStateReasons,omitempty"`
+	SapinLawResponse                   SapinLawResponse  `json:"sapinLawResponse,omitempty"`
+	LocInvoiceDetails                  LocInvoiceDetails `json:"locInvoiceDetails,omitempty"`
 }
 
-// NegativeKeyword to define negative Keyword and connection to other
-type NegativeKeyword struct {
-	ID               int    `json:"id,omitempty"`
-	CampaignID       int    `json:"campaignId,omitempty"`
-	AdGroupID        int    `json:"adGroupId,omitempty"`
-	ModificationTime string `json:"modificationTime,omitempty"`
-	Text             string `json:"text,omitempty"`
-	MatchType        string `json:"matchType,omitempty"`
-	Status           string `json:"status,omitempty"`
-	Deleted          bool   `json:"deleted,omitempty"`
+// LocInvoiceDetails needs to be used for LOC Payment
+type LocInvoiceDetails struct {
+	ClientName  string `json:"clientName,omitempty"`
+	OrderNumber string `json:"orderNumber,omitempty"`
+	BuyerName   string `json:"buyerName,omitempty"`
+	BuyerEmail  string `json:"buyerEmail,omitempty"`
 }
 
 // Amount  to hold amount and currency for various fields

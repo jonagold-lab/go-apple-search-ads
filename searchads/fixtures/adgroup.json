@@ -1,0 +1,42 @@
+{
+  "data": {
+    "id": 235523270,
+    "campaignId": 235469991,
+    "name": "GB_Brand_Exact",
+    "cpaGoal": {
+      "amount": "6",
+      "currency": "USD"
+    },
+    "startTime": "2019-01-10T23:00:00.000",
+    "endTime": null,
+    "automatedKeywordsOptIn": false,
+    "defaultCpcBid": {
+      "amount": "3",
+      "currency": "USD"
+    },
+    "targetingDimensions": {
+      "age": null,
+      "gender": null,
+      "country": null,
+      "adminArea": null,
+      "locality": null,
+      "deviceClass": {
+        "included": ["IPHONE", "IPAD"]
+      },
+      "daypart": null,
+      "appDownloaders": {
+        "included": [],
+        "excluded": []
+      }
+    },
+    "orgId": 1388280,
+    "modificationTime": "2019-01-15T10:10:16.826",
+    "status": "ENABLED",
+    "servingStatus": "RUNNING",
+    "servingStateReasons": null,
+    "displayStatus": "RUNNING",
+    "deleted": false
+  },
+  "pagination": null,
+  "error": null
+}

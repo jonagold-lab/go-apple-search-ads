@@ -13,82 +13,17 @@ type AdGroup struct {
 	CampaignID             int                 `json:"campaignId,omitempty"`
 	Name                   string              `json:"name,omitempty"`
 	CpaGoal                Amount              `json:"cpaGoal,omitempty"`
-	Storefronts            []string            `json:"storefronts,omitempty"`
 	StartTime              string              `json:"startTime,omitempty"`
 	EndTime                string              `json:"endTime,omitempty"`
 	AutomatedKeywordsOptIn bool                `json:"automatedKeywordsOptIn,omitempty"`
 	DefaultCpcBid          Amount              `json:"defaultCpcBid,omitempty"`
-	Keywords               []Keywords          `json:"keywords,omitempty"`
-	NegativeKeywords       []NegativeKeyword   `json:"negativeKeywords,omitempty"`
 	TargetingDimensions    TargetingDimensions `json:"targetingDimensions,omitempty"`
 	OrgID                  int                 `json:"orgId,omitempty"`
 	ModificationTime       string              `json:"modificationTime,omitempty"`
 	Status                 string              `json:"status,omitempty"`
 	ServingStatus          string              `json:"servingStatus,omitempty"`
 	ServingStateReasons    []string            `json:"servingStateReasons,omitempty"`
-	DisplayStatus          string              `json:"displayStatus,omitempty"`
 	Deleted                bool                `json:"deleted,omitempty"`
-}
-
-type Keywords struct {
-	ID               int    `json:"id,omitempty"`
-	AdGroupID        int    `json:"adGroupId,omitempty"`
-	Text             string `json:"text,omitempty"`
-	Status           string `json:"status,omitempty"`
-	MatchType        string `json:"matchType,omitempty"`
-	BidAmount        Amount `json:"bidAmount,omitempty"`
-	ModificationTime string `json:"modificationTime,omitempty"`
-	Deleted          bool   `json:"deleted,omitempty"`
-}
-type DeviceClass struct {
-	Included []string `json:"included,omitempty"`
-}
-type AppDownloaders struct {
-	Included []string `json:"included,omitempty"`
-	Excluded []string `json:"excluded,omitempty"`
-}
-type TargetingDimensions struct {
-	Age            Age            `json:"age,omitempty"`
-	Gender         Gender         `json:"gende,omitemptyr"`
-	Country        Country        `json:"country,omitempty"`
-	AdminArea      AdminArea      `json:"adminArea,omitempty"`
-	Locality       Locality       `json:"locality,omitempty"`
-	DeviceClass    DeviceClass    `json:"deviceClass,omitempty"`
-	Daypart        Daypart        `json:"daypart,omitempty"`
-	AppDownloaders AppDownloaders `json:"appDownloaders,omitempty"`
-}
-
-type Country struct {
-	Included []string `json:"included,omitempty"`
-}
-
-type Age struct {
-	Included []AgeObj `json:"included,omitempty"`
-}
-
-type AgeObj struct {
-	MinAge string `json:"minAge,omitempty"`
-	MaxAge string `json:"maxAge,omitempty"`
-}
-
-type Gender struct {
-	Included []string `json:"included,omitempty"`
-}
-
-type AdminArea struct {
-	Included []string `json:"included,omitempty"`
-}
-
-type Locality struct {
-	Included []string `json:"included,omitempty"`
-}
-
-type Daypart struct {
-	UserTime UserTime `json:"userTime,omitempty"`
-}
-
-type UserTime struct {
-	Included []string `json:"included,omitempty"`
 }
 
 // List function to get Adgroups from campaign

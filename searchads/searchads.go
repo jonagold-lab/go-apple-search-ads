@@ -17,7 +17,7 @@ import (
 )
 
 const (
-	defaultBaseURL = "https://api.searchads.apple.com/api/v1/"
+	defaultBaseURL = "https://api.searchads.apple.com/api/v2/"
 	userAgent      = "go-apple-search-ads"
 )
 
