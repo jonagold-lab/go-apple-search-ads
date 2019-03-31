@@ -58,13 +58,13 @@ func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaig
 		return nil, nil, err
 	}
 
-	Targetingkeywords := []*TargetingKeyword{}
-	resp, err := s.client.Do(ctx, req, Targetingkeywords)
+	targetingkeywords := []*TargetingKeyword{}
+	resp, err := s.client.Do(ctx, req, &targetingkeywords)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return Targetingkeywords, resp, nil
+	return targetingkeywords, resp, nil
 }
 
 // Delete will remove an existing Targeting on a Adgroup
