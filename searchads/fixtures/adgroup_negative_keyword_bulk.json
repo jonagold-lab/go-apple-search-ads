@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "campaignId": 1234,
+      "adGroupId": 1234,
+      "text": "i do negative keywords",
+      "status": "ACTIVE",
+      "matchType": "EXACT",
+      "modificationTime": "2019-02-22T15:25:46.851",
+      "deleted": false
+    }
+  ],
+  "pagination": { "totalResults": 1, "startIndex": 0, "itemsPerPage": 1000 },
+  "error": null
+}

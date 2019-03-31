@@ -53,7 +53,6 @@ func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaig
 		return nil, nil, err
 	}
 	negativekeywords := []*NegativeKeyword{}
-
 	resp, err := s.client.Do(ctx, req, &negativekeywords)
 	if err != nil {
 		return nil, resp, err
@@ -119,9 +118,8 @@ func (s *AdGroupNegativeKeywordServive) CreateBulk(ctx context.Context, campaign
 	if err != nil {
 		return nil, nil, err
 	}
-
 	negativekeywords := []*NegativeKeyword{}
-	resp, err := s.client.Do(ctx, req, negativekeywords)
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
 	if err != nil {
 		return nil, resp, err
 	}
