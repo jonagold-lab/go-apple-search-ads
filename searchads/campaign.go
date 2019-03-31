@@ -26,7 +26,7 @@ type Campaign struct {
 	EndTime                            string            `json:"endTime,omitempty"`
 	Deleted                            bool              `json:"deleted,omitempty"`
 	CountriesOrRegions                 []CountryCode     `json:"countriesOrRegions,omitempty"`
-	CountryOrRegionServingStateReasons []string          `json:"CountryOrRegionServingStateReasons,omitempty"`
+	CountryOrRegionServingStateReasons interface{}       `json:"CountryOrRegionServingStateReasons,omitempty"`
 	SapinLawResponse                   SapinLawResponse  `json:"sapinLawResponse,omitempty"`
 	LocInvoiceDetails                  LocInvoiceDetails `json:"locInvoiceDetails,omitempty"`
 }

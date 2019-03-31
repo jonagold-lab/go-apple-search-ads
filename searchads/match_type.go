@@ -5,24 +5,24 @@ import (
 	"fmt"
 )
 
-// MatchType type to represent enum of MatchType (EXACT/BORAD)
+// MatchType type to represent enum of MatchType (EXACT/BROAD)
 type MatchType byte
 
-// EXACT and BORAD enum values
+// EXACT and BROAD enum values
 const (
 	EXACT MatchType = iota
-	BORAD
+	BROAD
 )
 
 var (
 	_MatchTypeNameToValue = map[string]MatchType{
 		"EXACT": EXACT,
-		"BORAD": BORAD,
+		"BROAD": BROAD,
 	}
 
 	_MatchTypeValueToName = map[MatchType]string{
 		EXACT: "EXACT",
-		BORAD: "BORAD",
+		BROAD: "BROAD",
 	}
 )
 
@@ -31,7 +31,7 @@ func init() {
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_MatchTypeNameToValue = map[string]MatchType{
 			interface{}(EXACT).(fmt.Stringer).String(): EXACT,
-			interface{}(BORAD).(fmt.Stringer).String(): BORAD,
+			interface{}(BROAD).(fmt.Stringer).String(): BROAD,
 		}
 	}
 }

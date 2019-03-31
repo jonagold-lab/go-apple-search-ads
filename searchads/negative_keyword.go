@@ -7,14 +7,14 @@ import (
 
 // NegativeKeyword to define negative Keyword and connection to other
 type NegativeKeyword struct {
-	ID               int       `json:"id,omitempty"`
-	CampaignID       int       `json:"campaignId,omitempty"`
-	AdGroupID        int       `json:"adGroupId,omitempty"`
-	ModificationTime string    `json:"modificationTime,omitempty"`
-	Text             string    `json:"text,omitempty"`
-	MatchType        MatchType `json:"matchType,omitempty"`
-	Status           Status    `json:"status,omitempty"`
-	Deleted          bool      `json:"deleted,omitempty"`
+	ID               int           `json:"id,omitempty"`
+	CampaignID       int           `json:"campaignId,omitempty"`
+	AdGroupID        int           `json:"adGroupId,omitempty"`
+	ModificationTime string        `json:"modificationTime,omitempty"`
+	Text             string        `json:"text,omitempty"`
+	MatchType        MatchType     `json:"matchType,omitempty"`
+	Status           KeywordStatus `json:"status,omitempty"`
+	Deleted          bool          `json:"deleted,omitempty"`
 }
 
 // CampaignNegativeKeywordServive to handle Negative Keywords of
@@ -52,13 +52,12 @@ func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaig
 	if err != nil {
 		return nil, nil, err
 	}
-
 	negativekeywords := []*NegativeKeyword{}
-	resp, err := s.client.Do(ctx, req, negativekeywords)
+
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
 	if err != nil {
 		return nil, resp, err
 	}
-
 	return negativekeywords, resp, nil
 }
 

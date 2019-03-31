@@ -94,7 +94,10 @@ func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) (*C
 	c := &Client{client: httpClient, BaseURL: baseURL, UserAgent: userAgent, OrgID: orgID}
 	c.common.client = c
 	c.Campaign = (*CampaignService)(&c.common)
+	c.CampaignNegativeKeyword = (*CampaignNegativeKeywordServive)(&c.common)
 	c.AdGroup = (*AdGroupService)(&c.common)
+	c.AdGroupNegativeKeyword = (*AdGroupNegativeKeywordServive)(&c.common)
+	c.AdGroupTargetingKeyword = (*AdGroupTargetingKeywordServive)(&c.common)
 	c.ACL = (*ACLService)(&c.common)
 	return c, nil
 }
@@ -108,7 +111,6 @@ func (c *Client) NewRequest(method, urlStr string, body interface{}) (*http.Requ
 	if err != nil {
 		return nil, err
 	}
-
 	var buf io.ReadWriter
 	if body != nil {
 		buf = new(bytes.Buffer)

@@ -14,7 +14,7 @@ import (
 const (
 	// baseURLPath is a non-empty Client.BaseURL path to use during tests,
 	// to ensure relative URLs are used for all endpoints. See issue #752.
-	baseURLPath = "/api/v1"
+	baseURLPath = "/api/v2"
 )
 
 func testMethod(t *testing.T, r *http.Request, want string) {
