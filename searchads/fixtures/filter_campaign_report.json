@@ -1,0 +1,29 @@
+{
+  "startTime": "2019-04-01",
+  "endTime": "2019-04-01",
+  "granularity": "HOURLY",
+  "selector": {
+    "orderBy": [
+      {
+        "field": "countryOrRegion",
+        "sortOrder": "ASCENDING"
+      }
+    ],
+    "conditions": [
+      {
+        "field": "countriesOrRegions",
+        "operator": "CONTAINS_ANY",
+        "values": ["US", "GB"]
+      }
+    ],
+    "pagination": {
+      "offset": 0,
+      "limit": 1000
+    }
+  },
+  "groupBy": ["countryOrRegion"],
+  "timeZone": "UTC",
+  "returnRecordsWithNoMetrics": true,
+  "returnRowTotals": true,
+  "returnGrandTotals": true
+}

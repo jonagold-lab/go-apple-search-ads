@@ -34,6 +34,7 @@ type Client struct {
 	CampaignNegativeKeyword *CampaignNegativeKeywordServive
 	AdGroupNegativeKeyword  *AdGroupNegativeKeywordServive
 	AdGroupTargetingKeyword *AdGroupTargetingKeywordServive
+	Report                  *ReportServive
 }
 
 type service struct {
@@ -99,6 +100,7 @@ func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) (*C
 	c.AdGroupNegativeKeyword = (*AdGroupNegativeKeywordServive)(&c.common)
 	c.AdGroupTargetingKeyword = (*AdGroupTargetingKeywordServive)(&c.common)
 	c.ACL = (*ACLService)(&c.common)
+	c.Report = (*ReportServive)(&c.common)
 	return c, nil
 }
 

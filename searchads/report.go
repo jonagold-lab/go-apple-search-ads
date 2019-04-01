@@ -1,49 +1,244 @@
 package searchads
 
-type ReportingResponse struct {
-	Row []ReportingRow
+import (
+	"context"
+	"fmt"
+)
+
+// ReportServive a service to do campaign based reports
+type ReportServive service
+
+// CampaignReport to hold Reports of campaign especially Metadata
+type CampaignReport struct {
+	ReportingDataResponse CampaignReportingDataResponse `json:"reportingDataResponse"`
 }
 
-type ReportingRow struct {
-	Metadata    Metadata
-	Total       Total
-	Granularity []GranularityObj
+type CampaignReportingDataResponse struct {
+	Row         []CampaignReportRow `json:"row"`
+	GrandTotals GrandTotals         `json:"grandTotals"`
 }
 
-type GranularityObj struct {
-	Date string
-	Statistics
+type CampaignReportRow struct {
+	Other       bool             `json:"other"`
+	Metadata    CampaignMetadata `json:"metadata"`
+	Granularity Statistics       `json:"granularity,omitemtpy"`
+	Total       Statistics       `json:"total"`
+}
+type CampaignMetadata struct {
+	CampaignID                         int           `json:"campaignId"`
+	CampaignName                       string        `json:"campaignName"`
+	Deleted                            bool          `json:"deleted"`
+	CampaignStatus                     Status        `json:"campaignStatus"`
+	App                                App           `json:"app"`
+	ServingStatus                      ServingStatus `json:"servingStatus"`
+	ServingStateReasons                interface{}   `json:"servingStateReasons,omitemtpy"`
+	CountriesOrRegions                 []CountryCode `json:"countriesOrRegions"`
+	ModificationTime                   string        `json:"modificationTime"`
+	TotalBudget                        Amount        `json:"totalBudget"`
+	DailyBudget                        Amount        `json:"dailyBudget"`
+	DisplayStatus                      Status        `json:"displayStatus"`
+	OrgID                              int           `json:"orgId"`
+	CountryOrRegionServingStateReasons interface{}   `json:"countryOrRegionServingStateReasons"`
+	CountryOrRegion                    CountryCode   `json:"countryOrRegion"`
 }
 
-type Metadata struct {
+// Campaigns to get reports from all campaigns with filter
+func (s *ReportServive) Campaigns(ctx context.Context, filter *ReportFilter) (*CampaignReport, *Response, error) {
+	u := fmt.Sprintf("reports/campaigns")
+	req, err := s.client.NewRequest("POST", u, filter)
+	if err != nil {
+		return nil, nil, err
+	}
+	report := new(CampaignReport)
+	resp, err := s.client.Do(ctx, req, &report)
+	if err != nil {
+		return nil, resp, err
+	}
+	return report, resp, nil
 }
 
-type Total struct {
-	LocalSpend Amount
-	Statistics
+// AdGroupReport to hold Reports of campaign especially Metadata
+type AdGroupReport struct {
+	ReportingDataResponse AdGroupReportingDataResponse `json:"reportingDataResponse"`
+}
+
+type AdGroupReportingDataResponse struct {
+	Row         []AdGroupReportRow `json:"row"`
+	GrandTotals GrandTotals        `json:"grandTotals"`
+}
+
+type AdGroupReportRow struct {
+	Other       bool            `json:"other"`
+	Metadata    AdGroupMetadata `json:"metadata"`
+	Granularity Statistics      `json:"granularity,omitemtpy"`
+	Total       Statistics      `json:"total"`
+}
+type AdGroupMetadata struct {
+	AdGroupID                  int           `json:"adGroupId"`
+	AdGroupName                string        `json:"adGroupName"`
+	StartTime                  string        `json:"startTime"`
+	EndTime                    string        `json:"endTime,omitempty"`
+	CpaGoal                    Amount        `json:"cpcGoal"`
+	DefaultCpaGoal             Amount        `json:"defaultCpcGoal"`
+	Deleted                    bool          `json:"deleted"`
+	AdGroupStatus              Status        `json:"adGroupStatus"`
+	AdGroupServingStatus       ServingStatus `json:"adGroupServingStatus"`
+	AdGroupServingStateReasons interface{}   `json:"servingStateReasons,omitemtpy"`
+	ModificationTime           string        `json:"modificationTime"`
+	AdGroupDisplayStatus       Status        `json:"adGroupDisplayStatus"`
+	AutomatedKeywordsOptIn     bool          `json:"automatedKeywordsOptIn"`
+}
+
+// AdGroups to return reports of Adgroups
+func (s *ReportServive) AdGroups(ctx context.Context, campaignID int, filter *ReportFilter) (*AdGroupReport, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	u := fmt.Sprintf("reports/campaigns/{campaignID}/adgroups")
+	req, err := s.client.NewRequest("POST", u, filter)
+	if err != nil {
+		return nil, nil, err
+	}
+	report := new(AdGroupReport)
+	resp, err := s.client.Do(ctx, req, &report)
+	if err != nil {
+		return nil, resp, err
+	}
+	return report, resp, nil
+}
+
+// KeywordReport to hold Reports of campaign especially Metadata
+type KeywordReport struct {
+	ReportingDataResponse KeywordReportingDataResponse `json:"reportingDataResponse"`
+}
+
+type KeywordReportingDataResponse struct {
+	Row         []KeywordReportRow `json:"row"`
+	GrandTotals GrandTotals        `json:"grandTotals"`
+}
+
+type KeywordReportRow struct {
+	Other       bool            `json:"other"`
+	Metadata    KeywordMetadata `json:"metadata"`
+	Granularity Statistics      `json:"granularity,omitemtpy"`
+	Total       Statistics      `json:"total"`
+}
+type KeywordMetadata struct {
+	KeywordID            int       `json:"keywordId"`
+	Keyword              string    `json:"keyword"`
+	KeywordStatus        Status    `json:"keywordStatus"`
+	MatchType            MatchType `json:"matchType"`
+	BidAmout             Amount    `json:"bidAmount"`
+	KeywordDisplayStatus string    `json:"keywordDisplayStatus"`
+	Deleted              bool      `json:"deleted"`
+	AdGroupID            int       `json:"adGroupId"`
+	AdGroupName          string    `json:"adGroupName"`
+	AdGroupDeleted       bool      `json:"adGroupDeleted"`
+	ModificationTime     string    `json:"modificationTime"`
+}
+
+// Keywords to return reports of Kewords
+func (s *ReportServive) Keywords(ctx context.Context, campaignID int, filter *ReportFilter) (*KeywordReport, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	u := fmt.Sprintf("reports/campaigns/{campaignID}/keywords")
+	req, err := s.client.NewRequest("POST", u, filter)
+	if err != nil {
+		return nil, nil, err
+	}
+	report := new(KeywordReport)
+	resp, err := s.client.Do(ctx, req, &report)
+	if err != nil {
+		return nil, resp, err
+	}
+	return report, resp, nil
+}
+
+// SearchTermdReport to hold Reports of campaign especially Metadata
+type SearchTermdReport struct {
+	ReportingDataResponse SearchTermdReportingDataResponse `json:"reportingDataResponse"`
+}
+
+type SearchTermdReportingDataResponse struct {
+	Row         []SearchTermdReportRow `json:"row"`
+	GrandTotals GrandTotals            `json:"grandTotals"`
+}
+
+type SearchTermdReportRow struct {
+	Other       bool                `json:"other"`
+	Metadata    SearchTermdMetadata `json:"metadata"`
+	Granularity Statistics          `json:"granularity,omitemtpy"`
+	Total       Statistics          `json:"total"`
+}
+type SearchTermdMetadata struct {
+	KeywordID            int              `json:"keywordId"`
+	Keyword              string           `json:"keyword"`
+	MatchType            MatchType        `json:"matchType"`
+	BidAmout             Amount           `json:"bidAmount"`
+	KeywordDisplayStatus string           `json:"keywordDisplayStatus"`
+	Deleted              bool             `json:"deleted"`
+	AdGroupID            int              `json:"adGroupId"`
+	AdGroupName          string           `json:"adGroupName"`
+	AdGroupDeleted       bool             `json:"adGroupDeleted"`
+	ModificationTime     string           `json:"modificationTime"`
+	SearchTermText       *string          `json:"searchTermText"`
+	SearchTermSource     SearchTermSource `json:"searchTermSource"`
+}
+
+// SearchTerms to return reports of SearchTerms
+func (s *ReportServive) SearchTerms(ctx context.Context, campaignID int, filter *ReportFilter) (*SearchTermdReport, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	u := fmt.Sprintf("reports/campaigns/{campaignID}/searchterms")
+	req, err := s.client.NewRequest("POST", u, filter)
+	if err != nil {
+		return nil, nil, err
+	}
+	report := new(SearchTermdReport)
+	resp, err := s.client.Do(ctx, req, &report)
+	if err != nil {
+		return nil, resp, err
+	}
+	return report, resp, nil
+}
+
+// General Report data model stuff
+
+type GrandTotals struct {
+	Other bool       `json:"other"`
+	Total Statistics `json:"total"`
 }
 
 type Statistics struct {
-	Taps                    int
-	Conversions             int
-	AvgCPA                  Amount
-	AvgCPT                  Amount
-	TTR                     float64
-	ConversionRate          float64
-	Impressions             int
-	ConversionsLATOn        int
-	ConversionsLATOff       int
-	ConversionsNewDownloads int
-	ConversionsRedownloads  int
+	Impressions    int     `json:"impressions"`
+	Taps           int     `json:"taps"`
+	Installs       int     `json:"installs"`
+	NewDownloads   int     `json:"newDownloads"`
+	Redownloads    int     `json:"redownloads"`
+	LatOnInstalls  int     `json:"latOnInstalls"`
+	LatOffInstalls int     `json:"latOffInstalls"`
+	TTR            float64 `json:"ttr"`
+	AvgCPA         Amount  `json:"avgCPA"`
+	AvgCPT         Amount  `json:"avgCPT"`
+	LocalSpend     Amount  `json:"localSpent"`
+	ConversionRate float64 `json:"conversionRate"`
+	Date           string  `json:"date,omitemtpy"`
+}
+
+type App struct {
+	AppName string `json:"appName"`
+	AdamID  int    `json:"adamId"`
 }
 
 type ReportFilter struct {
-	StartTime                  string      `json:"startTime,omitempty"`
-	EndTime                    string      `json:"endTime,omitempty"`
+	StartTime                  string      `json:"startTime"`
+	EndTime                    string      `json:"endTime"`
 	TimeZone                   TimeZone    `json:"timeZone,omitempty"`
 	Granularity                Granularity `json:"granularity,omitempty"`
-	Selector                   Selector    `json:"selector,omitempty"`
-	GroupBy                    string      `json:"groupBy,omitempty"`
+	Selector                   Selector    `json:"selector"`
+	GroupBy                    []string    `json:"groupBy,omitempty"`
 	ReturnRowTotals            bool        `json:"returnRowTotals,omitempty"`
 	ReturnGrandTotals          bool        `json:"returnGrandTotals,omitempty"`
 	ReturnRecordsWithNoMetrics bool        `json:"returnRecordsWithNoMetrics,omitempty"`

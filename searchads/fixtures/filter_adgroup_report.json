@@ -1,0 +1,23 @@
+{
+  "startTime": "2019-04-01",
+  "endTime": "2019-04-01",
+  "granularity": "HOURLY",
+  "selector": {
+    "orderBy": [
+      {
+        "field": "adGroupId",
+        "sortOrder": "ASCENDING"
+      }
+    ],
+    "conditions": [],
+    "pagination": {
+      "offset": 0,
+      "limit": 1000
+    }
+  },
+  "groupBy": [],
+  "timeZone": "UTC",
+  "returnRecordsWithNoMetrics": true,
+  "returnRowTotals": true,
+  "returnGrandTotals": true
+}

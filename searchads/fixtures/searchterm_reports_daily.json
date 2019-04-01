@@ -1,0 +1,32 @@
+{
+  "data": {
+    "reportingDataResponse": {
+      "row": [
+        {
+          "other": true,
+          "granularity": [
+            {
+              "localSpend": { "amount": "0", "currency": "EUR" },
+              "date": "2019-04-01"
+            }
+          ],
+          "metadata": {
+            "keywordId": 262823190,
+            "keyword": "back pain",
+            "matchType": "EXACT",
+            "bidAmount": { "amount": "12", "currency": "EUR" },
+            "deleted": false,
+            "keywordDisplayStatus": "RUNNING",
+            "adGroupId": 262770380,
+            "adGroupName": "Exact Match",
+            "adGroupDeleted": false,
+            "searchTermText": null,
+            "searchTermSource": "TARGETED"
+          }
+        }
+      ]
+    }
+  },
+  "pagination": { "totalResults": 1, "startIndex": 0, "itemsPerPage": 1 },
+  "error": null
+}
