@@ -31,7 +31,7 @@ type CampaignMetadata struct {
 	CampaignStatus                     Status            `json:"campaignStatus"`
 	App                                App               `json:"app"`
 	ServingStatus                      ServingStatus     `json:"servingStatus"`
-	ServingStateReasons                *string           `json:"servingStateReasons,omitemtpy"`
+	ServingStateReasons                *string           `json:"servingStateReasons"`
 	CountriesOrRegions                 []CountryCode     `json:"countriesOrRegions"`
 	ModificationTime                   string            `json:"modificationTime"`
 	TotalBudget                        Amount            `json:"totalBudget"`
@@ -74,19 +74,19 @@ type AdGroupReportRow struct {
 	Total       Statistics      `json:"total"`
 }
 type AdGroupMetadata struct {
-	AdGroupID                  int               `json:"adGroupId"`
-	AdGroupName                string            `json:"adGroupName"`
-	StartTime                  string            `json:"startTime"`
-	EndTime                    string            `json:"endTime,omitempty"`
-	CpaGoal                    Amount            `json:"cpcGoal"`
-	DefaultCpaGoal             Amount            `json:"defaultCpcGoal"`
-	Deleted                    bool              `json:"deleted"`
-	AdGroupStatus              Status            `json:"adGroupStatus"`
-	AdGroupServingStatus       ServingStatus     `json:"adGroupServingStatus"`
-	AdGroupServingStateReasons map[string]string `json:"servingStateReasons,omitemtpy"`
-	ModificationTime           string            `json:"modificationTime"`
-	AdGroupDisplayStatus       DisplayStatus     `json:"adGroupDisplayStatus"`
-	AutomatedKeywordsOptIn     bool              `json:"automatedKeywordsOptIn"`
+	AdGroupID                  int                `json:"adGroupId"`
+	AdGroupName                string             `json:"adGroupName"`
+	StartTime                  string             `json:"startTime"`
+	EndTime                    *string            `json:"endTime,omitempty"`
+	CpaGoal                    Amount             `json:"cpaGoal"`
+	DefaultCpcBid              Amount             `json:"defaultCpcBid"`
+	Deleted                    bool               `json:"deleted"`
+	AdGroupStatus              Status             `json:"adGroupStatus"`
+	AdGroupServingStatus       ServingStatus      `json:"adGroupServingStatus"`
+	AdGroupServingStateReasons *map[string]string `json:"servingStateReasons"`
+	ModificationTime           string             `json:"modificationTime"`
+	AdGroupDisplayStatus       DisplayStatus      `json:"adGroupDisplayStatus"`
+	AutomatedKeywordsOptIn     bool               `json:"automatedKeywordsOptIn"`
 }
 
 // AdGroups to return reports of Adgroups
@@ -94,7 +94,7 @@ func (s *ReportServive) AdGroups(ctx context.Context, campaignID int, filter *Re
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
-	u := fmt.Sprintf("reports/campaigns/{campaignID}/adgroups")
+	u := fmt.Sprintf("reports/campaigns/%d/adgroups", campaignID)
 	req, err := s.client.NewRequest("POST", u, filter)
 	if err != nil {
 		return nil, nil, err
@@ -142,7 +142,7 @@ func (s *ReportServive) Keywords(ctx context.Context, campaignID int, filter *Re
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
-	u := fmt.Sprintf("reports/campaigns/{campaignID}/keywords")
+	u := fmt.Sprintf("reports/campaigns/%d/keywords", campaignID)
 	req, err := s.client.NewRequest("POST", u, filter)
 	if err != nil {
 		return nil, nil, err
@@ -191,7 +191,7 @@ func (s *ReportServive) SearchTerms(ctx context.Context, campaignID int, filter 
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
-	u := fmt.Sprintf("reports/campaigns/{campaignID}/searchterms")
+	u := fmt.Sprintf("reports/campaigns/%d/searchterms", campaignID)
 	req, err := s.client.NewRequest("POST", u, filter)
 	if err != nil {
 		return nil, nil, err
@@ -235,20 +235,20 @@ type App struct {
 type ReportFilter struct {
 	StartTime                  string      `json:"startTime"`
 	EndTime                    string      `json:"endTime"`
-	TimeZone                   TimeZone    `json:"timeZone,omitempty"`
-	Granularity                Granularity `json:"granularity,omitempty"`
+	TimeZone                   TimeZone    `json:"timeZone"`
+	Granularity                Granularity `json:"granularity"`
 	Selector                   Selector    `json:"selector"`
-	GroupBy                    []string    `json:"groupBy,omitempty"`
-	ReturnRowTotals            bool        `json:"returnRowTotals,omitempty"`
-	ReturnGrandTotals          bool        `json:"returnGrandTotals,omitempty"`
-	ReturnRecordsWithNoMetrics bool        `json:"returnRecordsWithNoMetrics,omitempty"`
+	GroupBy                    []string    `json:"groupBy"`
+	ReturnRowTotals            bool        `json:"returnRowTotals"`
+	ReturnGrandTotals          bool        `json:"returnGrandTotals"`
+	ReturnRecordsWithNoMetrics bool        `json:"returnRecordsWithNoMetrics"`
 }
 
 type Selector struct {
-	Conditions []Condition      `json:"conditions,omitempty"`
-	Fields     []string         `json:"fields,omitempty"`
-	OrderBy    []OrderBy        `json:"orderBy,omitempty"`
-	Pagination FilterPagination `json:"pagination,omitempty"`
+	Conditions []Condition      `json:"conditions"`
+	Fields     []string         `json:"fields"`
+	OrderBy    []OrderBy        `json:"orderBy"`
+	Pagination FilterPagination `json:"pagination"`
 }
 
 type FilterPagination struct {
@@ -257,8 +257,8 @@ type FilterPagination struct {
 }
 
 type OrderBy struct {
-	Field     string    `json:"field,omitempty"`
-	SortOrder SortOrder `json:"sortOrder,omitempty"`
+	Field     string    `json:"field"`
+	SortOrder SortOrder `json:"sortOrder"`
 }
 
 type Condition struct {

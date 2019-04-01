@@ -99,3 +99,80 @@ func TestReportServive_Campaigns(t *testing.T) {
 		t.Errorf("Report.Campaigns First Row Metadata returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata, metadata)
 	}
 }
+
+func TestReportServive_AdGroups(t *testing.T) {
+	client, mux, _, teardown := setup()
+	defer teardown()
+
+	filter := &ReportFilter{
+		StartTime:   "2019-04-01",
+		EndTime:     "2019-04-01",
+		Granularity: HOURLY,
+		Selector: Selector{
+			OrderBy: []OrderBy{
+				OrderBy{
+					Field:     "adGroupId",
+					SortOrder: ASCENDING,
+				},
+			},
+			Conditions: []Condition{},
+			Pagination: FilterPagination{
+				Offset: 0,
+				Limit:  1000,
+			},
+		},
+		GroupBy:                    []string{},
+		TimeZone:                   UTC,
+		ReturnRowTotals:            true,
+		ReturnGrandTotals:          true,
+		ReturnRecordsWithNoMetrics: true,
+	}
+
+	wantAcceptHeaders := []string{"application/json"}
+	mux.HandleFunc("/reports/campaigns/1234/adgroups", func(w http.ResponseWriter, r *http.Request) {
+		v := new(ReportFilter)
+		json.NewDecoder(r.Body).Decode(v)
+		testMethod(t, r, "POST")
+		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
+		if !reflect.DeepEqual(v, filter) {
+			t.Errorf("Request body = %+v, want %+v", v, filter)
+		}
+		w.Write(loadFixture("report_adgroups_hourly.json"))
+	})
+
+	got, _, err := client.Report.AdGroups(context.Background(), 1234, filter)
+
+	if err != nil {
+		t.Errorf("Report.AdGroups returned error: %v", err)
+	}
+	metadata := AdGroupMetadata{
+		AdGroupID:   262770380,
+		AdGroupName: "Exact Match",
+		StartTime:   "2019-03-21T00:00:00.000",
+		EndTime:     nil,
+		CpaGoal: Amount{
+			Amount:   "10",
+			Currency: "EUR",
+		},
+		DefaultCpcBid: Amount{
+			Amount:   "12",
+			Currency: "EUR",
+		},
+		Deleted:                    false,
+		AdGroupStatus:              ENABLED,
+		AdGroupServingStatus:       RUNNING,
+		AdGroupServingStateReasons: nil,
+		ModificationTime:           "2019-03-20T23:58:51.437",
+		AdGroupDisplayStatus:       DS_RUNNING,
+		AutomatedKeywordsOptIn:     false,
+	}
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata.CpaGoal, metadata.CpaGoal) {
+		t.Errorf("Report.AdGroups First Row Metadata CpaGoal returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata.CpaGoal, metadata.CpaGoal)
+	}
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata.DefaultCpcBid, metadata.DefaultCpcBid) {
+		t.Errorf("Report.AdGroups First Row Metadata DefaultCpcBid returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata.DefaultCpcBid, metadata.DefaultCpcBid)
+	}
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata, metadata) {
+		t.Errorf("Report.AdGroups First Row Metadata returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata, metadata)
+	}
+}
