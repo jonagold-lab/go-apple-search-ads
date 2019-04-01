@@ -11,6 +11,7 @@ type Operator byte
 // IN, EQUALS, GREATER_THAN, LESS_THAN and STARTSWITH enum values
 const (
 	IN Operator = iota
+	CONTAINS_ANY
 	EQUALS
 	GREATER_THAN
 	LESS_THAN
@@ -20,6 +21,7 @@ const (
 var (
 	_OperatorNameToValue = map[string]Operator{
 		"IN":           IN,
+		"CONTAINS_ANY": CONTAINS_ANY,
 		"EQUALS":       EQUALS,
 		"GREATER_THAN": GREATER_THAN,
 		"LESS_THAN":    LESS_THAN,
@@ -28,6 +30,7 @@ var (
 
 	_OperatorValueToName = map[Operator]string{
 		IN:           "IN",
+		CONTAINS_ANY: "CONTAINS_ANY",
 		EQUALS:       "EQUALS",
 		GREATER_THAN: "GREATER_THAN",
 		LESS_THAN:    "LESS_THAN",
@@ -40,6 +43,7 @@ func init() {
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_OperatorNameToValue = map[string]Operator{
 			interface{}(IN).(fmt.Stringer).String():           IN,
+			interface{}(CONTAINS_ANY).(fmt.Stringer).String(): CONTAINS_ANY,
 			interface{}(EQUALS).(fmt.Stringer).String():       EQUALS,
 			interface{}(GREATER_THAN).(fmt.Stringer).String(): GREATER_THAN,
 			interface{}(LESS_THAN).(fmt.Stringer).String():    LESS_THAN,
