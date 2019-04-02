@@ -129,7 +129,7 @@ func TestReportServive_AdGroups(t *testing.T) {
 	}
 
 	wantAcceptHeaders := []string{"application/json"}
-	mux.HandleFunc("/reports/campaigns/1234/adgroups", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/reports/campaigns/262806613/adgroups", func(w http.ResponseWriter, r *http.Request) {
 		v := new(ReportFilter)
 		json.NewDecoder(r.Body).Decode(v)
 		testMethod(t, r, "POST")
@@ -140,7 +140,7 @@ func TestReportServive_AdGroups(t *testing.T) {
 		w.Write(loadFixture("report_adgroups_hourly.json"))
 	})
 
-	got, _, err := client.Report.AdGroups(context.Background(), 1234, filter)
+	got, _, err := client.Report.AdGroups(context.Background(), 262806613, filter)
 
 	if err != nil {
 		t.Errorf("Report.AdGroups returned error: %v", err)
@@ -174,5 +174,145 @@ func TestReportServive_AdGroups(t *testing.T) {
 	}
 	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata, metadata) {
 		t.Errorf("Report.AdGroups First Row Metadata returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata, metadata)
+	}
+}
+
+func TestReportServive_SearchTerms(t *testing.T) {
+	client, mux, _, teardown := setup()
+	defer teardown()
+
+	filter := &ReportFilter{
+		StartTime:   "2019-03-01",
+		EndTime:     "2019-04-01",
+		Granularity: DAILY,
+		Selector: Selector{
+			OrderBy: []OrderBy{
+				OrderBy{
+					Field:     "adGroupId",
+					SortOrder: ASCENDING,
+				},
+			},
+			Conditions: []Condition{},
+			Pagination: FilterPagination{
+				Offset: 0,
+				Limit:  1000,
+			},
+		},
+		GroupBy:                    []string{},
+		TimeZone:                   UTC,
+		ReturnRowTotals:            true,
+		ReturnGrandTotals:          true,
+		ReturnRecordsWithNoMetrics: true,
+	}
+
+	wantAcceptHeaders := []string{"application/json"}
+	mux.HandleFunc("/reports/campaigns/262806613/searchterms", func(w http.ResponseWriter, r *http.Request) {
+		v := new(ReportFilter)
+		json.NewDecoder(r.Body).Decode(v)
+		testMethod(t, r, "POST")
+		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
+		if !reflect.DeepEqual(v, filter) {
+			t.Errorf("Request body = %+v, want %+v", v, filter)
+		}
+		w.Write(loadFixture("report_searchterms_daily.json"))
+	})
+
+	got, _, err := client.Report.SearchTerms(context.Background(), 262806613, filter)
+
+	if err != nil {
+		t.Errorf("Report.SearchTerms returned error: %v", err)
+	}
+	metadata := SearchTermMetadata{
+		KeywordID: 262823190,
+		Keyword:   "back pain",
+		MatchType: EXACT,
+		BidAmount: Amount{
+			Amount:   "12",
+			Currency: "EUR",
+		},
+		KeywordDisplayStatus: KDS_RUNNING,
+		Deleted:              false,
+		AdGroupID:            262770380,
+		AdGroupName:          "Exact Match",
+		AdGroupDeleted:       false,
+		SearchTermText:       nil,
+		SearchTermSource:     TARGETED,
+	}
+
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata.BidAmount, metadata.BidAmount) {
+		t.Errorf("Report.SearchTerms First Row Metadata BidAmount returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata.BidAmount, metadata.BidAmount)
+	}
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata, metadata) {
+		t.Errorf("Report.SearchTerms First Row Metadata returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata, metadata)
+	}
+}
+
+func TestReportServive_Keywords(t *testing.T) {
+	client, mux, _, teardown := setup()
+	defer teardown()
+
+	filter := &ReportFilter{
+		StartTime:   "2019-03-01",
+		EndTime:     "2019-04-01",
+		Granularity: DAILY,
+		Selector: Selector{
+			OrderBy: []OrderBy{
+				OrderBy{
+					Field:     "adGroupId",
+					SortOrder: ASCENDING,
+				},
+			},
+			Conditions: []Condition{},
+			Pagination: FilterPagination{
+				Offset: 0,
+				Limit:  1000,
+			},
+		},
+		GroupBy:                    []string{},
+		TimeZone:                   UTC,
+		ReturnRowTotals:            true,
+		ReturnGrandTotals:          true,
+		ReturnRecordsWithNoMetrics: true,
+	}
+
+	wantAcceptHeaders := []string{"application/json"}
+	mux.HandleFunc("/reports/campaigns/262806613/keywords", func(w http.ResponseWriter, r *http.Request) {
+		v := new(ReportFilter)
+		json.NewDecoder(r.Body).Decode(v)
+		testMethod(t, r, "POST")
+		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
+		if !reflect.DeepEqual(v, filter) {
+			t.Errorf("Request body = %+v, want %+v", v, filter)
+		}
+		w.Write(loadFixture("report_keywords_daily.json"))
+	})
+
+	got, _, err := client.Report.Keywords(context.Background(), 262806613, filter)
+
+	if err != nil {
+		t.Errorf("Report.Keywords returned error: %v", err)
+	}
+	metadata := KeywordMetadata{
+		KeywordID:     262823190,
+		Keyword:       "back pain",
+		KeywordStatus: KEYWORD_ACTIVE,
+		MatchType:     EXACT,
+		BidAmount: Amount{
+			Amount:   "12",
+			Currency: "EUR",
+		},
+		Deleted:              false,
+		KeywordDisplayStatus: KDS_RUNNING,
+		AdGroupID:            262770380,
+		AdGroupName:          "Exact Match",
+		AdGroupDeleted:       false,
+		ModificationTime:     "2019-03-20T23:06:51.606",
+	}
+
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata.BidAmount, metadata.BidAmount) {
+		t.Errorf("Report.Keywords First Row Metadata BidAmount returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata.BidAmount, metadata.BidAmount)
+	}
+	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata, metadata) {
+		t.Errorf("Report.Keywords First Row Metadata returned %+v, want %+v", got.ReportingDataResponse.Row[0].Metadata, metadata)
 	}
 }

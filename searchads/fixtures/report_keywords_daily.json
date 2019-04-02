@@ -5,62 +5,6 @@
         {
           "other": false,
           "granularity": [
-            { "date": "2019-04-01 00" },
-            { "date": "2019-04-01 01" },
-            { "date": "2019-04-01 02" },
-            { "date": "2019-04-01 03" },
-            { "date": "2019-04-01 04" },
-            { "date": "2019-04-01 05" },
-            { "date": "2019-04-01 06" },
-            { "date": "2019-04-01 07" },
-            { "date": "2019-04-01 08" },
-            { "date": "2019-04-01 09" },
-            { "date": "2019-04-01 10" },
-            { "date": "2019-04-01 11" },
-            { "date": "2019-04-01 12" },
-            { "date": "2019-04-01 13" },
-            { "date": "2019-04-01 14" },
-            { "date": "2019-04-01 15" },
-            { "date": "2019-04-01 16" },
-            { "date": "2019-04-01 17" },
-            { "date": "2019-04-01 18" },
-            { "date": "2019-04-01 19" },
-            { "date": "2019-04-01 20" },
-            { "date": "2019-04-01 21" },
-            { "date": "2019-04-01 22" },
-            { "date": "2019-04-01 23" }
-          ],
-          "total": {
-            "impressions": 0,
-            "taps": 0,
-            "installs": 0,
-            "newDownloads": 0,
-            "redownloads": 0,
-            "latOnInstalls": 0,
-            "latOffInstalls": 0,
-            "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
-            "conversionRate": 0.0
-          },
-          "metadata": {
-            "keywordId": 262823191,
-            "keyword": "backpain",
-            "keywordStatus": "ACTIVE",
-            "matchType": "EXACT",
-            "bidAmount": { "amount": "12", "currency": "EUR" },
-            "deleted": false,
-            "keywordDisplayStatus": "RUNNING",
-            "adGroupId": 262770380,
-            "adGroupName": "Exact Match",
-            "adGroupDeleted": false,
-            "modificationTime": "2019-03-20T23:06:51.612"
-          }
-        },
-        {
-          "other": false,
-          "granularity": [
             {
               "impressions": 0,
               "taps": 0,
@@ -74,22 +18,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 00"
-            },
-            {
-              "impressions": 2,
-              "taps": 0,
-              "installs": 0,
-              "newDownloads": 0,
-              "redownloads": 0,
-              "latOnInstalls": 0,
-              "latOffInstalls": 0,
-              "ttr": 0.0,
-              "avgCPA": { "amount": "0", "currency": "EUR" },
-              "avgCPT": { "amount": "0", "currency": "EUR" },
-              "localSpend": { "amount": "0", "currency": "EUR" },
-              "conversionRate": 0.0,
-              "date": "2019-04-01 01"
+              "date": "2019-03-01"
             },
             {
               "impressions": 0,
@@ -104,7 +33,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 02"
+              "date": "2019-03-02"
             },
             {
               "impressions": 0,
@@ -119,7 +48,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 03"
+              "date": "2019-03-03"
             },
             {
               "impressions": 0,
@@ -134,7 +63,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 04"
+              "date": "2019-03-04"
             },
             {
               "impressions": 0,
@@ -149,7 +78,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 05"
+              "date": "2019-03-05"
             },
             {
               "impressions": 0,
@@ -164,7 +93,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 06"
+              "date": "2019-03-06"
             },
             {
               "impressions": 0,
@@ -179,7 +108,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 07"
+              "date": "2019-03-07"
             },
             {
               "impressions": 0,
@@ -194,7 +123,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 08"
+              "date": "2019-03-08"
             },
             {
               "impressions": 0,
@@ -209,7 +138,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 09"
+              "date": "2019-03-09"
             },
             {
               "impressions": 0,
@@ -224,7 +153,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 10"
+              "date": "2019-03-10"
             },
             {
               "impressions": 0,
@@ -239,7 +168,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 11"
+              "date": "2019-03-11"
             },
             {
               "impressions": 0,
@@ -254,7 +183,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 12"
+              "date": "2019-03-12"
             },
             {
               "impressions": 0,
@@ -269,7 +198,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 13"
+              "date": "2019-03-13"
             },
             {
               "impressions": 0,
@@ -284,7 +213,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 14"
+              "date": "2019-03-14"
             },
             {
               "impressions": 0,
@@ -299,7 +228,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 15"
+              "date": "2019-03-15"
             },
             {
               "impressions": 0,
@@ -314,7 +243,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 16"
+              "date": "2019-03-16"
             },
             {
               "impressions": 0,
@@ -329,7 +258,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 17"
+              "date": "2019-03-17"
             },
             {
               "impressions": 0,
@@ -344,7 +273,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 18"
+              "date": "2019-03-18"
             },
             {
               "impressions": 0,
@@ -359,7 +288,7 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 19"
+              "date": "2019-03-19"
             },
             {
               "impressions": 0,
@@ -374,7 +303,22 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 20"
+              "date": "2019-03-20"
+            },
+            {
+              "impressions": 3,
+              "taps": 2,
+              "installs": 1,
+              "newDownloads": 1,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 1,
+              "ttr": 0.6667,
+              "avgCPA": { "amount": "1.6352", "currency": "EUR" },
+              "avgCPT": { "amount": "0.8176", "currency": "EUR" },
+              "localSpend": { "amount": "1.6352", "currency": "EUR" },
+              "conversionRate": 0.5,
+              "date": "2019-03-21"
             },
             {
               "impressions": 0,
@@ -389,10 +333,10 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 21"
+              "date": "2019-03-22"
             },
             {
-              "impressions": 0,
+              "impressions": 4,
               "taps": 0,
               "installs": 0,
               "newDownloads": 0,
@@ -404,10 +348,55 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 22"
+              "date": "2019-03-23"
             },
             {
-              "impressions": 0,
+              "impressions": 11,
+              "taps": 5,
+              "installs": 3,
+              "newDownloads": 2,
+              "redownloads": 1,
+              "latOnInstalls": 0,
+              "latOffInstalls": 3,
+              "ttr": 0.4545,
+              "avgCPA": { "amount": "1.4444", "currency": "EUR" },
+              "avgCPT": { "amount": "0.8666", "currency": "EUR" },
+              "localSpend": { "amount": "4.3332", "currency": "EUR" },
+              "conversionRate": 0.6,
+              "date": "2019-03-24"
+            },
+            {
+              "impressions": 4,
+              "taps": 1,
+              "installs": 0,
+              "newDownloads": 0,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 0,
+              "ttr": 0.25,
+              "avgCPA": { "amount": "0", "currency": "EUR" },
+              "avgCPT": { "amount": "1.353", "currency": "EUR" },
+              "localSpend": { "amount": "1.353", "currency": "EUR" },
+              "conversionRate": 0.0,
+              "date": "2019-03-25"
+            },
+            {
+              "impressions": 6,
+              "taps": 2,
+              "installs": 1,
+              "newDownloads": 1,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 1,
+              "ttr": 0.3333,
+              "avgCPA": { "amount": "1.5114", "currency": "EUR" },
+              "avgCPT": { "amount": "0.7557", "currency": "EUR" },
+              "localSpend": { "amount": "1.5114", "currency": "EUR" },
+              "conversionRate": 0.5,
+              "date": "2019-03-26"
+            },
+            {
+              "impressions": 4,
               "taps": 0,
               "installs": 0,
               "newDownloads": 0,
@@ -419,23 +408,84 @@
               "avgCPT": { "amount": "0", "currency": "EUR" },
               "localSpend": { "amount": "0", "currency": "EUR" },
               "conversionRate": 0.0,
-              "date": "2019-04-01 23"
+              "date": "2019-03-27"
+            },
+            {
+              "impressions": 13,
+              "taps": 2,
+              "installs": 2,
+              "newDownloads": 2,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 2,
+              "ttr": 0.1538,
+              "avgCPA": { "amount": "1.0984", "currency": "EUR" },
+              "avgCPT": { "amount": "1.0984", "currency": "EUR" },
+              "localSpend": { "amount": "2.1968", "currency": "EUR" },
+              "conversionRate": 1.0,
+              "date": "2019-03-28"
+            },
+            {
+              "impressions": 10,
+              "taps": 4,
+              "installs": 2,
+              "newDownloads": 2,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 2,
+              "ttr": 0.4,
+              "avgCPA": { "amount": "2.4096", "currency": "EUR" },
+              "avgCPT": { "amount": "1.2048", "currency": "EUR" },
+              "localSpend": { "amount": "4.8191", "currency": "EUR" },
+              "conversionRate": 0.5,
+              "date": "2019-03-29"
+            },
+            {
+              "impressions": 9,
+              "taps": 5,
+              "installs": 2,
+              "newDownloads": 2,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 2,
+              "ttr": 0.5556,
+              "avgCPA": { "amount": "3.233", "currency": "EUR" },
+              "avgCPT": { "amount": "1.2932", "currency": "EUR" },
+              "localSpend": { "amount": "6.466", "currency": "EUR" },
+              "conversionRate": 0.4,
+              "date": "2019-03-30"
+            },
+            {
+              "impressions": 10,
+              "taps": 1,
+              "installs": 1,
+              "newDownloads": 1,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 1,
+              "ttr": 0.1,
+              "avgCPA": { "amount": "0.6056", "currency": "EUR" },
+              "avgCPT": { "amount": "0.6056", "currency": "EUR" },
+              "localSpend": { "amount": "0.6056", "currency": "EUR" },
+              "conversionRate": 1.0,
+              "date": "2019-03-31"
+            },
+            {
+              "impressions": 5,
+              "taps": 0,
+              "installs": 0,
+              "newDownloads": 0,
+              "redownloads": 0,
+              "latOnInstalls": 0,
+              "latOffInstalls": 0,
+              "ttr": 0.0,
+              "avgCPA": { "amount": "0", "currency": "EUR" },
+              "avgCPT": { "amount": "0", "currency": "EUR" },
+              "localSpend": { "amount": "0", "currency": "EUR" },
+              "conversionRate": 0.0,
+              "date": "2019-04-01"
             }
           ],
-          "total": {
-            "impressions": 2,
-            "taps": 0,
-            "installs": 0,
-            "newDownloads": 0,
-            "redownloads": 0,
-            "latOnInstalls": 0,
-            "latOffInstalls": 0,
-            "ttr": 0.0,
-            "avgCPA": { "amount": "0", "currency": "EUR" },
-            "avgCPT": { "amount": "0", "currency": "EUR" },
-            "localSpend": { "amount": "0", "currency": "EUR" },
-            "conversionRate": 0.0
-          },
           "metadata": {
             "keywordId": 262823190,
             "keyword": "back pain",
@@ -450,26 +500,9 @@
             "modificationTime": "2019-03-20T23:06:51.606"
           }
         }
-      ],
-      "grandTotals": {
-        "other": false,
-        "total": {
-          "impressions": 2,
-          "taps": 0,
-          "installs": 0,
-          "newDownloads": 0,
-          "redownloads": 0,
-          "latOnInstalls": 0,
-          "latOffInstalls": 0,
-          "ttr": 0.0,
-          "avgCPA": { "amount": "0", "currency": "EUR" },
-          "avgCPT": { "amount": "0", "currency": "EUR" },
-          "localSpend": { "amount": "0", "currency": "EUR" },
-          "conversionRate": 0.0
-        }
-      }
+      ]
     }
   },
-  "pagination": { "totalResults": 2, "startIndex": 0, "itemsPerPage": 2 },
+  "pagination": { "totalResults": 1, "startIndex": 0, "itemsPerPage": 1 },
   "error": null
 }

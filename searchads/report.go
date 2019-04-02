@@ -126,11 +126,11 @@ type KeywordReportRow struct {
 type KeywordMetadata struct {
 	KeywordID            int                  `json:"keywordId"`
 	Keyword              string               `json:"keyword"`
-	KeywordStatus        Status               `json:"keywordStatus"`
+	KeywordStatus        KeywordStatus        `json:"keywordStatus"`
 	MatchType            MatchType            `json:"matchType"`
-	BidAmout             Amount               `json:"bidAmount"`
-	KeywordDisplayStatus KeywordDisplayStatus `json:"keywordDisplayStatus"`
+	BidAmount            Amount               `json:"bidAmount"`
 	Deleted              bool                 `json:"deleted"`
+	KeywordDisplayStatus KeywordDisplayStatus `json:"keywordDisplayStatus"`
 	AdGroupID            int                  `json:"adGroupId"`
 	AdGroupName          string               `json:"adGroupName"`
 	AdGroupDeleted       bool                 `json:"adGroupDeleted"`
@@ -157,31 +157,30 @@ func (s *ReportServive) Keywords(ctx context.Context, campaignID int, filter *Re
 
 // SearchTermsReport to hold Reports of campaign especially Metadata
 type SearchTermsReport struct {
-	ReportingDataResponse SearchTermsReportingDataResponse `json:"reportingDataResponse"`
+	ReportingDataResponse SearchTermReportingDataResponse `json:"reportingDataResponse"`
 }
 
-type SearchTermsReportingDataResponse struct {
+type SearchTermReportingDataResponse struct {
 	Row         []SearchTermsReportRow `json:"row"`
 	GrandTotals GrandTotals            `json:"grandTotals"`
 }
 
 type SearchTermsReportRow struct {
-	Other       bool                `json:"other"`
-	Metadata    SearchTermsMetadata `json:"metadata"`
-	Granularity []Statistics        `json:"granularity,omitemtpy"`
-	Total       Statistics          `json:"total"`
+	Other       bool               `json:"other"`
+	Metadata    SearchTermMetadata `json:"metadata"`
+	Granularity []Statistics       `json:"granularity,omitemtpy"`
+	Total       Statistics         `json:"total"`
 }
-type SearchTermsMetadata struct {
+type SearchTermMetadata struct {
 	KeywordID            int                  `json:"keywordId"`
 	Keyword              string               `json:"keyword"`
 	MatchType            MatchType            `json:"matchType"`
-	BidAmout             Amount               `json:"bidAmount"`
+	BidAmount            Amount               `json:"bidAmount"`
 	KeywordDisplayStatus KeywordDisplayStatus `json:"keywordDisplayStatus"`
 	Deleted              bool                 `json:"deleted"`
 	AdGroupID            int                  `json:"adGroupId"`
 	AdGroupName          string               `json:"adGroupName"`
 	AdGroupDeleted       bool                 `json:"adGroupDeleted"`
-	ModificationTime     string               `json:"modificationTime"`
 	SearchTermText       *string              `json:"searchTermText"`
 	SearchTermSource     SearchTermSource     `json:"searchTermSource"`
 }
