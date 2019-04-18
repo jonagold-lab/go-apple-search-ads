@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestReportServive_Campaigns(t *testing.T) {
+func TestReportService_Campaigns(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -100,7 +100,7 @@ func TestReportServive_Campaigns(t *testing.T) {
 	}
 }
 
-func TestReportServive_AdGroups(t *testing.T) {
+func TestReportService_AdGroups(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -177,7 +177,7 @@ func TestReportServive_AdGroups(t *testing.T) {
 	}
 }
 
-func TestReportServive_SearchTerms(t *testing.T) {
+func TestReportService_SearchTerms(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -247,7 +247,7 @@ func TestReportServive_SearchTerms(t *testing.T) {
 	}
 }
 
-func TestReportServive_Keywords(t *testing.T) {
+func TestReportService_Keywords(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 

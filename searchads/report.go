@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-// ReportServive a service to do campaign based reports
-type ReportServive service
+// ReportService a service to do campaign based reports
+type ReportService service
 
 // CampaignReport to hold Reports of campaign especially Metadata
 type CampaignReport struct {
@@ -43,7 +43,7 @@ type CampaignMetadata struct {
 }
 
 // Campaigns to get reports from all campaigns with filter
-func (s *ReportServive) Campaigns(ctx context.Context, filter *ReportFilter) (*CampaignReport, *Response, error) {
+func (s *ReportService) Campaigns(ctx context.Context, filter *ReportFilter) (*CampaignReport, *Response, error) {
 	u := fmt.Sprintf("reports/campaigns")
 	req, err := s.client.NewRequest("POST", u, filter)
 	if err != nil {
@@ -90,7 +90,7 @@ type AdGroupMetadata struct {
 }
 
 // AdGroups to return reports of Adgroups
-func (s *ReportServive) AdGroups(ctx context.Context, campaignID int, filter *ReportFilter) (*AdGroupReport, *Response, error) {
+func (s *ReportService) AdGroups(ctx context.Context, campaignID int, filter *ReportFilter) (*AdGroupReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -138,7 +138,7 @@ type KeywordMetadata struct {
 }
 
 // Keywords to return reports of Kewords
-func (s *ReportServive) Keywords(ctx context.Context, campaignID int, filter *ReportFilter) (*KeywordReport, *Response, error) {
+func (s *ReportService) Keywords(ctx context.Context, campaignID int, filter *ReportFilter) (*KeywordReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -186,7 +186,7 @@ type SearchTermMetadata struct {
 }
 
 // SearchTerms to return reports of SearchTerms
-func (s *ReportServive) SearchTerms(ctx context.Context, campaignID int, filter *ReportFilter) (*SearchTermsReport, *Response, error) {
+func (s *ReportService) SearchTerms(ctx context.Context, campaignID int, filter *ReportFilter) (*SearchTermsReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
