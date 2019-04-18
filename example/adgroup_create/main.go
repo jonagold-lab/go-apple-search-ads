@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/maier-stefan/go-apple-search-ads/searchads"
+	"github.com/jonagold-lab/go-apple-search-ads/searchads"
 )
 
 func main() {

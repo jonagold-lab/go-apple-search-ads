@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// Granularity type to represent enum of Granularity (ORTZ/UTC)
+// Granularity type to represent enum of Granularity (HOURLY/DAILY/WEEKLY/MONTHLY)
 type Granularity byte
 
 // HOURLY, DAILY, WEEKLY and MONTHLY enum values

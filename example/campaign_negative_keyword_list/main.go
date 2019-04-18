@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/maier-stefan/go-apple-search-ads/searchads"
+	"github.com/jonagold-lab/go-apple-search-ads/searchads"
 )
 
 func main() {

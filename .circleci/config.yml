@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.11
-    working_directory: /go/src/github.com/maier-stefan/go-apple-search-ads
+    working_directory: /go/src/github.com/jonagold-lab/go-apple-search-ads
     steps:
       - checkout
       - run: go get -v -t -d ./...
