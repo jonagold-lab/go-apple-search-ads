@@ -237,26 +237,26 @@ type ReportFilter struct {
 	TimeZone                   TimeZone    `json:"timeZone"`
 	Granularity                Granularity `json:"granularity"`
 	Selector                   Selector    `json:"selector"`
-	GroupBy                    []string    `json:"groupBy"`
+	GroupBy                    []GroupBy   `json:"groupBy"`
 	ReturnRowTotals            bool        `json:"returnRowTotals"`
 	ReturnGrandTotals          bool        `json:"returnGrandTotals"`
 	ReturnRecordsWithNoMetrics bool        `json:"returnRecordsWithNoMetrics"`
 }
 
 type Selector struct {
-	Conditions []Condition      `json:"conditions"`
-	Fields     []string         `json:"fields"`
-	OrderBy    []OrderBy        `json:"orderBy"`
-	Pagination FilterPagination `json:"pagination"`
+	Conditions []Condition        `json:"conditions"`
+	Fields     []string           `json:"fields"`
+	OrderBy    []OrderBySelector  `json:"orderBy"`
+	Pagination PaginationSelector `json:"pagination"`
 }
 
-type FilterPagination struct {
+type PaginationSelector struct {
 	Offset int `json:"offset"`
 	Limit  int `json:"limit"`
 }
 
-type OrderBy struct {
-	Field     string    `json:"field"`
+type OrderBySelector struct {
+	Field     OrderBy   `json:"field"`
 	SortOrder SortOrder `json:"sortOrder"`
 }
 

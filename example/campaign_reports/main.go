@@ -21,9 +21,9 @@ func main() {
 		EndTime:     "2019-04-05",
 		Granularity: searchads.HOURLY,
 		Selector: searchads.Selector{
-			OrderBy: []searchads.OrderBy{
-				searchads.OrderBy{
-					Field:     "countryOrRegion",
+			OrderBy: []searchads.OrderBySelector{
+				searchads.OrderBySelector{
+					Field:     searchads.OrderByCountryOrRegion,
 					SortOrder: searchads.ASCENDING,
 				},
 			},
@@ -34,12 +34,14 @@ func main() {
 					Values:   []string{"US", "GB"},
 				},
 			},
-			Pagination: searchads.FilterPagination{
+			Pagination: searchads.PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
 			},
 		},
-		GroupBy:                    []string{"countryOrRegion"},
+		GroupBy: []searchads.GroupBy{
+			searchads.GroupByCountryOrRegion,
+		},
 		TimeZone:                   searchads.UTC,
 		ReturnRecordsWithNoMetrics: true,
 		ReturnRowTotals:            true,

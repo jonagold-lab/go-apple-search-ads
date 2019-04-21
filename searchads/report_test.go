@@ -18,9 +18,9 @@ func TestReportService_Campaigns(t *testing.T) {
 		EndTime:     "2019-04-01",
 		Granularity: HOURLY,
 		Selector: Selector{
-			OrderBy: []OrderBy{
-				OrderBy{
-					Field:     "countryOrRegion",
+			OrderBy: []OrderBySelector{
+				OrderBySelector{
+					Field:     OrderByCountryOrRegion,
 					SortOrder: ASCENDING,
 				},
 			},
@@ -31,12 +31,12 @@ func TestReportService_Campaigns(t *testing.T) {
 					Values:   []string{"US", "GB"},
 				},
 			},
-			Pagination: FilterPagination{
+			Pagination: PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
 			},
 		},
-		GroupBy:                    []string{"countryOrRegion"},
+		GroupBy:                    []GroupBy{GroupByCountryOrRegion},
 		TimeZone:                   UTC,
 		ReturnRowTotals:            true,
 		ReturnGrandTotals:          true,
@@ -109,19 +109,19 @@ func TestReportService_AdGroups(t *testing.T) {
 		EndTime:     "2019-04-01",
 		Granularity: HOURLY,
 		Selector: Selector{
-			OrderBy: []OrderBy{
-				OrderBy{
-					Field:     "adGroupId",
+			OrderBy: []OrderBySelector{
+				OrderBySelector{
+					Field:     OrderByAdGroupID,
 					SortOrder: ASCENDING,
 				},
 			},
 			Conditions: []Condition{},
-			Pagination: FilterPagination{
+			Pagination: PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
 			},
 		},
-		GroupBy:                    []string{},
+		GroupBy:                    []GroupBy{},
 		TimeZone:                   UTC,
 		ReturnRowTotals:            true,
 		ReturnGrandTotals:          true,
@@ -186,19 +186,19 @@ func TestReportService_SearchTerms(t *testing.T) {
 		EndTime:     "2019-04-01",
 		Granularity: DAILY,
 		Selector: Selector{
-			OrderBy: []OrderBy{
-				OrderBy{
-					Field:     "adGroupId",
+			OrderBy: []OrderBySelector{
+				OrderBySelector{
+					Field:     OrderByAdGroupID,
 					SortOrder: ASCENDING,
 				},
 			},
 			Conditions: []Condition{},
-			Pagination: FilterPagination{
+			Pagination: PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
 			},
 		},
-		GroupBy:                    []string{},
+		GroupBy:                    []GroupBy{},
 		TimeZone:                   UTC,
 		ReturnRowTotals:            true,
 		ReturnGrandTotals:          true,
@@ -256,19 +256,19 @@ func TestReportService_Keywords(t *testing.T) {
 		EndTime:     "2019-04-01",
 		Granularity: DAILY,
 		Selector: Selector{
-			OrderBy: []OrderBy{
-				OrderBy{
-					Field:     "adGroupId",
+			OrderBy: []OrderBySelector{
+				OrderBySelector{
+					Field:     OrderByAdGroupID,
 					SortOrder: ASCENDING,
 				},
 			},
 			Conditions: []Condition{},
-			Pagination: FilterPagination{
+			Pagination: PaginationSelector{
 				Offset: 0,
 				Limit:  1000,
 			},
 		},
-		GroupBy:                    []string{},
+		GroupBy:                    []GroupBy{},
 		TimeZone:                   UTC,
 		ReturnRowTotals:            true,
 		ReturnGrandTotals:          true,
