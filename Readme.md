@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/jonagold-lab/go-apple-search-ads/tree/master.svg?style=svg&circle-token=9b9091d95bb00a5d406ec24a2122a79654ef0142)](https://circleci.com/gh/jonagold-lab/go-apple-search-ads/tree/master)
+[![CircleCI](https://circleci.com/gh/jonagold-lab/go-apple-search-ads.svg?style=svg)](https://circleci.com/gh/jonagold-lab/go-apple-search-ads)
 
 ### Examples
 
