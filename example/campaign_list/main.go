@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	orgID := 1388280
+	orgID := 378940
 	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", &orgID)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
