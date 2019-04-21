@@ -5,36 +5,36 @@ import (
 	"fmt"
 )
 
-// Operator type to represent enum of Operator (IN/EQUALS)
+// Operator type to represent enum of Operator (IN/CONTAINS_ANY/EQUALS/GREATER_THAN/LESS_THAN/STARTSWITH)
 type Operator byte
 
 // IN, EQUALS, GREATER_THAN, LESS_THAN and STARTSWITH enum values
 const (
-	IN Operator = iota
-	CONTAINS_ANY
-	EQUALS
-	GREATER_THAN
-	LESS_THAN
-	STARTSWITH
+	OperatorIn Operator = iota
+	OperatorContainsAny
+	OperatorEquals
+	OperatorGreaterTahan
+	OperatorLessThan
+	OperatorStartsWith
 )
 
 var (
 	_OperatorNameToValue = map[string]Operator{
-		"IN":           IN,
-		"CONTAINS_ANY": CONTAINS_ANY,
-		"EQUALS":       EQUALS,
-		"GREATER_THAN": GREATER_THAN,
-		"LESS_THAN":    LESS_THAN,
-		"STARTSWITH":   STARTSWITH,
+		"IN":           OperatorIn,
+		"CONTAINS_ANY": OperatorContainsAny,
+		"EQUALS":       OperatorEquals,
+		"GREATER_THAN": OperatorGreaterTahan,
+		"LESS_THAN":    OperatorLessThan,
+		"STARTSWITH":   OperatorStartsWith,
 	}
 
 	_OperatorValueToName = map[Operator]string{
-		IN:           "IN",
-		CONTAINS_ANY: "CONTAINS_ANY",
-		EQUALS:       "EQUALS",
-		GREATER_THAN: "GREATER_THAN",
-		LESS_THAN:    "LESS_THAN",
-		STARTSWITH:   "STARTSWITH",
+		OperatorIn:           "IN",
+		OperatorContainsAny:  "CONTAINS_ANY",
+		OperatorEquals:       "EQUALS",
+		OperatorGreaterTahan: "GREATER_THAN",
+		OperatorLessThan:     "LESS_THAN",
+		OperatorStartsWith:   "STARTSWITH",
 	}
 )
 
@@ -42,12 +42,12 @@ func init() {
 	var v Operator
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_OperatorNameToValue = map[string]Operator{
-			interface{}(IN).(fmt.Stringer).String():           IN,
-			interface{}(CONTAINS_ANY).(fmt.Stringer).String(): CONTAINS_ANY,
-			interface{}(EQUALS).(fmt.Stringer).String():       EQUALS,
-			interface{}(GREATER_THAN).(fmt.Stringer).String(): GREATER_THAN,
-			interface{}(LESS_THAN).(fmt.Stringer).String():    LESS_THAN,
-			interface{}(STARTSWITH).(fmt.Stringer).String():   STARTSWITH,
+			interface{}(OperatorIn).(fmt.Stringer).String():           OperatorIn,
+			interface{}(OperatorContainsAny).(fmt.Stringer).String():  OperatorContainsAny,
+			interface{}(OperatorEquals).(fmt.Stringer).String():       OperatorEquals,
+			interface{}(OperatorGreaterTahan).(fmt.Stringer).String(): OperatorGreaterTahan,
+			interface{}(OperatorLessThan).(fmt.Stringer).String():     OperatorLessThan,
+			interface{}(OperatorStartsWith).(fmt.Stringer).String():   OperatorStartsWith,
 		}
 	}
 }
