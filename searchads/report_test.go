@@ -27,7 +27,7 @@ func TestReportService_Campaigns(t *testing.T) {
 			Conditions: []Condition{
 				Condition{
 					Field:    "countryOrRegion",
-					Operator: CONTAINS_ANY,
+					Operator: OperatorContainsAny,
 					Values:   []string{"US", "GB"},
 				},
 			},
