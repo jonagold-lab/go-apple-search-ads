@@ -10,25 +10,25 @@ type CampaignService service
 
 // Campaign to hold information about a campaign
 type Campaign struct {
-	ID                                 int               `json:"id,omitempty"`
-	OrgID                              int               `json:"orgId,omitempty"`
-	Name                               string            `json:"name,omitempty"`
-	BudgetAmount                       Amount            `json:"budgetAmount,omitempty"`
-	DailyBudgetAmount                  Amount            `json:"dailyBudgetAmount,omitempty"`
-	AdamID                             int               `json:"adamId,omitempty"`
-	PaymentModel                       PaymentModel      `json:"paymentModel,omitempty"`
-	BudgetOrders                       []int             `json:"budgetOrders,omitempty"`
-	Status                             Status            `json:"status,omitempty"`
-	ServingStatus                      ServingStatus     `json:"servingStatus,omitempty"`
-	ServingStateReasons                interface{}       `json:"servingStateReasons,omitempty"`
-	ModificationTime                   string            `json:"modificationTime,omitempty"`
-	StartTime                          string            `json:"startTime,omitempty"`
-	EndTime                            string            `json:"endTime,omitempty"`
-	Deleted                            bool              `json:"deleted,omitempty"`
-	CountriesOrRegions                 []CountryCode     `json:"countriesOrRegions,omitempty"`
-	CountryOrRegionServingStateReasons interface{}       `json:"CountryOrRegionServingStateReasons,omitempty"`
-	SapinLawResponse                   SapinLawResponse  `json:"sapinLawResponse,omitempty"`
-	LocInvoiceDetails                  LocInvoiceDetails `json:"locInvoiceDetails,omitempty"`
+	ID                                 int                `json:"id,omitempty"`
+	OrgID                              int                `json:"orgId,omitempty"`
+	Name                               string             `json:"name,omitempty"`
+	BudgetAmount                       Amount             `json:"budgetAmount,omitempty"`
+	DailyBudgetAmount                  Amount             `json:"dailyBudgetAmount,omitempty"`
+	AdamID                             int                `json:"adamId,omitempty"`
+	PaymentModel                       PaymentModel       `json:"paymentModel,omitempty"`
+	BudgetOrders                       []int              `json:"budgetOrders,omitempty"`
+	Status                             Status             `json:"status,omitempty"`
+	ServingStatus                      ServingStatus      `json:"servingStatus,omitempty"`
+	ServingStateReasons                interface{}        `json:"servingStateReasons,omitempty"`
+	ModificationTime                   string             `json:"modificationTime,omitempty"`
+	StartTime                          string             `json:"startTime,omitempty"`
+	EndTime                            string             `json:"endTime,omitempty"`
+	Deleted                            bool               `json:"deleted,omitempty"`
+	CountriesOrRegions                 []CountryCode      `json:"countriesOrRegions,omitempty"`
+	CountryOrRegionServingStateReasons interface{}        `json:"CountryOrRegionServingStateReasons,omitempty"`
+	SapinLawResponse                   SapinLawResponse   `json:"sapinLawResponse,omitempty"`
+	LocInvoiceDetails                  *LocInvoiceDetails `json:"locInvoiceDetails,omitempty"`
 }
 
 // LocInvoiceDetails needs to be used for LOC Payment
