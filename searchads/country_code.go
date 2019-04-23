@@ -65,7 +65,7 @@ const (
 	UA
 	GB
 	// Latin America and the Caribbean
-	AG
+	AR
 	CO
 	CL
 	EC
@@ -78,7 +78,7 @@ const (
 
 var (
 	_CountryCodeNameToValue = map[string]CountryCode{
-		"AG": AG,
+		"AR": AR,
 		"AL": AL,
 		"IL": IL,
 		"AT": AT,
@@ -140,7 +140,7 @@ var (
 	}
 
 	_CountryCodeValueToName = map[CountryCode]string{
-		AG: "AG",
+		AR: "AR",
 		AL: "AL",
 		IL: "IL",
 		IN: "IN",
@@ -206,7 +206,7 @@ func init() {
 	var v CountryCode
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_CountryCodeNameToValue = map[string]CountryCode{
-			interface{}(AG).(fmt.Stringer).String(): AG,
+			interface{}(AR).(fmt.Stringer).String(): AR,
 			interface{}(AL).(fmt.Stringer).String(): AL,
 			interface{}(IL).(fmt.Stringer).String(): IL,
 			interface{}(IN).(fmt.Stringer).String(): IN,
