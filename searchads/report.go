@@ -25,7 +25,7 @@ type CampaignReportRow struct {
 	Total       Statistics       `json:"total"`
 }
 type CampaignMetadata struct {
-	CampaignID                         int               `json:"campaignId"`
+	CampaignID                         int64             `json:"campaignId"`
 	CampaignName                       string            `json:"campaignName"`
 	Deleted                            bool              `json:"deleted"`
 	CampaignStatus                     Status            `json:"campaignStatus"`
@@ -37,7 +37,7 @@ type CampaignMetadata struct {
 	TotalBudget                        Amount            `json:"totalBudget"`
 	DailyBudget                        Amount            `json:"dailyBudget"`
 	DisplayStatus                      DisplayStatus     `json:"displayStatus"`
-	OrgID                              int               `json:"orgId"`
+	OrgID                              int64             `json:"orgId"`
 	CountryOrRegionServingStateReasons map[string]string `json:"countryOrRegionServingStateReasons"`
 	CountryOrRegion                    CountryCode       `json:"countryOrRegion"`
 }

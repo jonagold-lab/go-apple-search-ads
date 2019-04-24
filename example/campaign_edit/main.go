@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	orgID := 1405310
+	orgID := int64(1405310)
 	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", &orgID)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
@@ -21,7 +21,7 @@ func main() {
 		Name: "New Name",
 	}
 
-	editedCamapaign, _, err := client.Campaign.Edit(context.Background(), 259433851, &data)
+	editedCamapaign, _, err := client.Campaign.Edit(context.Background(), int64(259433851), &data)
 	if err != nil {
 		log.Fatalf("Campaign Edit error: %s", err)
 		panic(err)

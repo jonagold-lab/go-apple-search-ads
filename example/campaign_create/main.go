@@ -10,8 +10,8 @@ import (
 )
 
 func main() {
-	orgID := 1461850
-	adamID := 1222530780
+	orgID := int64(1461850)
+	adamID := int64(1222530780)
 	client, err := searchads.NewClient(nil, "../api-keys.pem", "../api-keys.key", &orgID)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)

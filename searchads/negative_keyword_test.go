@@ -37,7 +37,7 @@ func TestCampaignNegativeKeywordServive_CreateBulk(t *testing.T) {
 	defer teardown()
 
 	nk := NegativeKeyword{
-		CampaignID: 1234,
+		CampaignID: int64(1234),
 		Text:       "i do negative keywords",
 		MatchType:  EXACT,
 		Status:     KEYWORD_ACTIVE,

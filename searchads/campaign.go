@@ -10,12 +10,12 @@ type CampaignService service
 
 // Campaign to hold information about a campaign
 type Campaign struct {
-	ID                                 int                `json:"id,omitempty"`
-	OrgID                              int                `json:"orgId,omitempty"`
+	ID                                 int64              `json:"id,omitempty"`
+	OrgID                              int64              `json:"orgId,omitempty"`
 	Name                               string             `json:"name,omitempty"`
 	BudgetAmount                       Amount             `json:"budgetAmount,omitempty"`
 	DailyBudgetAmount                  Amount             `json:"dailyBudgetAmount,omitempty"`
-	AdamID                             int                `json:"adamId,omitempty"`
+	AdamID                             int64              `json:"adamId,omitempty"`
 	PaymentModel                       PaymentModel       `json:"paymentModel,omitempty"`
 	BudgetOrders                       []int              `json:"budgetOrders,omitempty"`
 	Status                             Status             `json:"status,omitempty"`
@@ -100,7 +100,7 @@ func (s *CampaignService) Create(ctx context.Context, data *Campaign) (*Campaign
 }
 
 // Edit will update an existing Campaign
-func (s *CampaignService) Edit(ctx context.Context, id int, data *Campaign) (*Campaign, *Response, error) {
+func (s *CampaignService) Edit(ctx context.Context, id int64, data *Campaign) (*Campaign, *Response, error) {
 	u := fmt.Sprintf("campaigns/%v", id)
 	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
@@ -117,7 +117,7 @@ func (s *CampaignService) Edit(ctx context.Context, id int, data *Campaign) (*Ca
 }
 
 // Delete will remove an existing Campaign
-func (s *CampaignService) Delete(ctx context.Context, id int) (*Response, error) {
+func (s *CampaignService) Delete(ctx context.Context, id int64) (*Response, error) {
 	u := fmt.Sprintf("campaigns/%v", id)
 	req, err := s.client.NewRequest("DELETE", u, nil)
 	if err != nil {

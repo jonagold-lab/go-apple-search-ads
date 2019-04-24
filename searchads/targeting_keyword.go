@@ -6,8 +6,8 @@ import (
 )
 
 type TargetingKeyword struct {
-	ID               int           `json:"id,omitempty"`
-	AdGroupID        int           `json:"adGroupId,omitempty"`
+	ID               int64         `json:"id,omitempty"`
+	AdGroupID        int64         `json:"adGroupId,omitempty"`
 	Text             string        `json:"text,omitempty"`
 	Status           KeywordStatus `json:"status,omitempty"`
 	MatchType        MatchType     `json:"matchType,omitempty"`
@@ -20,7 +20,7 @@ type TargetingKeyword struct {
 type AdGroupTargetingKeywordServive service
 
 // List function to get Adgroups from campaign
-func (s *AdGroupTargetingKeywordServive) List(ctx context.Context, campaignID int, adGroupID int, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordServive) List(ctx context.Context, campaignID int64, adGroupID int64, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -45,7 +45,7 @@ func (s *AdGroupTargetingKeywordServive) List(ctx context.Context, campaignID in
 }
 
 // CreateBulk will create multiple Targeting Keywords for a campaign
-func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaignID int, adGroupID int, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -68,7 +68,7 @@ func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaig
 }
 
 // Delete will remove an existing Targeting on a Adgroup
-func (s *AdGroupTargetingKeywordServive) Delete(ctx context.Context, campaignID, adGroupID, id int) (*Response, error) {
+func (s *AdGroupTargetingKeywordServive) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
 	if campaignID == 0 {
 		return nil, fmt.Errorf("campaignID can not be 0")
 	}

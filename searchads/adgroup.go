@@ -9,8 +9,8 @@ import (
 type AdGroupService service
 
 type AdGroup struct {
-	ID                     int                 `json:"id,omitempty"`
-	CampaignID             int                 `json:"campaignId,omitempty"`
+	ID                     int64               `json:"id,omitempty"`
+	CampaignID             int64               `json:"campaignId,omitempty"`
 	Name                   string              `json:"name,omitempty"`
 	CpaGoal                Amount              `json:"cpaGoal,omitempty"`
 	StartTime              string              `json:"startTime,omitempty"`
@@ -79,7 +79,7 @@ type AppDownloaders struct {
 }
 
 // List function to get Adgroups from campaign
-func (s *AdGroupService) List(ctx context.Context, campaignID int, opt *ListOptions) ([]*AdGroup, *Response, error) {
+func (s *AdGroupService) List(ctx context.Context, campaignID int64, opt *ListOptions) ([]*AdGroup, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -103,7 +103,7 @@ func (s *AdGroupService) List(ctx context.Context, campaignID int, opt *ListOpti
 }
 
 // Get function to get specific AdGroup by id and campaignID
-func (s *AdGroupService) Get(ctx context.Context, campaignID int, id int) (*AdGroup, *Response, error) {
+func (s *AdGroupService) Get(ctx context.Context, campaignID int64, id int64) (*AdGroup, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -123,7 +123,7 @@ func (s *AdGroupService) Get(ctx context.Context, campaignID int, id int) (*AdGr
 }
 
 // Create will create a new AdGroup on a specific campaign
-func (s *AdGroupService) Create(ctx context.Context, campaignID int, data *AdGroup) (*AdGroup, *Response, error) {
+func (s *AdGroupService) Create(ctx context.Context, campaignID int64, data *AdGroup) (*AdGroup, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -143,7 +143,7 @@ func (s *AdGroupService) Create(ctx context.Context, campaignID int, data *AdGro
 }
 
 // Edit will update an existing AdGroup on a Campaign
-func (s *AdGroupService) Edit(ctx context.Context, campaignID int, id int, data *AdGroup) (*AdGroup, *Response, error) {
+func (s *AdGroupService) Edit(ctx context.Context, campaignID int64, id int64, data *AdGroup) (*AdGroup, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -166,7 +166,7 @@ func (s *AdGroupService) Edit(ctx context.Context, campaignID int, id int, data 
 }
 
 // Delete will remove an existing AdGroup on a Campaign
-func (s *AdGroupService) Delete(ctx context.Context, campaignID int, id int) (*Response, error) {
+func (s *AdGroupService) Delete(ctx context.Context, campaignID int64, id int64) (*Response, error) {
 	if campaignID == 0 {
 		return nil, fmt.Errorf("campaignID can not be 0")
 	}

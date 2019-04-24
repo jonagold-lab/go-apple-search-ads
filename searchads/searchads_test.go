@@ -48,7 +48,7 @@ func setup() (client *Client, mux *http.ServeMux, serverURL string, teardown fun
 
 	// client is the AppleSearchAds client being tested and is
 	// configured to use test server.
-	orgID := 1238
+	orgID := int64(1238)
 	fakeClient := http.Client{}
 	client, _ = NewClient(&fakeClient, "", "", &orgID)
 	url, _ := url.Parse(server.URL + baseURLPath + "/")

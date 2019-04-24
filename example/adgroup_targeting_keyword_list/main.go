@@ -10,8 +10,8 @@ import (
 )
 
 func main() {
-	campaignID := 242933727
-	adGroupID := 242878799
+	campaignID := int64(242933727)
+	adGroupID := int64(242878799)
 	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)

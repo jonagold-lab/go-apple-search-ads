@@ -8,7 +8,7 @@ type ACLService service
 // ACL to hold information about a acl
 type ACL struct {
 	Currency     string       `json:"currency,omitempty"`
-	OrgID        int          `json:"orgId,omitempty"`
+	OrgID        int64        `json:"orgId,omitempty"`
 	OrgName      string       `json:"orgName,omitempty"`
 	RoleNames    []string     `json:"roleNames,omitempty"`
 	PaymentModel PaymentModel `json:"paymentModel,omitempty"`

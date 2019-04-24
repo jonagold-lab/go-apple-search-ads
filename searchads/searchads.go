@@ -25,7 +25,7 @@ const (
 type Client struct {
 	client                  *http.Client // Reuse a single struct instead of allocating one for each service on the heap.
 	BaseURL                 *url.URL
-	OrgID                   *int
+	OrgID                   *int64
 	UserAgent               string
 	common                  service
 	Campaign                *CampaignService
@@ -83,7 +83,7 @@ func setClientWithCerts(pemFile, keyFile string) (*http.Client, error) {
 }
 
 // NewClient with either http.Client or with pemFile and keyFile
-func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int) (*Client, error) {
+func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int64) (*Client, error) {
 	if httpClient == nil {
 		var err error
 		httpClient, err = setClientWithCerts(pemFile, keyFile)
@@ -175,22 +175,6 @@ func (c *Client) Do(ctx context.Context, req *http.Request, v interface{}) (*Res
 	rv := &Response{Data: v}
 	err = json.NewDecoder(resp.Body).Decode(rv)
 	response.Pagination = rv.Pagination
-	/*  TODO: Handle advanced EOF stuff etc
-	if v != nil {
-		if w, ok := v.(io.Writer); ok {
-			io.Copy(w, resp.Body)
-		} else {
-			decErr := json.NewDecoder(resp.Body).Decode(v)
-			if decErr == io.EOF {
-				decErr = nil // ignore EOF errors caused by empty response body
-			}
-			if decErr != nil {
-				err = decErr
-			}
-		}
-	}
-	*/
-
 	return response, err
 }
 

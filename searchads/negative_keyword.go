@@ -7,9 +7,9 @@ import (
 
 // NegativeKeyword to define negative Keyword and connection to other
 type NegativeKeyword struct {
-	ID               int           `json:"id,omitempty"`
-	CampaignID       int           `json:"campaignId,omitempty"`
-	AdGroupID        int           `json:"adGroupId,omitempty"`
+	ID               int64         `json:"id,omitempty"`
+	CampaignID       int64         `json:"campaignId,omitempty"`
+	AdGroupID        int64         `json:"adGroupId,omitempty"`
 	ModificationTime string        `json:"modificationTime,omitempty"`
 	Text             string        `json:"text,omitempty"`
 	MatchType        MatchType     `json:"matchType,omitempty"`
@@ -21,7 +21,7 @@ type NegativeKeyword struct {
 type CampaignNegativeKeywordServive service
 
 // List function to get Adgroups from campaign
-func (s *CampaignNegativeKeywordServive) List(ctx context.Context, campaignID int, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
+func (s *CampaignNegativeKeywordServive) List(ctx context.Context, campaignID int64, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -43,7 +43,7 @@ func (s *CampaignNegativeKeywordServive) List(ctx context.Context, campaignID in
 }
 
 // CreateBulk will create multiple Negative Keywords for a campaign
-func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -61,7 +61,7 @@ func (s *CampaignNegativeKeywordServive) CreateBulk(ctx context.Context, campaig
 }
 
 // Delete will remove an existing Negative Keywords on a Adgroup
-func (s *CampaignNegativeKeywordServive) Delete(ctx context.Context, campaignID, id int) (*Response, error) {
+func (s *CampaignNegativeKeywordServive) Delete(ctx context.Context, campaignID, id int64) (*Response, error) {
 	if campaignID == 0 {
 		return nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -81,7 +81,7 @@ func (s *CampaignNegativeKeywordServive) Delete(ctx context.Context, campaignID,
 type AdGroupNegativeKeywordServive service
 
 // List function to get Adgroups from campaign
-func (s *AdGroupNegativeKeywordServive) List(ctx context.Context, campaignID int, adGroupID int, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
+func (s *AdGroupNegativeKeywordServive) List(ctx context.Context, campaignID int64, adGroupID int64, opt *ListOptions) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
