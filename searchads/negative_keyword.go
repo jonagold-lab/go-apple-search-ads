@@ -106,7 +106,7 @@ func (s *AdGroupNegativeKeywordServive) List(ctx context.Context, campaignID int
 }
 
 // CreateBulk will create multiple Negative Keywords for a campaign
-func (s *AdGroupNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int, adGroupID int, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
+func (s *AdGroupNegativeKeywordServive) CreateBulk(ctx context.Context, campaignID int64, adGroupID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -128,7 +128,7 @@ func (s *AdGroupNegativeKeywordServive) CreateBulk(ctx context.Context, campaign
 }
 
 // Delete will remove an existing Negative Keywords on a Adgroup
-func (s *AdGroupNegativeKeywordServive) Delete(ctx context.Context, campaignID, adGroupID, id int) (*Response, error) {
+func (s *AdGroupNegativeKeywordServive) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
 	if campaignID == 0 {
 		return nil, fmt.Errorf("campaignID can not be 0")
 	}
