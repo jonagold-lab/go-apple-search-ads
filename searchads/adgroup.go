@@ -9,26 +9,26 @@ import (
 type AdGroupService service
 
 type AdGroup struct {
-	ID                     int64               `json:"id,omitempty"`
-	CampaignID             int64               `json:"campaignId,omitempty"`
-	Name                   string              `json:"name,omitempty"`
-	CpaGoal                Amount              `json:"cpaGoal,omitempty"`
-	StartTime              string              `json:"startTime,omitempty"`
-	EndTime                string              `json:"endTime,omitempty"`
-	AutomatedKeywordsOptIn bool                `json:"automatedKeywordsOptIn,omitempty"`
-	DefaultCpcBid          Amount              `json:"defaultCpcBid,omitempty"`
-	TargetingDimensions    TargetingDimensions `json:"targetingDimensions,omitempty"`
-	OrgID                  int                 `json:"orgId,omitempty"`
-	ModificationTime       string              `json:"modificationTime,omitempty"`
-	Status                 string              `json:"status,omitempty"`
-	ServingStatus          string              `json:"servingStatus,omitempty"`
-	ServingStateReasons    []string            `json:"servingStateReasons,omitempty"`
-	Deleted                bool                `json:"deleted,omitempty"`
+	ID                     int64                `json:"id,omitempty"`
+	CampaignID             int64                `json:"campaignId,omitempty"`
+	Name                   string               `json:"name,omitempty"`
+	CpaGoal                Amount               `json:"cpaGoal,omitempty"`
+	StartTime              string               `json:"startTime,omitempty"`
+	EndTime                string               `json:"endTime,omitempty"`
+	AutomatedKeywordsOptIn bool                 `json:"automatedKeywordsOptIn,omitempty"`
+	DefaultCpcBid          Amount               `json:"defaultCpcBid,omitempty"`
+	TargetingDimensions    *TargetingDimensions `json:"targetingDimensions,omitempty"`
+	OrgID                  int                  `json:"orgId,omitempty"`
+	ModificationTime       string               `json:"modificationTime,omitempty"`
+	Status                 string               `json:"status,omitempty"`
+	ServingStatus          string               `json:"servingStatus,omitempty"`
+	ServingStateReasons    []string             `json:"servingStateReasons,omitempty"`
+	Deleted                bool                 `json:"deleted,omitempty"`
 }
 
 type TargetingDimensions struct {
 	Age            Age            `json:"age,omitempty"`
-	Gender         Gender         `json:"gende,omitemptyr"`
+	Gender         Gender         `json:"gender,omitemptyr"`
 	Country        Country        `json:"country,omitempty"`
 	AdminArea      AdminArea      `json:"adminArea,omitempty"`
 	Locality       Locality       `json:"locality,omitempty"`
