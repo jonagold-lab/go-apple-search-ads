@@ -10,19 +10,19 @@ type SearchTermSource byte
 
 // AUTO and TARGETED enum values
 const (
-	AUTO SearchTermSource = iota
-	TARGETED
+	SearchTermSourceAuto SearchTermSource = iota
+	SearchTermSourceTargeted
 )
 
 var (
 	_SearchTermSourceNameToValue = map[string]SearchTermSource{
-		"AUTO":     AUTO,
-		"TARGETED": TARGETED,
+		"AUTO":     SearchTermSourceAuto,
+		"TARGETED": SearchTermSourceTargeted,
 	}
 
 	_SearchTermSourceValueToName = map[SearchTermSource]string{
-		AUTO:     "AUTO",
-		TARGETED: "TARGETED",
+		SearchTermSourceAuto:     "AUTO",
+		SearchTermSourceTargeted: "TARGETED",
 	}
 )
 
@@ -30,8 +30,8 @@ func init() {
 	var v SearchTermSource
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_SearchTermSourceNameToValue = map[string]SearchTermSource{
-			interface{}(AUTO).(fmt.Stringer).String():     AUTO,
-			interface{}(TARGETED).(fmt.Stringer).String(): TARGETED,
+			interface{}(SearchTermSourceAuto).(fmt.Stringer).String():     SearchTermSourceAuto,
+			interface{}(SearchTermSourceTargeted).(fmt.Stringer).String(): SearchTermSourceTargeted,
 		}
 	}
 }

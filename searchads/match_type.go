@@ -12,17 +12,20 @@ type MatchType byte
 const (
 	EXACT MatchType = iota
 	BROAD
+	AUTO
 )
 
 var (
 	_MatchTypeNameToValue = map[string]MatchType{
 		"EXACT": EXACT,
 		"BROAD": BROAD,
+		"AUTO":  AUTO,
 	}
 
 	_MatchTypeValueToName = map[MatchType]string{
 		EXACT: "EXACT",
 		BROAD: "BROAD",
+		AUTO:  "AUTO",
 	}
 )
 
@@ -32,6 +35,7 @@ func init() {
 		_MatchTypeNameToValue = map[string]MatchType{
 			interface{}(EXACT).(fmt.Stringer).String(): EXACT,
 			interface{}(BROAD).(fmt.Stringer).String(): BROAD,
+			interface{}(AUTO).(fmt.Stringer).String():  AUTO,
 		}
 	}
 }

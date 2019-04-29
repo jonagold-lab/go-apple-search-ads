@@ -10,19 +10,22 @@ type KeywordDisplayStatus byte
 
 // RUNNING and PAUSED enum values
 const (
-	KDS_RUNNING KeywordDisplayStatus = iota
-	KDS_PAUSED
+	KeywordDisplayStatusRunning KeywordDisplayStatus = iota
+	KeywordDisplayStatusPaused
+	KeywordDisplayStatusEmpty
 )
 
 var (
 	_KeywordDisplayStatusNameToValue = map[string]KeywordDisplayStatus{
-		"RUNNING": KDS_RUNNING,
-		"PAUSED":  KDS_PAUSED,
+		"RUNNING": KeywordDisplayStatusRunning,
+		"PAUSED":  KeywordDisplayStatusPaused,
+		"":        KeywordDisplayStatusEmpty,
 	}
 
 	_KeywordDisplayStatusValueToName = map[KeywordDisplayStatus]string{
-		KDS_RUNNING: "RUNNING",
-		KDS_PAUSED:  "PAUSED",
+		KeywordDisplayStatusRunning: "RUNNING",
+		KeywordDisplayStatusPaused:  "PAUSED",
+		KeywordDisplayStatusEmpty:   "",
 	}
 )
 
@@ -30,8 +33,9 @@ func init() {
 	var v KeywordDisplayStatus
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_KeywordDisplayStatusNameToValue = map[string]KeywordDisplayStatus{
-			interface{}(KDS_RUNNING).(fmt.Stringer).String(): KDS_RUNNING,
-			interface{}(KDS_PAUSED).(fmt.Stringer).String():  KDS_PAUSED,
+			interface{}(KeywordDisplayStatusRunning).(fmt.Stringer).String(): KeywordDisplayStatusRunning,
+			interface{}(KeywordDisplayStatusPaused).(fmt.Stringer).String():  KeywordDisplayStatusPaused,
+			interface{}(KeywordDisplayStatusEmpty).(fmt.Stringer).String():   KeywordDisplayStatusEmpty,
 		}
 	}
 }

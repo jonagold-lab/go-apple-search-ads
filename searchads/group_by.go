@@ -17,6 +17,7 @@ const (
 	GroupByDeviceClass
 	GroupByGender
 	GroupByLocality
+	GroupByAdGroupID
 )
 
 var (
@@ -28,6 +29,7 @@ var (
 		"deviceClass":     GroupByDeviceClass,
 		"gender":          GroupByGender,
 		"locality":        GroupByLocality,
+		"adGroupId":       GroupByAdGroupID,
 	}
 
 	_GroupByValueToName = map[GroupBy]string{
@@ -38,6 +40,7 @@ var (
 		GroupByDeviceClass:     "deviceClass",
 		GroupByGender:          "gender",
 		GroupByLocality:        "locality",
+		GroupByAdGroupID:       "adGroupId",
 	}
 )
 
@@ -52,6 +55,7 @@ func init() {
 			interface{}(GroupByDeviceClass).(fmt.Stringer).String():     GroupByDeviceClass,
 			interface{}(GroupByGender).(fmt.Stringer).String():          GroupByGender,
 			interface{}(GroupByLocality).(fmt.Stringer).String():        GroupByLocality,
+			interface{}(GroupByAdGroupID).(fmt.Stringer).String():       GroupByAdGroupID,
 		}
 	}
 }

@@ -74,7 +74,7 @@ type AdGroupReportRow struct {
 	Total       Statistics      `json:"total"`
 }
 type AdGroupMetadata struct {
-	AdGroupID                  int                `json:"adGroupId"`
+	AdGroupID                  int64              `json:"adGroupId"`
 	AdGroupName                string             `json:"adGroupName"`
 	StartTime                  string             `json:"startTime"`
 	EndTime                    *string            `json:"endTime,omitempty"`
@@ -90,7 +90,7 @@ type AdGroupMetadata struct {
 }
 
 // AdGroups to return reports of Adgroups
-func (s *ReportService) AdGroups(ctx context.Context, campaignID int, filter *ReportFilter) (*AdGroupReport, *Response, error) {
+func (s *ReportService) AdGroups(ctx context.Context, campaignID int64, filter *ReportFilter) (*AdGroupReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -124,21 +124,21 @@ type KeywordReportRow struct {
 	Total       Statistics      `json:"total"`
 }
 type KeywordMetadata struct {
-	KeywordID            int                  `json:"keywordId"`
+	KeywordID            int64                `json:"keywordId"`
 	Keyword              string               `json:"keyword"`
 	KeywordStatus        KeywordStatus        `json:"keywordStatus"`
 	MatchType            MatchType            `json:"matchType"`
 	BidAmount            Amount               `json:"bidAmount"`
 	Deleted              bool                 `json:"deleted"`
 	KeywordDisplayStatus KeywordDisplayStatus `json:"keywordDisplayStatus"`
-	AdGroupID            int                  `json:"adGroupId"`
+	AdGroupID            int64                `json:"adGroupId"`
 	AdGroupName          string               `json:"adGroupName"`
 	AdGroupDeleted       bool                 `json:"adGroupDeleted"`
 	ModificationTime     string               `json:"modificationTime"`
 }
 
 // Keywords to return reports of Kewords
-func (s *ReportService) Keywords(ctx context.Context, campaignID int, filter *ReportFilter) (*KeywordReport, *Response, error) {
+func (s *ReportService) Keywords(ctx context.Context, campaignID int64, filter *ReportFilter) (*KeywordReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -172,13 +172,13 @@ type SearchTermsReportRow struct {
 	Total       Statistics         `json:"total"`
 }
 type SearchTermMetadata struct {
-	KeywordID            int                  `json:"keywordId"`
+	KeywordID            int64                `json:"keywordId"`
 	Keyword              string               `json:"keyword"`
 	MatchType            MatchType            `json:"matchType"`
 	BidAmount            Amount               `json:"bidAmount"`
 	KeywordDisplayStatus KeywordDisplayStatus `json:"keywordDisplayStatus"`
 	Deleted              bool                 `json:"deleted"`
-	AdGroupID            int                  `json:"adGroupId"`
+	AdGroupID            int64                `json:"adGroupId"`
 	AdGroupName          string               `json:"adGroupName"`
 	AdGroupDeleted       bool                 `json:"adGroupDeleted"`
 	SearchTermText       *string              `json:"searchTermText"`
@@ -186,7 +186,7 @@ type SearchTermMetadata struct {
 }
 
 // SearchTerms to return reports of SearchTerms
-func (s *ReportService) SearchTerms(ctx context.Context, campaignID int, filter *ReportFilter) (*SearchTermsReport, *Response, error) {
+func (s *ReportService) SearchTerms(ctx context.Context, campaignID int64, filter *ReportFilter) (*SearchTermsReport, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -228,7 +228,7 @@ type Statistics struct {
 
 type App struct {
 	AppName string `json:"appName"`
-	AdamID  int    `json:"adamId"`
+	AdamID  int64  `json:"adamId"`
 }
 
 type ReportFilter struct {

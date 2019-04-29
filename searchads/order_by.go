@@ -19,6 +19,7 @@ const (
 	OrderByLocality
 	OrderByAdGroupID
 	OrderByID
+	OrderByImpressions
 )
 
 var (
@@ -32,6 +33,7 @@ var (
 		"locality":        OrderByLocality,
 		"adGroupId":       OrderByAdGroupID,
 		"id":              OrderByID,
+		"impressions":     OrderByImpressions,
 	}
 
 	_OrderByValueToName = map[OrderBy]string{
@@ -44,6 +46,7 @@ var (
 		OrderByLocality:        "locality",
 		OrderByAdGroupID:       "adGroupId",
 		OrderByID:              "id",
+		OrderByImpressions:     "impressions",
 	}
 )
 
@@ -60,6 +63,7 @@ func init() {
 			interface{}(OrderByLocality).(fmt.Stringer).String():        OrderByLocality,
 			interface{}(OrderByAdGroupID).(fmt.Stringer).String():       OrderByAdGroupID,
 			interface{}(OrderByID).(fmt.Stringer).String():              OrderByID,
+			interface{}(OrderByImpressions).(fmt.Stringer).String():     OrderByImpressions,
 		}
 	}
 }
