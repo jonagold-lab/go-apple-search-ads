@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestCampaignNegativeKeywordServive_List(t *testing.T) {
+func TestCampaignNegativeKeywordService_List(t *testing.T) {
 	client, mux, _, teardown := setup()
 	t.Log("Setup Done")
 	defer teardown()
@@ -32,7 +32,7 @@ func TestCampaignNegativeKeywordServive_List(t *testing.T) {
 		t.Errorf("CampaignNegativeKeyword.List = %+v, want %+v", got, want)
 	}
 }
-func TestCampaignNegativeKeywordServive_CreateBulk(t *testing.T) {
+func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -78,7 +78,7 @@ func TestCampaignNegativeKeywordServive_CreateBulk(t *testing.T) {
 	}
 }
 
-func TestCampaignNegativeKeywordServive_Delete(t *testing.T) {
+func TestCampaignNegativeKeywordService_Delete(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -101,7 +101,7 @@ func TestCampaignNegativeKeywordServive_Delete(t *testing.T) {
 	}
 }
 
-func TestAdGroupNegativeKeywordServive_List(t *testing.T) {
+func TestAdGroupNegativeKeywordService_List(t *testing.T) {
 	client, mux, _, teardown := setup()
 	t.Log("Setup Done")
 	defer teardown()
@@ -124,7 +124,7 @@ func TestAdGroupNegativeKeywordServive_List(t *testing.T) {
 		t.Errorf("AdGroupNegativeKeyword.List = %+v, want %+v", got, want)
 	}
 }
-func TestAdGroupNegativeKeywordServive_CreateBulk(t *testing.T) {
+func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -172,7 +172,7 @@ func TestAdGroupNegativeKeywordServive_CreateBulk(t *testing.T) {
 	}
 }
 
-func TestAdGroupNegativeKeywordServive_Delete(t *testing.T) {
+func TestAdGroupNegativeKeywordService_Delete(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 

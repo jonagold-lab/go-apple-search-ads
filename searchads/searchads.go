@@ -31,9 +31,9 @@ type Client struct {
 	Campaign                *CampaignService
 	AdGroup                 *AdGroupService
 	ACL                     *ACLService
-	CampaignNegativeKeyword *CampaignNegativeKeywordServive
-	AdGroupNegativeKeyword  *AdGroupNegativeKeywordServive
-	AdGroupTargetingKeyword *AdGroupTargetingKeywordServive
+	CampaignNegativeKeyword *CampaignNegativeKeywordService
+	AdGroupNegativeKeyword  *AdGroupNegativeKeywordService
+	AdGroupTargetingKeyword *AdGroupTargetingKeywordService
 	Report                  *ReportService
 }
 
@@ -95,10 +95,10 @@ func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int64) (
 	c := &Client{client: httpClient, BaseURL: baseURL, UserAgent: userAgent, OrgID: orgID}
 	c.common.client = c
 	c.Campaign = (*CampaignService)(&c.common)
-	c.CampaignNegativeKeyword = (*CampaignNegativeKeywordServive)(&c.common)
+	c.CampaignNegativeKeyword = (*CampaignNegativeKeywordService)(&c.common)
 	c.AdGroup = (*AdGroupService)(&c.common)
-	c.AdGroupNegativeKeyword = (*AdGroupNegativeKeywordServive)(&c.common)
-	c.AdGroupTargetingKeyword = (*AdGroupTargetingKeywordServive)(&c.common)
+	c.AdGroupNegativeKeyword = (*AdGroupNegativeKeywordService)(&c.common)
+	c.AdGroupTargetingKeyword = (*AdGroupTargetingKeywordService)(&c.common)
 	c.ACL = (*ACLService)(&c.common)
 	c.Report = (*ReportService)(&c.common)
 	return c, nil

@@ -16,11 +16,11 @@ type TargetingKeyword struct {
 	Deleted          bool          `json:"deleted,omitempty"`
 }
 
-// AdGroupTargetingKeywordServive to handle Targeting Keywords of
-type AdGroupTargetingKeywordServive service
+// AdGroupTargetingKeywordService to handle Targeting Keywords of
+type AdGroupTargetingKeywordService service
 
 // List function to get Adgroups from campaign
-func (s *AdGroupTargetingKeywordServive) List(ctx context.Context, campaignID int64, adGroupID int64, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordService) List(ctx context.Context, campaignID int64, adGroupID int64, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -45,7 +45,7 @@ func (s *AdGroupTargetingKeywordServive) List(ctx context.Context, campaignID in
 }
 
 // CreateBulk will create multiple Targeting Keywords for a campaign
-func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
@@ -68,7 +68,7 @@ func (s *AdGroupTargetingKeywordServive) CreateBulk(ctx context.Context, campaig
 }
 
 // Delete will remove an existing Targeting on a Adgroup
-func (s *AdGroupTargetingKeywordServive) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
+func (s *AdGroupTargetingKeywordService) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
 	if campaignID == 0 {
 		return nil, fmt.Errorf("campaignID can not be 0")
 	}

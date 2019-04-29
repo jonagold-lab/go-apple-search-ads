@@ -9,7 +9,7 @@ import (
 	"testing"
 )
 
-func TestAdGroupTargetingKeywordServive_List(t *testing.T) {
+func TestAdGroupTargetingKeywordService_List(t *testing.T) {
 	client, mux, _, teardown := setup()
 	t.Log("Setup Done")
 	defer teardown()
@@ -32,7 +32,7 @@ func TestAdGroupTargetingKeywordServive_List(t *testing.T) {
 		t.Errorf("AdGroupTargetingKeyword.List = %+v, want %+v", got, want)
 	}
 }
-func TestAdGroupTargetingKeywordServive_CreateBulk(t *testing.T) {
+func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
@@ -86,7 +86,7 @@ func TestAdGroupTargetingKeywordServive_CreateBulk(t *testing.T) {
 	}
 }
 
-func TestAdGroupTargetingKeywordServive_Delete(t *testing.T) {
+func TestAdGroupTargetingKeywordService_Delete(t *testing.T) {
 	client, mux, _, teardown := setup()
 	defer teardown()
 
