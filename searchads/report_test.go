@@ -230,13 +230,13 @@ func TestReportService_SearchTerms(t *testing.T) {
 			Amount:   "12",
 			Currency: "EUR",
 		},
-		KeywordDisplayStatus: KDS_RUNNING,
+		KeywordDisplayStatus: KeywordDisplayStatusRunning,
 		Deleted:              false,
 		AdGroupID:            262770380,
 		AdGroupName:          "Exact Match",
 		AdGroupDeleted:       false,
 		SearchTermText:       nil,
-		SearchTermSource:     TARGETED,
+		SearchTermSource:     SearchTermSourceTargeted,
 	}
 
 	if !reflect.DeepEqual(got.ReportingDataResponse.Row[0].Metadata.BidAmount, metadata.BidAmount) {
@@ -302,7 +302,7 @@ func TestReportService_Keywords(t *testing.T) {
 			Currency: "EUR",
 		},
 		Deleted:              false,
-		KeywordDisplayStatus: KDS_RUNNING,
+		KeywordDisplayStatus: KeywordDisplayStatusRunning,
 		AdGroupID:            262770380,
 		AdGroupName:          "Exact Match",
 		AdGroupDeleted:       false,
