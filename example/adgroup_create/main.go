@@ -27,7 +27,7 @@ func main() {
 		Name:                   "US_BRAND_EXACT_2",
 		StartTime:              startTime,
 		AutomatedKeywordsOptIn: false,
-		CpaGoal: searchads.Amount{
+		CpaGoal: &searchads.Amount{
 			Amount:   "5",
 			Currency: "USD",
 		},
