@@ -12,11 +12,11 @@ type AdGroup struct {
 	ID                     int64                `json:"id,omitempty"`
 	CampaignID             int64                `json:"campaignId,omitempty"`
 	Name                   string               `json:"name,omitempty"`
-	CpaGoal                Amount               `json:"cpaGoal,omitempty"`
-	StartTime              string               `json:"startTime,omitempty"`
+	CpaGoal                *Amount              `json:"cpaGoal,omitempty"`
+	StartTime              string               `json:"startTime"`
 	EndTime                string               `json:"endTime,omitempty"`
-	AutomatedKeywordsOptIn bool                 `json:"automatedKeywordsOptIn,omitempty"`
-	DefaultCpcBid          Amount               `json:"defaultCpcBid,omitempty"`
+	AutomatedKeywordsOptIn bool                 `json:"automatedKeywordsOptIn"`
+	DefaultCpcBid          Amount               `json:"defaultCpcBid"`
 	TargetingDimensions    *TargetingDimensions `json:"targetingDimensions,omitempty"`
 	OrgID                  int                  `json:"orgId,omitempty"`
 	ModificationTime       string               `json:"modificationTime,omitempty"`
