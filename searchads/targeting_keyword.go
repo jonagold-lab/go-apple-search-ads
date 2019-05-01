@@ -11,7 +11,7 @@ type TargetingKeyword struct {
 	Text             string        `json:"text,omitempty"`
 	Status           KeywordStatus `json:"status,omitempty"`
 	MatchType        MatchType     `json:"matchType,omitempty"`
-	BidAmount        Amount        `json:"bidAmount,omitempty"`
+	BidAmount        *Amount       `json:"bidAmount,omitempty"`
 	ModificationTime string        `json:"modificationTime,omitempty"`
 	Deleted          bool          `json:"deleted,omitempty"`
 }
@@ -20,7 +20,7 @@ type TargetingKeyword struct {
 type AdGroupTargetingKeywordService service
 
 // List function to get Adgroups from campaign
-func (s *AdGroupTargetingKeywordService) List(ctx context.Context, campaignID int64, adGroupID int64, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
+func (s *AdGroupTargetingKeywordService) List(ctx context.Context, campaignID, adGroupID int64, opt *ListOptions) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}

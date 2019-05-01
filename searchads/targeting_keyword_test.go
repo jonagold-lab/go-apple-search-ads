@@ -41,7 +41,7 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 		Text:      "i do negative keywords",
 		MatchType: EXACT,
 		Status:    KEYWORD_ACTIVE,
-		BidAmount: Amount{
+		BidAmount: &Amount{
 			Amount:   "1.50",
 			Currency: "EUR",
 		},
@@ -73,7 +73,7 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 			Text:      "i do negative keywords",
 			MatchType: EXACT,
 			Status:    KEYWORD_ACTIVE,
-			BidAmount: Amount{
+			BidAmount: &Amount{
 				Amount:   "1.50",
 				Currency: "EUR",
 			},
