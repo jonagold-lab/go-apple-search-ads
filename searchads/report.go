@@ -221,7 +221,7 @@ type Statistics struct {
 	TTR            float64 `json:"ttr"`
 	AvgCPA         Amount  `json:"avgCPA"`
 	AvgCPT         Amount  `json:"avgCPT"`
-	LocalSpend     Amount  `json:"localSpent"`
+	LocalSpend     Amount  `json:"localSpend"`
 	ConversionRate float64 `json:"conversionRate"`
 	Date           string  `json:"date,omitemtpy"`
 }

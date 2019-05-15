@@ -16,7 +16,6 @@ func TestAdGroupTargetingKeywordService_List(t *testing.T) {
 
 	mux.HandleFunc("/campaigns/1234/adgroups/1234/targetingkeywords", func(w http.ResponseWriter, r *http.Request) {
 		testMethod(t, r, "GET")
-
 		w.WriteHeader(http.StatusOK)
 		w.Write(loadFixture("adgroup_targeting_keywords.json"))
 	})
