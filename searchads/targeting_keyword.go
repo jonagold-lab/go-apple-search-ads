@@ -44,6 +44,32 @@ func (s *AdGroupTargetingKeywordService) List(ctx context.Context, campaignID, a
 	return Targetingkeywords, resp, nil
 }
 
+// Get will get a specific targeting Keyword
+func (s *AdGroupTargetingKeywordService) Get(ctx context.Context, campaignID, adGroupID, targetingkeywordID int64) (*TargetingKeyword, *Response, error) {
+	if campaignID == 0 {
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
+	}
+	if adGroupID == 0 {
+		return nil, nil, fmt.Errorf("adGroupID can not be 0")
+	}
+	if targetingkeywordID == 0 {
+		return nil, nil, fmt.Errorf("targetingkeywordID can not be 0")
+	}
+	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/%d", campaignID, adGroupID, targetingkeywordID)
+	req, err := s.client.NewRequest("GET", u, nil)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	targetingkeyword := new(TargetingKeyword)
+	resp, err := s.client.Do(ctx, req, targetingkeyword)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return targetingkeyword, resp, nil
+}
+
 // CreateBulk will create multiple Targeting Keywords for a campaign
 func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
