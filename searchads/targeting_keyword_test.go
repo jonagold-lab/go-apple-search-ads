@@ -107,3 +107,30 @@ func TestAdGroupTargetingKeywordService_Delete(t *testing.T) {
 		t.Errorf("AdGroupTargetingKeyword.Delete returned %+v, want %+v", got, want)
 	}
 }
+
+func TestAdGroupTargetingKeywordService_Update(t *testing.T) {
+	client, mux, _, teardown := setup()
+	defer teardown()
+
+	wantAcceptHeaders := []string{"application/json"}
+	mux.HandleFunc("/campaigns/1234/adgroups/1234/targetingkeywords/1234", func(w http.ResponseWriter, r *http.Request) {
+		testMethod(t, r, "PUT")
+		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
+		w.WriteHeader(http.StatusOK)
+		w.Write(loadFixture("adgroup_targeting_keyword_update.json"))
+	})
+	data := &TargetingKeyword{
+		ID:        1234,
+		AdGroupID: 1234,
+		Status:    KEYWORD_PAUSED,
+	}
+	resp, err := client.AdGroupTargetingKeyword.Update(context.Background(), 1234, 1234, 1234, data)
+	if err != nil {
+		t.Errorf("AdGroupTargetingKeyword.Update returned error: %v", err)
+	}
+	want := http.StatusOK
+	got := resp.StatusCode
+	if !reflect.DeepEqual(got, want) {
+		t.Errorf("AdGroupTargetingKeyword.Update returned %+v, want %+v", got, want)
+	}
+}
