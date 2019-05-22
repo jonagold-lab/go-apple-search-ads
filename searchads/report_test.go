@@ -225,7 +225,7 @@ func TestReportService_SearchTerms(t *testing.T) {
 	metadata := SearchTermMetadata{
 		KeywordID: 262823190,
 		Keyword:   "back pain",
-		MatchType: EXACT,
+		MatchType: MatchTypeExact,
 		BidAmount: Amount{
 			Amount:   "12",
 			Currency: "EUR",
@@ -296,7 +296,7 @@ func TestReportService_Keywords(t *testing.T) {
 		KeywordID:     262823190,
 		Keyword:       "back pain",
 		KeywordStatus: KEYWORD_ACTIVE,
-		MatchType:     EXACT,
+		MatchType:     MatchTypeExact,
 		BidAmount: Amount{
 			Amount:   "12",
 			Currency: "EUR",

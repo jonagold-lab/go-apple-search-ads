@@ -38,7 +38,7 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 	nk := TargetingKeyword{
 		AdGroupID: 1234,
 		Text:      "i do negative keywords",
-		MatchType: EXACT,
+		MatchType: MatchTypeExact,
 		Status:    KEYWORD_ACTIVE,
 		BidAmount: &Amount{
 			Amount:   "1.50",
@@ -70,7 +70,7 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 			ID:        1,
 			AdGroupID: 1234,
 			Text:      "i do negative keywords",
-			MatchType: EXACT,
+			MatchType: MatchTypeExact,
 			Status:    KEYWORD_ACTIVE,
 			BidAmount: &Amount{
 				Amount:   "1.50",
@@ -82,55 +82,5 @@ func TestAdGroupTargetingKeywordService_CreateBulk(t *testing.T) {
 	}
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("AdGroupTargetingKeyword.CreateBulk returned %+v, want %+v", got, want)
-	}
-}
-
-func TestAdGroupTargetingKeywordService_Delete(t *testing.T) {
-	client, mux, _, teardown := setup()
-	defer teardown()
-
-	wantAcceptHeaders := []string{"application/json"}
-	mux.HandleFunc("/campaigns/1234/adgroups/1234/targetingkeywords/1234", func(w http.ResponseWriter, r *http.Request) {
-		testMethod(t, r, "DELETE")
-		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
-		w.WriteHeader(http.StatusOK)
-		w.Write(loadFixture("adgroup_targeting_keyword_delete.json"))
-	})
-
-	resp, err := client.AdGroupTargetingKeyword.Delete(context.Background(), 1234, 1234, 1234)
-	if err != nil {
-		t.Errorf("AdGroupTargetingKeyword.Delete returned error: %v", err)
-	}
-	want := http.StatusOK
-	got := resp.StatusCode
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AdGroupTargetingKeyword.Delete returned %+v, want %+v", got, want)
-	}
-}
-
-func TestAdGroupTargetingKeywordService_Update(t *testing.T) {
-	client, mux, _, teardown := setup()
-	defer teardown()
-
-	wantAcceptHeaders := []string{"application/json"}
-	mux.HandleFunc("/campaigns/1234/adgroups/1234/targetingkeywords/1234", func(w http.ResponseWriter, r *http.Request) {
-		testMethod(t, r, "PUT")
-		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
-		w.WriteHeader(http.StatusOK)
-		w.Write(loadFixture("adgroup_targeting_keyword_update.json"))
-	})
-	data := &TargetingKeyword{
-		ID:        1234,
-		AdGroupID: 1234,
-		Status:    KEYWORD_PAUSED,
-	}
-	resp, err := client.AdGroupTargetingKeyword.Update(context.Background(), 1234, 1234, 1234, data)
-	if err != nil {
-		t.Errorf("AdGroupTargetingKeyword.Update returned error: %v", err)
-	}
-	want := http.StatusOK
-	got := resp.StatusCode
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AdGroupTargetingKeyword.Update returned %+v, want %+v", got, want)
 	}
 }

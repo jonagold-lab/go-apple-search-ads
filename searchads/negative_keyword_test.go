@@ -39,7 +39,7 @@ func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 	nk := NegativeKeyword{
 		CampaignID: int64(1234),
 		Text:       "i do negative keywords",
-		MatchType:  EXACT,
+		MatchType:  MatchTypeExact,
 		Status:     KEYWORD_ACTIVE,
 	}
 
@@ -67,7 +67,7 @@ func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 			ID:               1,
 			CampaignID:       1234,
 			Text:             "i do negative keywords",
-			MatchType:        EXACT,
+			MatchType:        MatchTypeExact,
 			Status:           KEYWORD_ACTIVE,
 			ModificationTime: "2019-02-22T15:25:46.851",
 			Deleted:          false,
@@ -75,29 +75,6 @@ func TestCampaignNegativeKeywordService_CreateBulk(t *testing.T) {
 	}
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("CampaignNegativeKeyword.CreateBulk returned %+v, want %+v", got, want)
-	}
-}
-
-func TestCampaignNegativeKeywordService_Delete(t *testing.T) {
-	client, mux, _, teardown := setup()
-	defer teardown()
-
-	wantAcceptHeaders := []string{"application/json"}
-	mux.HandleFunc("/campaigns/1234/negativekeywords/1234", func(w http.ResponseWriter, r *http.Request) {
-		testMethod(t, r, "DELETE")
-		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
-		w.WriteHeader(http.StatusOK)
-		w.Write(loadFixture("campaign_negative_keyword_delete.json"))
-	})
-
-	resp, err := client.CampaignNegativeKeyword.Delete(context.Background(), 1234, 1234)
-	if err != nil {
-		t.Errorf("CampaignNegativeKeyword.Delete returned error: %v", err)
-	}
-	want := http.StatusOK
-	got := resp.StatusCode
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("CampaignNegativeKeyword.Delete returned %+v, want %+v", got, want)
 	}
 }
 
@@ -132,7 +109,7 @@ func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 		CampaignID: 1234,
 		AdGroupID:  1234,
 		Text:       "i do negative keywords",
-		MatchType:  EXACT,
+		MatchType:  MatchTypeExact,
 		Status:     KEYWORD_ACTIVE,
 	}
 
@@ -161,7 +138,7 @@ func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 			CampaignID:       1234,
 			AdGroupID:        1234,
 			Text:             "i do negative keywords",
-			MatchType:        EXACT,
+			MatchType:        MatchTypeExact,
 			Status:           KEYWORD_ACTIVE,
 			ModificationTime: "2019-02-22T15:25:46.851",
 			Deleted:          false,
@@ -169,28 +146,5 @@ func TestAdGroupNegativeKeywordService_CreateBulk(t *testing.T) {
 	}
 	if !reflect.DeepEqual(got, want) {
 		t.Errorf("AdGroupNegativeKeyword.CreateBulk returned %+v, want %+v", got, want)
-	}
-}
-
-func TestAdGroupNegativeKeywordService_Delete(t *testing.T) {
-	client, mux, _, teardown := setup()
-	defer teardown()
-
-	wantAcceptHeaders := []string{"application/json"}
-	mux.HandleFunc("/campaigns/1234/adgroups/1234/negativekeywords/1234", func(w http.ResponseWriter, r *http.Request) {
-		testMethod(t, r, "DELETE")
-		testHeader(t, r, "Accept", strings.Join(wantAcceptHeaders, ", "))
-		w.WriteHeader(http.StatusOK)
-		w.Write(loadFixture("campaign_negative_keyword_delete.json"))
-	})
-
-	resp, err := client.AdGroupNegativeKeyword.Delete(context.Background(), 1234, 1234, 1234)
-	if err != nil {
-		t.Errorf("AdGroupNegativeKeyword.Delete returned error: %v", err)
-	}
-	want := http.StatusOK
-	got := resp.StatusCode
-	if !reflect.DeepEqual(got, want) {
-		t.Errorf("AdGroupNegativeKeyword.Delete returned %+v, want %+v", got, want)
 	}
 }

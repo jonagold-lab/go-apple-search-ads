@@ -8,7 +8,6 @@ import (
 // GroupBy type to represent enum of GroupBy
 type GroupBy byte
 
-// EXACT and BROAD enum values
 const (
 	GroupByAdminArea GroupBy = iota
 	GroupByAgeRange

@@ -22,7 +22,7 @@ func main() {
 		&searchads.TargetingKeyword{
 			ID:        targetingKeywordID,
 			AdGroupID: adGroupID,
-			MatchType: "EXACT",
+			MatchType: searchads.MatchTypeExact,
 			Status:    searchads.KEYWORD_PAUSED,
 			Text:      "test",
 		},

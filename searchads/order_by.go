@@ -8,7 +8,6 @@ import (
 // OrderBy type to represent enum of OrderBy
 type OrderBy byte
 
-// EXACT and BROAD enum values
 const (
 	OrderByAdminArea OrderBy = iota
 	OrderByAgeRange
