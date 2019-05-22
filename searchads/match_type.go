@@ -5,27 +5,27 @@ import (
 	"fmt"
 )
 
-// MatchType type to represent enum of MatchType (EXACT/BROAD)
+// MatchType type to represent enum of MatchType (MatchTypeBroad,MatchTypeExact,MatchTypeAuto)
 type MatchType byte
 
-// EXACT and BROAD enum values
+// (MatchTypeBroad,MatchTypeExact,MatchTypeAuto) enum values
 const (
-	EXACT MatchType = iota
-	BROAD
-	AUTO
+	MatchTypeExact MatchType = iota
+	MatchTypeBroad
+	MatchTypeAuto
 )
 
 var (
 	_MatchTypeNameToValue = map[string]MatchType{
-		"EXACT": EXACT,
-		"BROAD": BROAD,
-		"AUTO":  AUTO,
+		"EXACT": MatchTypeExact,
+		"BROAD": MatchTypeBroad,
+		"AUTO":  MatchTypeAuto,
 	}
 
 	_MatchTypeValueToName = map[MatchType]string{
-		EXACT: "EXACT",
-		BROAD: "BROAD",
-		AUTO:  "AUTO",
+		MatchTypeExact: "EXACT",
+		MatchTypeBroad: "BROAD",
+		MatchTypeAuto:  "AUTO",
 	}
 )
 
@@ -33,9 +33,9 @@ func init() {
 	var v MatchType
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_MatchTypeNameToValue = map[string]MatchType{
-			interface{}(EXACT).(fmt.Stringer).String(): EXACT,
-			interface{}(BROAD).(fmt.Stringer).String(): BROAD,
-			interface{}(AUTO).(fmt.Stringer).String():  AUTO,
+			interface{}(MatchTypeExact).(fmt.Stringer).String(): MatchTypeExact,
+			interface{}(MatchTypeBroad).(fmt.Stringer).String(): MatchTypeBroad,
+			interface{}(MatchTypeAuto).(fmt.Stringer).String():  MatchTypeAuto,
 		}
 	}
 }

@@ -78,6 +78,7 @@ func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaig
 	if adGroupID == 0 {
 		return nil, nil, fmt.Errorf("adGroupID can not be 0")
 	}
+	fmt.Println(data)
 	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/bulk", campaignID, adGroupID)
 	req, err := s.client.NewRequest("POST", u, data)
 	if err != nil {
@@ -93,48 +94,25 @@ func (s *AdGroupTargetingKeywordService) CreateBulk(ctx context.Context, campaig
 	return targetingkeywords, resp, nil
 }
 
-// Update will update an existing Targeting on a Adgroup
-func (s *AdGroupTargetingKeywordService) Update(ctx context.Context, campaignID, adGroupID, id int64, data *TargetingKeyword) (*TargetingKeyword, *Response, error) {
+// UpdateBulk will update an existing Targeting on a Adgroup
+func (s *AdGroupTargetingKeywordService) UpdateBulk(ctx context.Context, campaignID, adGroupID int64, data []*TargetingKeyword) ([]*TargetingKeyword, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
 	if adGroupID == 0 {
 		return nil, nil, fmt.Errorf("adGroupID can not be 0")
 	}
-	if id == 0 {
-		return nil, nil, fmt.Errorf("id can not be 0")
-	}
-	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/%d", campaignID, adGroupID, id)
+	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/bulk", campaignID, adGroupID)
 	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
 		return nil, nil, err
 	}
 
-	targetingkeyword := &TargetingKeyword{}
-	resp, err := s.client.Do(ctx, req, targetingkeyword)
+	targetingkeywords := []*TargetingKeyword{}
+	resp, err := s.client.Do(ctx, req, &targetingkeywords)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return targetingkeyword, resp, nil
-}
-
-// Delete will remove an existing Targeting on a Adgroup
-func (s *AdGroupTargetingKeywordService) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
-	if campaignID == 0 {
-		return nil, fmt.Errorf("campaignID can not be 0")
-	}
-	if adGroupID == 0 {
-		return nil, fmt.Errorf("adGroupID can not be 0")
-	}
-	if id == 0 {
-		return nil, fmt.Errorf("id can not be 0")
-	}
-	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/%d", campaignID, adGroupID, id)
-	req, err := s.client.NewRequest("DELETE", u, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	return s.client.Do(ctx, req, nil)
+	return targetingkeywords, resp, nil
 }

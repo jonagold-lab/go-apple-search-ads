@@ -10,25 +10,29 @@ import (
 )
 
 func main() {
-	campaignID := int64(262727835)
-	adGroupID := int64(262765077)
-	targetingKeywordID := int64(262765077)
+	campaignID := int64(284979913)
+	adGroupID := int64(285227483)
+	targetingKeywordID := int64(302465274)
 	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
 		panic(err)
 	}
-	input := &searchads.TargetingKeyword{
-		ID:        targetingKeywordID,
-		AdGroupID: adGroupID,
-		Status:    searchads.KEYWORD_PAUSED,
+	input := []*searchads.TargetingKeyword{
+		&searchads.TargetingKeyword{
+			ID:        targetingKeywordID,
+			AdGroupID: adGroupID,
+			MatchType: "EXACT",
+			Status:    searchads.KEYWORD_PAUSED,
+			Text:      "test",
+		},
 	}
-	updatedKeyword, rs, err := client.AdGroupTargetingKeyword.Update(context.Background(), campaignID, adGroupID, targetingKeywordID, input)
+	updatedKeywords, rs, err := client.AdGroupTargetingKeyword.UpdateBulk(context.Background(), campaignID, adGroupID, input)
 	if err != nil {
 		log.Fatalf("TargetingKeyword error: %s", err)
 		panic(err)
 	}
-	res, _ := json.Marshal(&updatedKeyword)
+	res, _ := json.Marshal(&updatedKeywords)
 	fmt.Println(string(res))
 	fmt.Println("----------------")
 	fmt.Println(rs.Pagination.ItemsPerPage)

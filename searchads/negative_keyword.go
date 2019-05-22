@@ -60,21 +60,22 @@ func (s *CampaignNegativeKeywordService) CreateBulk(ctx context.Context, campaig
 	return negativekeywords, resp, nil
 }
 
-// Delete will remove an existing Negative Keywords on a Adgroup
-func (s *CampaignNegativeKeywordService) Delete(ctx context.Context, campaignID, id int64) (*Response, error) {
+// UpdateBulk will create multiple Negative Keywords for a campaign
+func (s *CampaignNegativeKeywordService) UpdateBulk(ctx context.Context, campaignID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
-		return nil, fmt.Errorf("campaignID can not be 0")
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
-	if id == 0 {
-		return nil, fmt.Errorf("id can not be 0")
-	}
-	u := fmt.Sprintf("campaigns/%d/negativekeywords/%d", campaignID, id)
-	req, err := s.client.NewRequest("DELETE", u, nil)
+	u := fmt.Sprintf("campaigns/%d/negativekeywords/bulk", campaignID)
+	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
 	}
-
-	return s.client.Do(ctx, req, nil)
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	if err != nil {
+		return nil, resp, err
+	}
+	return negativekeywords, resp, nil
 }
 
 // AdGroupNegativeKeywordService to handle Negative Keywords of
@@ -127,22 +128,24 @@ func (s *AdGroupNegativeKeywordService) CreateBulk(ctx context.Context, campaign
 	return negativekeywords, resp, nil
 }
 
-// Delete will remove an existing Negative Keywords on a Adgroup
-func (s *AdGroupNegativeKeywordService) Delete(ctx context.Context, campaignID, adGroupID, id int64) (*Response, error) {
+// UpdateBulk will create multiple Negative Keywords for a campaign
+func (s *AdGroupNegativeKeywordService) UpdateBulk(ctx context.Context, campaignID int64, adGroupID int64, data []*NegativeKeyword) ([]*NegativeKeyword, *Response, error) {
 	if campaignID == 0 {
-		return nil, fmt.Errorf("campaignID can not be 0")
+		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}
 	if adGroupID == 0 {
-		return nil, fmt.Errorf("adGroupID can not be 0")
+		return nil, nil, fmt.Errorf("adGroupID can not be 0")
 	}
-	if id == 0 {
-		return nil, fmt.Errorf("id can not be 0")
-	}
-	u := fmt.Sprintf("campaigns/%d/adgroups/%d/negativekeywords/%d", campaignID, adGroupID, id)
-	req, err := s.client.NewRequest("DELETE", u, nil)
+	u := fmt.Sprintf("campaigns/%d/adgroups/%d/negativekeywords/bulk", campaignID, adGroupID)
+	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
-		return nil, err
+		return nil, nil, err
+	}
+	negativekeywords := []*NegativeKeyword{}
+	resp, err := s.client.Do(ctx, req, &negativekeywords)
+	if err != nil {
+		return nil, resp, err
 	}
 
-	return s.client.Do(ctx, req, nil)
+	return negativekeywords, resp, nil
 }
