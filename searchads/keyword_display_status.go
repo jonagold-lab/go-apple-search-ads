@@ -12,20 +12,23 @@ type KeywordDisplayStatus byte
 const (
 	KeywordDisplayStatusRunning KeywordDisplayStatus = iota
 	KeywordDisplayStatusPaused
+	KeywordDisplayStatusCampaignOnHold
 	KeywordDisplayStatusEmpty
 )
 
 var (
 	_KeywordDisplayStatusNameToValue = map[string]KeywordDisplayStatus{
-		"RUNNING": KeywordDisplayStatusRunning,
-		"PAUSED":  KeywordDisplayStatusPaused,
-		"":        KeywordDisplayStatusEmpty,
+		"RUNNING":          KeywordDisplayStatusRunning,
+		"PAUSED":           KeywordDisplayStatusPaused,
+		"CAMPAIGN_ON_HOLD": KeywordDisplayStatusCampaignOnHold,
+		"":                 KeywordDisplayStatusEmpty,
 	}
 
 	_KeywordDisplayStatusValueToName = map[KeywordDisplayStatus]string{
-		KeywordDisplayStatusRunning: "RUNNING",
-		KeywordDisplayStatusPaused:  "PAUSED",
-		KeywordDisplayStatusEmpty:   "",
+		KeywordDisplayStatusRunning:        "RUNNING",
+		KeywordDisplayStatusPaused:         "PAUSED",
+		KeywordDisplayStatusCampaignOnHold: "CAMPAIGN_ON_HOLD",
+		KeywordDisplayStatusEmpty:          "",
 	}
 )
 
@@ -33,9 +36,10 @@ func init() {
 	var v KeywordDisplayStatus
 	if _, ok := interface{}(v).(fmt.Stringer); ok {
 		_KeywordDisplayStatusNameToValue = map[string]KeywordDisplayStatus{
-			interface{}(KeywordDisplayStatusRunning).(fmt.Stringer).String(): KeywordDisplayStatusRunning,
-			interface{}(KeywordDisplayStatusPaused).(fmt.Stringer).String():  KeywordDisplayStatusPaused,
-			interface{}(KeywordDisplayStatusEmpty).(fmt.Stringer).String():   KeywordDisplayStatusEmpty,
+			interface{}(KeywordDisplayStatusRunning).(fmt.Stringer).String():        KeywordDisplayStatusRunning,
+			interface{}(KeywordDisplayStatusPaused).(fmt.Stringer).String():         KeywordDisplayStatusPaused,
+			interface{}(KeywordDisplayStatusCampaignOnHold).(fmt.Stringer).String(): KeywordDisplayStatusCampaignOnHold,
+			interface{}(KeywordDisplayStatusEmpty).(fmt.Stringer).String():          KeywordDisplayStatusEmpty,
 		}
 	}
 }
