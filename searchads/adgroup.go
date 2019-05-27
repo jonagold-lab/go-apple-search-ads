@@ -13,10 +13,10 @@ type AdGroup struct {
 	CampaignID             int64                `json:"campaignId,omitempty"`
 	Name                   string               `json:"name,omitempty"`
 	CpaGoal                *Amount              `json:"cpaGoal,omitempty"`
-	StartTime              string               `json:"startTime"`
+	StartTime              string               `json:"startTime,omitempty"`
 	EndTime                string               `json:"endTime,omitempty"`
 	AutomatedKeywordsOptIn bool                 `json:"automatedKeywordsOptIn"`
-	DefaultCpcBid          Amount               `json:"defaultCpcBid"`
+	DefaultCpcBid          *Amount              `json:"defaultCpcBid,omitempty"`
 	TargetingDimensions    *TargetingDimensions `json:"targetingDimensions,omitempty"`
 	OrgID                  int                  `json:"orgId,omitempty"`
 	ModificationTime       string               `json:"modificationTime,omitempty"`
@@ -103,7 +103,7 @@ func (s *AdGroupService) List(ctx context.Context, campaignID int64, opt *ListOp
 }
 
 // Get function to get specific AdGroup by id and campaignID
-func (s *AdGroupService) Get(ctx context.Context, campaignID int64, id int64) (*AdGroup, *Response, error) {
+func (s *AdGroupService) Get(ctx context.Context, campaignID, id int64) (*AdGroup, *Response, error) {
 	if campaignID == 0 {
 		return nil, nil, fmt.Errorf("campaignID can not be 0")
 	}

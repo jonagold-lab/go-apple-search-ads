@@ -31,17 +31,17 @@ func main() {
 			Amount:   "5",
 			Currency: "USD",
 		},
-		DefaultCpcBid: searchads.Amount{
+		DefaultCpcBid: &searchads.Amount{
 			Amount:   "3",
 			Currency: "USD",
 		},
 	}
 
-	createdCamapaign, _, err := client.AdGroup.Create(context.Background(), campaignID, &data)
+	createdAdGroup, _, err := client.AdGroup.Create(context.Background(), campaignID, &data)
 	if err != nil {
 		log.Fatalf("Campaign Create error: %s", err)
 		panic(err)
 	}
-	res, _ := json.Marshal(&createdCamapaign)
+	res, _ := json.Marshal(&createdAdGroup)
 	fmt.Println(string(res))
 }
