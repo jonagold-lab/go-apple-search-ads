@@ -20,8 +20,8 @@ type AdGroup struct {
 	TargetingDimensions    *TargetingDimensions `json:"targetingDimensions,omitempty"`
 	OrgID                  int                  `json:"orgId,omitempty"`
 	ModificationTime       string               `json:"modificationTime,omitempty"`
-	Status                 string               `json:"status,omitempty"`
-	ServingStatus          string               `json:"servingStatus,omitempty"`
+	Status                 Status               `json:"status,omitempty"`
+	ServingStatus          ServingStatus        `json:"servingStatus,omitempty"`
 	ServingStateReasons    []string             `json:"servingStateReasons,omitempty"`
 	Deleted                bool                 `json:"deleted,omitempty"`
 }
