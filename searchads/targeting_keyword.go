@@ -6,14 +6,14 @@ import (
 )
 
 type TargetingKeyword struct {
-	ID               int64     `json:"id,omitempty"`
-	AdGroupID        int64     `json:"adGroupId,omitempty"`
-	Text             string    `json:"text,omitempty"`
-	Status           string    `json:"status,omitempty"`
-	MatchType        MatchType `json:"matchType,omitempty"`
-	BidAmount        *Amount   `json:"bidAmount,omitempty"`
-	ModificationTime string    `json:"modificationTime,omitempty"`
-	Deleted          bool      `json:"deleted,omitempty"`
+	ID               int64         `json:"id,omitempty"`
+	AdGroupID        int64         `json:"adGroupId,omitempty"`
+	Text             string        `json:"text,omitempty"`
+	Status           KeywordStatus `json:"status,omitempty"`
+	MatchType        MatchType     `json:"matchType,omitempty"`
+	BidAmount        *Amount       `json:"bidAmount,omitempty"`
+	ModificationTime string        `json:"modificationTime,omitempty"`
+	Deleted          bool          `json:"deleted,omitempty"`
 }
 
 // AdGroupTargetingKeywordService to handle Targeting Keywords of

@@ -22,7 +22,7 @@ func main() {
 		&searchads.TargetingKeyword{
 			ID:        targetingKeywordID,
 			AdGroupID: adGroupID,
-			Status:    "ACTIVE",
+			Status:    searchads.KEYWORD_ACTIVE,
 		},
 	}
 	updatedKeywords, rs, err := client.AdGroupTargetingKeyword.UpdateBulk(context.Background(), campaignID, adGroupID, input)
