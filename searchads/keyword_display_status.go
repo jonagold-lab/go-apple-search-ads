@@ -13,6 +13,7 @@ const (
 	KeywordDisplayStatusRunning KeywordDisplayStatus = iota
 	KeywordDisplayStatusPaused
 	KeywordDisplayStatusCampaignOnHold
+	KeywordDisplayStatusAdGroupOnHold
 	KeywordDisplayStatusEmpty
 )
 
@@ -21,6 +22,7 @@ var (
 		"RUNNING":          KeywordDisplayStatusRunning,
 		"PAUSED":           KeywordDisplayStatusPaused,
 		"CAMPAIGN_ON_HOLD": KeywordDisplayStatusCampaignOnHold,
+		"AD_GROUP_ON_HOLD": KeywordDisplayStatusAdGroupOnHold,
 		"":                 KeywordDisplayStatusEmpty,
 	}
 
@@ -28,6 +30,7 @@ var (
 		KeywordDisplayStatusRunning:        "RUNNING",
 		KeywordDisplayStatusPaused:         "PAUSED",
 		KeywordDisplayStatusCampaignOnHold: "CAMPAIGN_ON_HOLD",
+		KeywordDisplayStatusAdGroupOnHold:  "AD_GROUP_ON_HOLD",
 		KeywordDisplayStatusEmpty:          "",
 	}
 )
@@ -39,6 +42,7 @@ func init() {
 			interface{}(KeywordDisplayStatusRunning).(fmt.Stringer).String():        KeywordDisplayStatusRunning,
 			interface{}(KeywordDisplayStatusPaused).(fmt.Stringer).String():         KeywordDisplayStatusPaused,
 			interface{}(KeywordDisplayStatusCampaignOnHold).(fmt.Stringer).String(): KeywordDisplayStatusCampaignOnHold,
+			interface{}(KeywordDisplayStatusAdGroupOnHold).(fmt.Stringer).String():  KeywordDisplayStatusAdGroupOnHold,
 			interface{}(KeywordDisplayStatusEmpty).(fmt.Stringer).String():          KeywordDisplayStatusEmpty,
 		}
 	}
