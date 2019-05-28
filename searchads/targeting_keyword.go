@@ -6,14 +6,14 @@ import (
 )
 
 type TargetingKeyword struct {
-	ID               int64         `json:"id,omitempty"`
-	AdGroupID        int64         `json:"adGroupId,omitempty"`
-	Text             string        `json:"text,omitempty"`
-	Status           KeywordStatus `json:"status,omitempty"`
-	MatchType        MatchType     `json:"matchType,omitempty"`
-	BidAmount        *Amount       `json:"bidAmount,omitempty"`
-	ModificationTime string        `json:"modificationTime,omitempty"`
-	Deleted          bool          `json:"deleted,omitempty"`
+	ID               int64     `json:"id,omitempty"`
+	AdGroupID        int64     `json:"adGroupId,omitempty"`
+	Text             string    `json:"text,omitempty"`
+	Status           string    `json:"status,omitempty"`
+	MatchType        MatchType `json:"matchType,omitempty"`
+	BidAmount        *Amount   `json:"bidAmount,omitempty"`
+	ModificationTime string    `json:"modificationTime,omitempty"`
+	Deleted          bool      `json:"deleted,omitempty"`
 }
 
 // AdGroupTargetingKeywordService to handle Targeting Keywords of
@@ -102,6 +102,7 @@ func (s *AdGroupTargetingKeywordService) UpdateBulk(ctx context.Context, campaig
 	if adGroupID == 0 {
 		return nil, nil, fmt.Errorf("adGroupID can not be 0")
 	}
+	fmt.Println(data)
 	u := fmt.Sprintf("campaigns/%d/adgroups/%d/targetingkeywords/bulk", campaignID, adGroupID)
 	req, err := s.client.NewRequest("PUT", u, data)
 	if err != nil {
