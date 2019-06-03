@@ -18,8 +18,9 @@ func main() {
 		log.Fatalf("Client error: %s", err)
 		panic(err)
 	}
+	status := searchads.PAUSED
 	data := searchads.AdGroup{
-		Status: searchads.PAUSED,
+		Status: &status,
 	}
 
 	uag, _, err := client.AdGroup.Edit(context.Background(), campaignID, adGroupID, &data)

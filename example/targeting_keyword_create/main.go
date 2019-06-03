@@ -18,7 +18,7 @@ func main() {
 		panic(err)
 	}
 	status, _ := searchads.ParseKeywordStatus("ACTIVE")
-	// matchType, _ := searchads.ParseMatchType("EXACT")
+	matchType, _ := searchads.ParseMatchType("EXACT")
 	input := []*searchads.TargetingKeyword{
 		&searchads.TargetingKeyword{
 			AdGroupID: adGroupID,
@@ -28,7 +28,7 @@ func main() {
 				Amount:   fmt.Sprintf("%f", 3.0),
 				Currency: "EUR",
 			},
-			MatchType: "EXACT",
+			MatchType: matchType,
 		},
 	}
 	createdKeyword, rs, err := client.AdGroupTargetingKeyword.CreateBulk(context.Background(), campaignID, adGroupID, input)
