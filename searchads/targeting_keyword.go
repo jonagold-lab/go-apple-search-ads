@@ -6,14 +6,14 @@ import (
 )
 
 type TargetingKeyword struct {
-	ID               int64         `json:"id,omitempty"`
-	AdGroupID        int64         `json:"adGroupId,omitempty"`
-	Text             string        `json:"text,omitempty"`
-	Status           KeywordStatus `json:"status,omitempty"`
-	MatchType        MatchType     `json:"matchType,omitempty"`
-	BidAmount        *Amount       `json:"bidAmount,omitempty"`
-	ModificationTime string        `json:"modificationTime,omitempty"`
-	Deleted          bool          `json:"deleted,omitempty"`
+	ID               int64          `json:"id,omitempty"`
+	AdGroupID        int64          `json:"adGroupId,omitempty"`
+	Text             string         `json:"text,omitempty"`
+	Status           KeywordStatus  `json:"status"`
+	MatchType        MatchType      `json:"matchType"`
+	BidAmount        Amount         `json:"bidAmount"`
+	ModificationTime string         `json:"modificationTime,omitempty"`
+	Deleted          bool           `json:"deleted,omitempty"`
 }
 
 // AdGroupTargetingKeywordService to handle Targeting Keywords of
@@ -35,13 +35,13 @@ func (s *AdGroupTargetingKeywordService) List(ctx context.Context, campaignID, a
 	if err != nil {
 		return nil, nil, err
 	}
-	Targetingkeywords := []*TargetingKeyword{}
-	resp, err := s.client.Do(ctx, req, &Targetingkeywords)
+	targetingkeywords := []*TargetingKeyword{}
+	resp, err := s.client.Do(ctx, req, &targetingkeywords)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return Targetingkeywords, resp, nil
+	return targetingkeywords, resp, nil
 }
 
 // Get will get a specific targeting Keyword
@@ -61,13 +61,13 @@ func (s *AdGroupTargetingKeywordService) Get(ctx context.Context, campaignID, ad
 		return nil, nil, err
 	}
 
-	targetingkeyword := new(TargetingKeyword)
-	resp, err := s.client.Do(ctx, req, targetingkeyword)
+	targetingkeyword := TargetingKeyword{}
+	resp, err := s.client.Do(ctx, req, &targetingkeyword)
 	if err != nil {
 		return nil, resp, err
 	}
 
-	return targetingkeyword, resp, nil
+	return &targetingkeyword, resp, nil
 }
 
 // CreateBulk will create multiple Targeting Keywords for a campaign

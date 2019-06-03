@@ -10,9 +10,14 @@ import (
 )
 
 func main() {
-	campaignID := int64(262931515)
-	adGroupID := int64(262987552)
-	targetingKeywordID := int64(263022253)
+	campaignID := int64(284979913)
+	adGroupID := int64(285227483)
+	targetingKeywordID := int64(306701962)
+	/*
+		campaignID := int64(262931515)
+		adGroupID := int64(262987552)
+		targetingKeywordID := int64(263022253)
+	*/
 	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
@@ -22,7 +27,11 @@ func main() {
 		&searchads.TargetingKeyword{
 			ID:        targetingKeywordID,
 			AdGroupID: adGroupID,
-			Status:    searchads.KEYWORD_ACTIVE,
+			Status:    searchads.KEYWORD_PAUSED,
+			BidAmount: searchads.Amount{
+				Amount:   fmt.Sprintf("%f", 3.0),
+				Currency: "EUR",
+			},
 		},
 	}
 	updatedKeywords, rs, err := client.AdGroupTargetingKeyword.UpdateBulk(context.Background(), campaignID, adGroupID, input)
