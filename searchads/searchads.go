@@ -69,8 +69,8 @@ func addOptions(s string, opt interface{}) (string, error) {
 	return u.String(), nil
 }
 
-func setClientWithCerts(pemFile, keyFile string) (*http.Client, error) {
-	cert, err := tls.LoadX509KeyPair(pemFile, keyFile)
+func setClientWithCerts(certPEMBlock, keyPEMBlock []byte) (*http.Client, error) {
+	cert, err := tls.X509KeyPair(certPEMBlock, keyPEMBlock)
 	if err != nil {
 		return nil, err
 	}
@@ -83,10 +83,10 @@ func setClientWithCerts(pemFile, keyFile string) (*http.Client, error) {
 }
 
 // NewClient with either http.Client or with pemFile and keyFile
-func NewClient(httpClient *http.Client, pemFile, keyFile string, orgID *int64) (*Client, error) {
+func NewClient(httpClient *http.Client, certPEMBlock, keyPEMBlock []byte, orgID *int64) (*Client, error) {
 	if httpClient == nil {
 		var err error
-		httpClient, err = setClientWithCerts(pemFile, keyFile)
+		httpClient, err = setClientWithCerts(certPEMBlock, keyPEMBlock)
 		if err != nil {
 			return nil, err
 		}

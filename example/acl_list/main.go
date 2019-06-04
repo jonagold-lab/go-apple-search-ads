@@ -4,13 +4,16 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 
 	"github.com/jonagold-lab/go-apple-search-ads/searchads"
 )
 
 func main() {
-	client, err := searchads.NewClient(nil, "../cert.pem", "../cert.key", nil)
+	pemdat, _ := ioutil.ReadFile("../cert.pem")
+	keydat, _ := ioutil.ReadFile("../cert.key")
+	client, err := searchads.NewClient(nil, pemdat, keydat, nil)
 	if err != nil {
 		log.Fatalf("Client error: %s", err)
 		panic(err)
